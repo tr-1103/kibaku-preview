@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script>document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>希爆Style ｜ 人は、変われる。｜ 希望の成長OS</title>
+<meta name="description" content="希爆Style（きばくスタイル）は、人間の無限の可能性を信じ、構造で引き出す“希望の成長OS”。人を能力ではなく状態（OS）で見る、現役小学校教師が開発した教育・人材育成メソッド。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F2EDE3;
+    --cream-2:#ECE4D5;
+    --cream-3:#E6DCC9;
+    --ink:#232020;
+    --ink-80:#3a3531;
+    --ink-soft:#6B6358;
+    --line:#D8CFC0;
+    --ember:#C8492A;
+    --ember-deep:#A63A1E;
+    --ember-soft:#F08A5D;
+    --serif:'Shippori Mincho B1', serif;
+    --latin:'Cormorant Garamond', serif;
+    --sans:'Zen Kaku Gothic New', sans-serif;
+    --measure:1140px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.9;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  ::selection{background:var(--ember);color:var(--cream)}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--measure);margin:0 auto;padding:0 36px}
+
+  /* scroll progress */
+  .progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--ember);z-index:100;transition:width .08s linear}
+
+  /* header */
+  header{position:sticky;top:0;z-index:70;background:rgba(242,237,227,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{max-width:var(--measure);margin:0 auto;padding:14px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .logo{display:flex;align-items:baseline;gap:7px;line-height:1}
+  .logo .mark{font-family:var(--serif);font-weight:800;font-size:25px;letter-spacing:.04em;position:relative;display:inline-block}
+  .logo .flame{position:absolute;top:-13px;right:-3px;width:14px;height:16px}
+  .logo .sub{font-family:var(--latin);font-weight:600;font-size:18px;letter-spacing:.04em;color:var(--ink-soft);font-style:italic}
+  nav.links{display:flex;align-items:center;gap:30px}
+  nav.links a{font-size:13.5px;letter-spacing:.06em;color:var(--ink-80);position:relative;padding:4px 0;transition:color .25s}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-1px;width:0;height:1px;background:var(--ember);transition:width .3s ease}
+  nav.links a:hover{color:var(--ink)}
+  nav.links a:hover::after{width:100%}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--sans);font-weight:700;font-size:13.5px;letter-spacing:.06em;padding:11px 22px;border-radius:2px;border:1px solid var(--ink);background:var(--ink);color:var(--cream);transition:transform .2s ease,background .25s,color .25s,border-color .25s;cursor:pointer;white-space:nowrap}
+  .btn:hover{background:var(--ember);border-color:var(--ember);transform:translateY(-2px)}
+  .btn:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+  .btn .arr{transition:transform .25s}
+  .btn:hover .arr{transform:translateX(3px)}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+  .btn.ember{background:var(--ember);border-color:var(--ember);color:var(--cream)}
+  .btn.ember:hover{background:var(--ember-deep);border-color:var(--ember-deep)}
+  .nav .btn{padding:10px 18px}
+  a:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+
+  /* chapter divider */
+  .chapter{padding:74px 0 0}
+  .chapter .wrap{display:flex;align-items:flex-end;gap:24px}
+  .chapter .cnum{font-family:var(--latin);font-style:italic;font-weight:500;font-size:clamp(54px,9vw,104px);line-height:.8;color:var(--ember);letter-spacing:-.02em}
+  .chapter .cmeta{padding-bottom:8px;flex:1;border-bottom:1px solid var(--line)}
+  .chapter .ckick{font-family:var(--latin);font-style:italic;font-size:17px;color:var(--ink-soft);letter-spacing:.04em}
+  .chapter .ctitle{font-family:var(--serif);font-weight:700;font-size:clamp(15px,2vw,18px);letter-spacing:.14em;margin-top:2px}
+
+  /* hero */
+  .hero{position:relative;padding:104px 0 92px;overflow:hidden}
+  .hero .wrap{position:relative;z-index:2}
+  .hero-watermark{position:absolute;right:-3%;top:4%;z-index:1;width:min(520px,48vw);opacity:.06;pointer-events:none;will-change:transform}
+  .prologue{font-family:var(--latin);font-style:italic;font-size:19px;color:var(--ember);letter-spacing:.06em;margin-bottom:26px;display:flex;align-items:center;gap:14px}
+  .prologue::before{content:"";width:40px;height:1px;background:var(--ember)}
+  .hero h1{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:clamp(35px,6.1vw,70px);line-height:1.2;letter-spacing:-.005em;margin-bottom:40px}
+  .hero h1 .line{display:block;overflow:hidden}
+  .hero h1 .line span{display:inline-block;transform:translateY(110%);opacity:0;animation:rise .95s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero h1 .line:nth-child(1) span{animation-delay:.10s}
+  .hero h1 .line:nth-child(2) span{animation-delay:.26s}
+  .hero h1 .line:nth-child(3) span{animation-delay:.42s}
+  .hero h1 em{font-style:normal;color:var(--ember);position:relative;white-space:nowrap}
+  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.05em;height:.08em;background:var(--ember);opacity:.3}
+  @keyframes rise{to{transform:translateY(0);opacity:1}}
+  .hero .lede{max-width:600px;font-size:clamp(16px,1.9vw,19px);color:var(--ink-80);margin-bottom:44px;opacity:0;animation:fade 1s ease .62s forwards}
+  .hero .lede b{font-weight:700;color:var(--ink)}
+  @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fade 1s ease .78s forwards}
+  .hero .scrollcue{margin-top:62px;display:flex;align-items:center;gap:12px;color:var(--ink-soft);font-family:var(--latin);font-style:italic;font-size:15px;letter-spacing:.1em;opacity:0;animation:fade 1s ease .95s forwards}
+  .hero .scrollcue .bar{width:1px;height:42px;background:linear-gradient(var(--ink-soft),transparent);position:relative;overflow:hidden}
+  .hero .scrollcue .bar::after{content:"";position:absolute;top:-50%;left:0;width:1px;height:50%;background:var(--ember);animation:drop 2.2s ease-in-out infinite}
+  @keyframes drop{0%{top:-50%}60%,100%{top:100%}}
+
+  /* generic blocks */
+  .block{padding:64px 0 100px}
+  h2.head{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:clamp(28px,4.4vw,48px);line-height:1.32;letter-spacing:.005em}
+  h2.head em{font-style:normal;color:var(--ember)}
+  .lead{font-size:clamp(15.5px,1.7vw,17.5px);color:var(--ink-80);max-width:660px}
+  .lead b{color:var(--ink);font-weight:700}
+  .mt16{margin-top:16px}.mt24{margin-top:24px}.mt40{margin-top:40px}.mt56{margin-top:56px}
+  .split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+  .split.offset{grid-template-columns:.92fr 1.08fr}
+
+  /* drop cap */
+  .dropcap::first-letter{font-family:var(--serif);font-weight:700;float:left;font-size:4.4em;line-height:.78;padding:.06em .14em 0 0;color:var(--ember)}
+
+  /* pull quote */
+  .pull{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3.4vw,38px);line-height:1.55;color:var(--ink);letter-spacing:.01em;position:relative;padding-left:30px}
+  .pull::before{content:"";position:absolute;left:0;top:.1em;bottom:.1em;width:3px;background:var(--ember)}
+  .pull .em{color:var(--ember)}
+  .pull.center{text-align:center;padding:0;max-width:880px;margin:0 auto}
+  .pull.center::before{display:none}
+  .pull.center .qm{font-family:var(--latin);font-style:italic;color:var(--ember);font-size:1.3em;line-height:0}
+
+  /* tags */
+  .tags{display:flex;flex-wrap:wrap;gap:10px}
+  .tag{font-size:13px;letter-spacing:.04em;color:var(--ink-80);border:1px solid var(--line);border-radius:100px;padding:7px 16px;background:rgba(255,255,255,.35)}
+
+  /* inverted */
+  .invert{background:var(--ink);color:var(--cream);padding:122px 0;position:relative;overflow:hidden;margin-top:64px}
+  .invert .cnum2{position:absolute;top:34px;left:50%;transform:translateX(-50%);font-family:var(--latin);font-style:italic;font-size:15px;color:#a89e8f;letter-spacing:.2em}
+  .invert .big{font-family:var(--serif);font-weight:700;font-size:clamp(30px,5.4vw,62px);line-height:1.28;letter-spacing:.005em}
+  .invert .big .small{display:block;font-size:.55em;color:#b8ad9d;font-weight:500;margin-bottom:.45em;letter-spacing:.02em}
+  .invert .big em{font-style:normal;color:var(--ember-soft)}
+  .invert .big em .u{box-shadow:inset 0 -.12em 0 rgba(240,138,93,.45)}
+  .ba{display:grid;grid-template-columns:1fr 1fr;margin-top:74px;border:1px solid rgba(255,255,255,.16)}
+  .ba > div{padding:40px 38px}
+  .ba .from{border-right:1px solid rgba(255,255,255,.16)}
+  .ba h4{font-family:var(--serif);font-size:22px;margin-bottom:8px;letter-spacing:.05em}
+  .ba .from h4{color:#a89e8f}
+  .ba .to h4{color:var(--ember-soft)}
+  .ba p{font-size:14.5px;color:#cfc7b9;line-height:1.85}
+  .ba .to{position:relative}
+  .ba .to::after{content:"→";position:absolute;left:-26px;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:var(--ember);color:var(--cream);border-radius:50%;font-size:20px;z-index:3}
+
+  /* values */
+  .values{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+  .values .v{padding:42px 30px 38px;border-bottom:1px solid var(--line)}
+  .values .v:not(:last-child){border-right:1px solid var(--line)}
+  .values .v .vn{font-family:var(--latin);font-style:italic;font-size:16px;letter-spacing:.08em;color:var(--ember)}
+  .values .v h3{font-family:var(--serif);font-size:34px;font-weight:700;margin:10px 0 12px;letter-spacing:.06em}
+  .values .v p{font-size:14.5px;color:var(--ink-80)}
+
+  /* iceberg + twin */
+  .iceberg{border:1px solid var(--line);background:rgba(255,255,255,.4)}
+  .iceberg .row{padding:30px 34px}
+  .iceberg .row.top{border-bottom:1px dashed var(--line)}
+  .iceberg .row .rl{font-family:var(--latin);font-style:italic;font-size:15px;letter-spacing:.06em;margin-bottom:12px}
+  .iceberg .row.top .rl{color:var(--ink-soft)}
+  .iceberg .row.deep{background:linear-gradient(180deg,rgba(200,73,42,.05),rgba(200,73,42,.09))}
+  .iceberg .row.deep .rl{color:var(--ember)}
+  .iceberg .row .items{display:flex;flex-wrap:wrap;gap:10px 22px;font-family:var(--serif);font-size:clamp(17px,2vw,21px)}
+  .iceberg .row.top .items{color:var(--ink-soft)}
+  .iceberg .row.deep .items{color:var(--ink)}
+  .twin{display:grid;grid-template-columns:1fr auto 1fr;margin-top:36px;border:1px solid var(--line)}
+  .twin .t{padding:32px 30px}
+  .twin .t .tt{font-family:var(--latin);font-style:italic;font-size:15px;color:var(--ember);margin-bottom:8px}
+  .twin .t h4{font-family:var(--serif);font-size:21px;font-weight:700;margin-bottom:8px}
+  .twin .t p{font-size:14px;color:var(--ink-80)}
+  .twin .x{display:flex;align-items:center;justify-content:center;padding:0 8px;border-left:1px solid var(--line);border-right:1px solid var(--line);font-family:var(--serif);font-size:26px;color:var(--ember);background:rgba(255,255,255,.4)}
+
+  /* steps */
+  .steps{display:flex;flex-wrap:wrap;counter-reset:s}
+  .steps .step{flex:1 1 auto;min-width:130px;padding:26px 20px;border:1px solid var(--line);margin:-1px 0 0 -1px;background:rgba(255,255,255,.32)}
+  .steps .step .sn{font-family:var(--latin);font-style:italic;font-size:15px;color:var(--ember);letter-spacing:.05em}
+  .steps .step h4{font-family:var(--serif);font-size:20px;font-weight:700;margin-top:8px;letter-spacing:.04em}
+  .steps .step.accent{background:var(--ink)}
+  .steps .step.accent h4{color:var(--cream)}
+  .steps .step.accent .sn{color:var(--ember-soft)}
+
+  /* use */
+  .use{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .use .ug .ut{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+  .use .ug .ut .dot{width:8px;height:8px;border-radius:50%;background:var(--ember);display:inline-block}
+  .use .ug.alt .ut .dot{background:var(--ink)}
+
+  /* voices placeholder */
+  .voices{border:1px dashed var(--line);background:rgba(255,255,255,.3);padding:46px 40px;text-align:center;border-radius:3px}
+  .voices .qm{font-family:var(--latin);font-style:italic;font-size:40px;color:var(--ember);line-height:.6}
+  .voices p{font-family:var(--serif);font-size:clamp(17px,2.2vw,22px);color:var(--ink);margin-top:14px}
+  .voices small{display:block;margin-top:14px;color:var(--ink-soft);font-size:13px;letter-spacing:.04em}
+
+  /* developer */
+  .dev{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+  .dev .ava{width:128px;height:128px;border-radius:50%;border:1px solid var(--line);background:var(--cream-2);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:800;font-size:40px;color:var(--ink);position:relative}
+  .dev .ava .flame{position:absolute;top:8px;right:18px;width:22px;height:26px}
+  .dev .pq{font-family:var(--serif);font-size:clamp(21px,2.9vw,32px);line-height:1.6;color:var(--ink)}
+  .dev .pq .em{color:var(--ember)}
+  .dev .meta{margin-top:20px;font-size:13.5px;letter-spacing:.04em;color:var(--ink-soft)}
+  .dev .meta b{color:var(--ink);font-weight:700}
+  .dev .body{margin-top:18px;font-size:15px;color:var(--ink-80);max-width:560px}
+
+  /* mini cta */
+  .minicta{display:flex;justify-content:center;margin-top:56px}
+  .minicta a{font-family:var(--latin);font-style:italic;font-size:18px;color:var(--ink-soft);display:inline-flex;flex-direction:column;align-items:center;gap:8px;transition:color .25s}
+  .minicta a:hover{color:var(--ember)}
+  .minicta a .ar{font-family:var(--sans);font-size:13px;letter-spacing:.2em}
+
+  /* final */
+  .final{position:relative;padding:132px 0;text-align:center;background:var(--ink);color:var(--cream);margin-top:64px;overflow:hidden}
+  .final .flame-big{width:48px;height:56px;margin:0 auto 28px}
+  .final .flame-big path{stroke:var(--ember-soft)}
+  .final h2{font-family:var(--serif);font-weight:700;font-size:clamp(30px,5.2vw,56px);line-height:1.3}
+  .final h2 em{font-style:normal;color:var(--ember-soft)}
+  .final p{margin:24px auto 42px;max-width:520px;color:#cfc7b9;font-size:16px}
+  .final .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .final .btn.ghost{color:var(--cream);border-color:rgba(255,255,255,.4)}
+  .final .btn.ghost:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+
+  /* footer */
+  footer{background:#1a1816;color:#cfc7b9;padding:60px 0 34px}
+  footer .frow{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
+  footer .logo .mark{color:var(--cream)}
+  footer .logo .sub{color:#8f8576}
+  footer .fnav{display:flex;gap:28px;flex-wrap:wrap;font-size:13.5px}
+  footer .fnav a{color:#cfc7b9;transition:color .2s}
+  footer .fnav a:hover{color:var(--ember-soft)}
+  footer .fbot{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#8f8576;letter-spacing:.04em}
+  .draftnote{margin-top:14px;font-size:11.5px;color:#6f675b}
+
+  /* reveal */
+  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+  .flame path{fill:none;stroke:var(--ember);stroke-width:2.4;stroke-linecap:round;transform-origin:center bottom}
+  .flame.ink path{stroke:var(--ink)}
+  .flame .f1{animation:flick 2.6s ease-in-out infinite}
+  .flame .f2{animation:flick 2.2s ease-in-out .3s infinite}
+  .flame .f3{animation:flick 3s ease-in-out .15s infinite}
+  @keyframes flick{0%,100%{transform:scaleY(1) translateX(0)}50%{transform:scaleY(1.08) translateX(.5px)}}
+
+  @media(max-width:860px){
+    nav.links{display:none}
+    .split,.split.offset,.use,.dev{grid-template-columns:1fr;gap:34px}
+    .values{grid-template-columns:1fr}
+    .values .v:not(:last-child){border-right:none}
+    .ba{grid-template-columns:1fr}
+    .ba .from{border-right:none;border-bottom:1px solid rgba(255,255,255,.16)}
+    .ba .to::after{left:50%;top:-26px;transform:translate(-50%,-50%) rotate(90deg)}
+    .twin{grid-template-columns:1fr}
+    .twin .x{border:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px}
+    .dev{text-align:left}
+    .chapter .cmeta{padding-bottom:6px}
+    .block{padding:48px 0 74px}
+    .invert{padding:88px 0}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .js .reveal{opacity:1;transform:none}
+    .hero h1 .line span{transform:none;opacity:1}
+    .hero .lede,.hero .cta,.hero .scrollcue{opacity:1}
+  }
+</style>
+</head>
+<body>
+
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="flamewisp" viewBox="0 0 40 46">
+    <path class="f1" d="M13 44 C8 34,16 30,12 20 C10 15,13 9,16 5"/>
+    <path class="f2" d="M21 44 C16 35,23 31,20 21 C18 16,21 11,24 6"/>
+    <path class="f3" d="M29 44 C25 35,31 31,28 22 C26 17,28 13,30 9"/>
+  </symbol>
+</svg>
+
+<div class="progress" id="progress"></div>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="logo" aria-label="希爆Style ホーム">
+      <span class="mark">希爆<svg class="flame" aria-hidden="true"><use href="#flamewisp"/></svg></span>
+      <span class="sub">style</span>
+    </a>
+    <nav class="links">
+      <a href="#about">希爆Styleとは</a>
+      <a href="#theory">理論</a>
+      <a href="#use">活用場面</a>
+      <a href="#support">研修・サポート</a>
+    </nav>
+    <a href="#contact" class="btn">お問い合わせ</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 序章 / HERO -->
+  <section class="hero">
+    <svg class="hero-watermark flame ink" aria-hidden="true" viewBox="0 0 40 46"><use href="#flamewisp"/></svg>
+    <div class="wrap">
+      <p class="prologue">Prologue — 序章</p>
+      <h1>
+        <span class="line"><span>人は、変われる。</span></span>
+        <span class="line"><span>人は、育つ。</span></span>
+        <span class="line"><span>人は何度でも、<em>再挑戦</em>できる。</span></span>
+      </h1>
+      <p class="lede">「希爆Style（きばくスタイル）」は、人間の無限の可能性を信じ、<b>構造で引き出す</b>——希望の成長OS。単なる学級経営ノウハウではなく、人が動き出す“しくみ”そのものです。</p>
+      <div class="cta">
+        <a href="#about" class="btn ember">希爆Styleを知る <span class="arr">→</span></a>
+        <a href="#contact" class="btn ghost">お問い合わせ</a>
+      </div>
+      <div class="scrollcue"><span class="bar"></span><span>scroll to read</span></div>
+    </div>
+  </section>
+
+  <!-- 第一章 共感 -->
+  <div class="chapter">
+    <div class="wrap reveal">
+      <div class="cnum">01</div>
+      <div class="cmeta"><div class="ckick">Chapter One</div><div class="ctitle">いま、教室で</div></div>
+    </div>
+  </div>
+  <section class="block" id="problem">
+    <div class="wrap">
+      <div class="split offset">
+        <div class="reveal">
+          <h2 class="head">その教室は、なぜ<br>静かに止まっていくのか。</h2>
+          <div class="tags mt40">
+            <span class="tag">40人学級</span><span class="tag">認知特性の多様化</span><span class="tag">感覚過敏・衝動性</span>
+            <span class="tag">自己肯定感の低下</span><span class="tag">所属の不安</span><span class="tag">教師の疲弊</span>
+          </div>
+        </div>
+        <div class="reveal d1">
+          <p class="lead dropcap">40人学級。ひとりひとり違う認知特性。感覚過敏、衝動性、自己肯定感の揺らぎ、所属の不安——。「統制」で抑えようとするほど、先生のエネルギーは少数のトラブル対応に吸い込まれ、学級全体の成長は止まっていきます。誰も、悪くない。足りないのは努力でも才能でもなく、<b>「人が動き出す構造」</b>です。</p>
+        </div>
+      </div>
+      <div class="pull center mt56 reveal"><span class="qm">“</span> 問題は“人”ではない。<br>足りないのは、<span class="em">人が動き出す構造</span>だ。 <span class="qm">”</span></div>
+    </div>
+  </section>
+
+  <!-- 第二章 転換（反転） -->
+  <section class="invert" id="shift">
+    <div class="cnum2">Chapter Two — 視点の転換</div>
+    <div class="wrap">
+      <p class="big reveal">
+        <span class="small">必要なのは、もっと強い「統制」ではない。</span>
+        いま教室に必要なのは、<br><em><span class="u">「自走する集団OS」</span></em>だ。
+      </p>
+      <div class="ba reveal d1">
+        <div class="from">
+          <h4>統制</h4>
+          <p>教師がひとりで回す。注意で抑える。エネルギーは少数に集中し、やがて限界が来て、学級全体の成長が止まる。</p>
+        </div>
+        <div class="to">
+          <h4>循環</h4>
+          <p>構造と文化で回る。挑戦と承認が連鎖する。教師が抱え込まなくても、子どもたちが自ら育ち続ける。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第三章 希爆Styleとは -->
+  <div class="chapter">
+    <div class="wrap reveal">
+      <div class="cnum">03</div>
+      <div class="cmeta"><div class="ckick">Chapter Three</div><div class="ctitle">希爆Styleとは</div></div>
+    </div>
+  </div>
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="pull center reveal"><span class="qm">“</span> 人間の無限の可能性を、<span class="em">構造</span>で引き出す。<br>——希望の成長OS。 <span class="qm">”</span></div>
+      <div class="values mt56 reveal d1">
+        <div class="v"><span class="vn">i. 挑戦</span><h3>挑戦</h3><p>失敗を恐れず、一歩を踏み出す勇気。動き出した瞬間から、成長は始まる。</p></div>
+        <div class="v"><span class="vn">ii. 承認</span><h3>承認</h3><p>存在・努力・成長を認め合う文化。安心が、次の挑戦の土台になる。</p></div>
+        <div class="v"><span class="vn">iii. 再挑戦</span><h3>再挑戦</h3><p>失敗しても、何度でも立ち上がれるという確信。ここから希望が生まれる。</p></div>
+      </div>
+      <p class="lead mt40 reveal">この3つが循環しはじめると、人は驚くほど成長しはじめます。</p>
+      <div class="minicta reveal"><a href="#theory"><span>では、なぜ人は変わるのか</span><span class="ar">↓ READ ON</span></a></div>
+    </div>
+  </section>
+
+  <!-- 第四章 理論 -->
+  <div class="chapter" style="background:var(--cream-2)">
+    <div class="wrap reveal">
+      <div class="cnum">04</div>
+      <div class="cmeta"><div class="ckick">Chapter Four</div><div class="ctitle">独自理論 — OSと構造</div></div>
+    </div>
+  </div>
+  <section class="block" id="theory" style="background:var(--cream-2);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="split">
+        <div class="reveal">
+          <h2 class="head">「能力」ではなく、<br><em>「状態（OS）」</em>を見る。</h2>
+          <p class="lead mt24 dropcap">同じ人でも、希望があるとき・意味を感じているときは動けます。比較・不信・失敗への恐れが強まると、動けなくなる。問題は“その人”ではなく、いまどんな<b>OS（状態）</b>が起動しているか。希爆Styleは、その状態を動かす「構造」を設計します。</p>
+        </div>
+        <div class="reveal d1">
+          <div class="iceberg">
+            <div class="row top"><div class="rl">visible — 見えているもの</div><div class="items"><span>行動</span><span>結果</span><span>態度</span></div></div>
+            <div class="row deep"><div class="rl">beneath — その奥にある“本質”</div><div class="items"><span>状態</span><span>感情</span><span>前提・レンズ</span><span>信念</span><span>関係性</span></div></div>
+          </div>
+          <div class="twin">
+            <div class="t"><div class="tt">diagnose — 診断</div><h4>Human OS</h4><p>いまどんな状態か。なぜそうなっているかを“見える化”する。</p></div>
+            <div class="x">×</div>
+            <div class="t"><div class="tt">prescribe — 処方</div><h4>希爆Style</h4><p>状態を動かす変容の“構造（手順）”を設計する。</p></div>
+          </div>
+          <p class="lead mt24" style="font-size:15px">診断と処方がそろってこそ、人は変わる。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第五章 変容 -->
+  <div class="chapter">
+    <div class="wrap reveal">
+      <div class="cnum">05</div>
+      <div class="cmeta"><div class="ckick">Chapter Five</div><div class="ctitle">変容のしくみ</div></div>
+    </div>
+  </div>
+  <section class="block" id="how">
+    <div class="wrap">
+      <h2 class="head reveal">人は、こうして変わる。</h2>
+      <div class="steps mt56 reveal d1">
+        <div class="step"><span class="sn">01</span><h4>OS（状態）</h4></div>
+        <div class="step"><span class="sn">02</span><h4>構造</h4></div>
+        <div class="step"><span class="sn">03</span><h4>行動</h4></div>
+        <div class="step"><span class="sn">04</span><h4>体験</h4></div>
+        <div class="step"><span class="sn">05</span><h4>振り返り</h4></div>
+        <div class="step"><span class="sn">06</span><h4>確信</h4></div>
+        <div class="step accent"><span class="sn">07</span><h4>OS更新</h4></div>
+        <div class="step accent"><span class="sn">08</span><h4>文化へ</h4></div>
+      </div>
+      <p class="lead mt40 reveal">変化は一気には起きません。体験の積み重ねが、新しいOSをインストールする。そして<b>一人の変容が、やがて学級の「文化」になる</b>。希爆Styleには、これを支える<b>7つの成長サイクル</b>が組み込まれています。</p>
+    </div>
+  </section>
+
+  <!-- 第六章 活用 -->
+  <div class="chapter" style="background:var(--cream-2)">
+    <div class="wrap reveal">
+      <div class="cnum">06</div>
+      <div class="cmeta"><div class="ckick">Chapter Six</div><div class="ctitle">活用場面</div></div>
+    </div>
+  </div>
+  <section class="block" id="use" style="background:var(--cream-2);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <h2 class="head reveal">教室から、組織まで。</h2>
+      <div class="use mt56 reveal d1">
+        <div class="ug">
+          <div class="ut"><span class="dot"></span>教育現場で</div>
+          <div class="tags"><span class="tag">学級経営</span><span class="tag">授業づくり</span><span class="tag">探究学習</span><span class="tag">道徳・特別活動</span><span class="tag">キャリア教育</span><span class="tag">いじめ予防</span><span class="tag">リーダー育成</span></div>
+        </div>
+        <div class="ug alt">
+          <div class="ut"><span class="dot"></span>教育の、その先へ</div>
+          <div class="tags"><span class="tag">企業研修</span><span class="tag">人材育成</span><span class="tag">組織開発</span><span class="tag">子育て</span><span class="tag">地域づくり</span></div>
+        </div>
+      </div>
+      <p class="lead mt40 reveal">人を育てる、すべての場面に。希爆Styleは“人が動き出す構造”そのものだから、教育の枠を超えて応用できます。</p>
+    </div>
+  </section>
+
+  <!-- 声（プレースホルダ） -->
+  <section class="block" id="voices" style="padding-top:90px">
+    <div class="wrap">
+      <div class="voices reveal">
+        <div class="qm">“</div>
+        <p>導入された先生方の声を、順次このページに掲載していきます。</p>
+        <small>現場で起きた変化の事例を準備中です</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- 終章 開発者 -->
+  <div class="chapter">
+    <div class="wrap reveal">
+      <div class="cnum">07</div>
+      <div class="cmeta"><div class="ckick">Epilogue — 終章</div><div class="ctitle">つくった人</div></div>
+    </div>
+  </div>
+  <section class="block" id="developer">
+    <div class="wrap">
+      <div class="dev reveal d1">
+        <div class="ava">希<svg class="flame" aria-hidden="true"><use href="#flamewisp"/></svg></div>
+        <div>
+          <p class="pq">「人は変われない<span class="em">のではない</span>。<br>ただ、変わるための“構造”が、<br>無かっただけだ。」</p>
+          <p class="meta"><b>さのっち（佐野 伸之）</b>　／　現役小学校教師・希爆Style開発者</p>
+          <p class="body">40人学級の現実のただ中で、ひとりの教師として子どもたちと向き合いながら、「誰がやっても、人が育ち、希望が循環する」教育のOSを設計してきた。希爆Styleは、理屈ではなく“現場”から生まれた実践理論です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- climax CTA -->
+  <section class="final" id="contact">
+    <svg class="flame-big flame" aria-hidden="true"><use href="#flamewisp"/></svg>
+    <div class="wrap">
+      <h2 class="reveal">希爆Styleを、<br><em>あなたの現場</em>へ。</h2>
+      <p class="reveal d1">講演・研修・導入のご相談を承っています。<br>「うちのクラスでも？」——その一歩を、まずはお聞かせください。</p>
+      <div class="cta reveal d2">
+        <a href="#contact" class="btn ember">お問い合わせ <span class="arr">→</span></a>
+        <a href="#support" class="btn ghost">研修・サポートを見る</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="support">
+  <div class="wrap">
+    <div class="frow">
+      <div>
+        <a href="#top" class="logo" aria-label="希爆Style">
+          <span class="mark">希爆<svg class="flame" aria-hidden="true"><use href="#flamewisp"/></svg></span>
+          <span class="sub">style</span>
+        </a>
+        <p style="margin-top:16px;font-size:13px;color:#8f8576;max-width:300px;line-height:1.8">人間の無限の可能性を信じ、構造で引き出す——希望の成長OS。</p>
+      </div>
+      <nav class="fnav">
+        <a href="#about">希爆Styleとは</a>
+        <a href="#theory">理論</a>
+        <a href="#use">活用場面</a>
+        <a href="#support">研修・サポート</a>
+        <a href="#contact">お問い合わせ</a>
+        <a href="https://x.com/Style940533" target="_blank" rel="noopener">X (旧Twitter)</a>
+      </nav>
+    </div>
+    <div class="fbot">
+      <span>© 2026 希爆Style. All rights reserved.</span>
+      <span>人は変われる。人は育つ。人は何度でも再挑戦できる。</span>
+    </div>
+    <p class="draftnote">※ 本ページは構成・デザインの叩き台（ドラフト）です。掲載文言・実績・写真等は今後の打ち合わせで確定します。</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    // reveal
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+    // scroll progress + subtle hero parallax
+    var bar = document.getElementById('progress');
+    var wm = document.querySelector('.hero-watermark');
+    var ticking = false;
+    function onScroll(){
+      if(ticking) return; ticking = true;
+      requestAnimationFrame(function(){
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        var p = max > 0 ? (h.scrollTop || window.pageYOffset) / max : 0;
+        bar.style.width = (p*100).toFixed(2) + '%';
+        if(wm){ wm.style.transform = 'translateY(' + ((window.pageYOffset||0) * 0.08) + 'px)'; }
+        ticking = false;
+      });
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
+</script>
+</body>
+</html>
