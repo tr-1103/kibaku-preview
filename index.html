@@ -4,358 +4,200 @@
 <script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>希爆Style ｜ 人は、変われる。｜ 希望の成長OS</title>
-<meta name="description" content="希爆Style（きばくスタイル）は、人間の無限の可能性を信じ、構造で引き出す“希望の成長OS”。人を能力ではなく状態（OS）で見る、現役の教育者が開発した教育・人材育成メソッド。思いを、構造に。">
+<title>希爆塾 ｜ 半年で、自走・自立・リフレクションを育てるオンライン塾</title>
+<meta name="description" content="希爆塾（きばくじゅく）は、子どもの自走・自立・リフレクションを半年で育てるオンライン塾。小学生・中学生対象／完全オンライン／6ヶ月制。月額¥6,000〜。運営：ムーンブラスト希爆。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --washi:#F7F2E7;
-    --washi-2:#F1E9D9;
-    --washi-3:#EBE1CD;
-    --sumi:#1B1714;
-    --sumi-bg:#15110D;
-    --ink-80:#3a342d;
-    --ink-soft:#6a6052;
-    --line:#E0D6C2;
-    --gold:#9c7a2e;
-    --gold-deep:#7c5f22;
-    --gold-lt:#d8b35e;
-    --serif:'Shippori Mincho B1', serif;
-    --latin:'Cormorant Garamond', serif;
-    --sans:'Zen Kaku Gothic New', sans-serif;
-    --measure:1140px;
-    --gold-grad:linear-gradient(104deg,#7c5f22 0%,#b18a36 26%,#f0d488 50%,#b9912f 70%,#7c5f22 100%);
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--sans);background:var(--washi);color:var(--sumi);line-height:1.9;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
-  body::before{
-    content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opacity:.05;mix-blend-mode:multiply;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-  ::selection{background:var(--gold);color:var(--washi)}
-  a{color:inherit;text-decoration:none}
-  img{display:block;max-width:100%}
-  .wrap{max-width:var(--measure);margin:0 auto;padding:0 36px}
-  .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-
-  /* progress */
-  .progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold-grad);z-index:100;transition:width .08s linear}
-
-  /* header */
-  header{position:sticky;top:0;z-index:70;background:rgba(247,242,231,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{max-width:var(--measure);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .logo-h{display:flex;align-items:center;height:46px}
-  .logo-h img{height:46px;width:auto}
-  nav.links{display:flex;align-items:center;gap:30px}
-  nav.links a{font-size:13.5px;letter-spacing:.06em;color:var(--ink-80);position:relative;padding:4px 0;transition:color .25s}
-  nav.links a::after{content:"";position:absolute;left:0;bottom:-1px;width:0;height:1px;background:var(--gold);transition:width .3s ease}
-  nav.links a:hover{color:var(--sumi)}
-  nav.links a:hover::after{width:100%}
-  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--sans);font-weight:700;font-size:13.5px;letter-spacing:.06em;padding:11px 22px;border-radius:2px;border:1px solid var(--sumi);background:var(--sumi);color:var(--washi);transition:transform .2s ease,background .25s,color .25s,border-color .25s;cursor:pointer;white-space:nowrap}
-  .btn:hover{transform:translateY(-2px)}
-  .btn:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-  .btn .arr{transition:transform .25s}
-  .btn:hover .arr{transform:translateX(3px)}
-  .btn.gold{border:1px solid transparent;background:var(--gold-grad);color:#241b08;font-weight:700;position:relative}
-  .btn.gold:hover{filter:brightness(1.06)}
-  .btn.ghost{background:transparent;color:var(--sumi)}
-  .btn.ghost:hover{background:var(--sumi);color:var(--washi)}
-  .nav .btn{padding:10px 18px}
-
-  /* hero */
-  .hero{position:relative;text-align:center;padding:78px 0 92px;overflow:hidden}
-  .hero::before{content:"";position:absolute;top:-12%;right:-8%;width:60vw;height:60vw;max-width:760px;max-height:760px;pointer-events:none;z-index:0;
-    background:radial-gradient(circle at 60% 40%, rgba(216,179,94,.30), rgba(216,179,94,.08) 38%, transparent 64%)}
-  .hero .wrap{position:relative;z-index:2}
-  .hero .eyebrow{font-family:var(--latin);font-style:italic;font-size:18px;letter-spacing:.12em;margin-bottom:26px}
-  .hero .logo-hero{width:min(360px,72vw);margin:0 auto 40px;opacity:0;animation:pop 1s cubic-bezier(.2,.8,.2,1) .05s forwards}
-  @keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
-  .hero h1{font-family:var(--serif);font-weight:700;color:var(--sumi);font-size:clamp(33px,5.7vw,64px);line-height:1.26;letter-spacing:.01em;margin-bottom:32px}
-  .hero h1 .line{display:block;overflow:hidden}
-  .hero h1 .line span{display:inline-block;transform:translateY(110%);opacity:0;animation:rise .95s cubic-bezier(.2,.7,.2,1) forwards}
-  .hero h1 .line:nth-child(1) span{animation-delay:.30s}
-  .hero h1 .line:nth-child(2) span{animation-delay:.44s}
-  .hero h1 .line:nth-child(3) span{animation-delay:.58s}
-  @keyframes rise{to{transform:translateY(0);opacity:1}}
-  .hero h1 em{font-style:normal;white-space:nowrap}
-  .hero .lede{max-width:600px;margin:0 auto 18px;font-size:clamp(15.5px,1.8vw,18px);color:var(--ink-80);opacity:0;animation:fade 1s ease .82s forwards}
-  .hero .lede b{font-weight:700;color:var(--sumi)}
-  .hero .tagline{font-family:var(--serif);font-weight:600;font-size:clamp(16px,2vw,21px);letter-spacing:.14em;margin-bottom:40px;opacity:0;animation:fade 1s ease .92s forwards}
-  @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-  .hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fade 1s ease 1.02s forwards}
-  .rule{height:2px;width:100%;background:linear-gradient(90deg,transparent,var(--gold) 18%,var(--gold-lt) 50%,var(--gold) 82%,transparent);opacity:.85}
-  .rule.short{width:78px;margin:0 auto}
-
-  /* chapter divider */
-  .chapter{padding:72px 0 0}
-  .chapter .wrap{display:flex;align-items:flex-end;gap:24px}
-  .chapter .cnum{font-family:var(--latin);font-style:italic;font-weight:600;font-size:clamp(54px,9vw,104px);line-height:1;padding:.04em .04em 0 0;letter-spacing:-.02em}
-  .chapter .cmeta{padding-bottom:8px;flex:1;border-bottom:1px solid var(--line)}
-  .chapter .ckick{font-family:var(--latin);font-style:italic;font-size:17px;color:var(--ink-soft);letter-spacing:.04em}
-  .chapter .ctitle{font-family:var(--serif);font-weight:700;font-size:clamp(15px,2vw,18px);letter-spacing:.14em;margin-top:2px}
-
-  .block{padding:60px 0 100px}
-  h2.head{font-family:var(--serif);font-weight:700;color:var(--sumi);font-size:clamp(28px,4.4vw,46px);line-height:1.32;letter-spacing:.01em}
-  .lead{font-size:clamp(15.5px,1.7vw,17.5px);color:var(--ink-80);max-width:660px}
-  .lead b{color:var(--sumi);font-weight:700}
-  .mt16{margin-top:16px}.mt24{margin-top:24px}.mt40{margin-top:40px}.mt56{margin-top:56px}
-  .split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
-  .split.offset{grid-template-columns:.92fr 1.08fr}
-
-  .dropcap::first-letter{font-family:var(--serif);font-weight:700;float:left;font-size:4.4em;line-height:.78;padding:.06em .14em 0 0;
-    background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-
-  .pull{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3.4vw,38px);line-height:1.55;color:var(--sumi);letter-spacing:.01em;text-align:center;max-width:880px;margin:0 auto;position:relative}
-  .pull .qm{font-family:var(--latin);font-style:italic;font-size:1.3em;line-height:0;vertical-align:-.1em}
-
-  .tags{display:flex;flex-wrap:wrap;gap:10px}
-  .tag{font-size:13px;letter-spacing:.04em;color:var(--ink-80);border:1px solid var(--line);border-radius:100px;padding:7px 16px;background:rgba(255,255,255,.4)}
-
-  /* inverted dramatic */
-  .invert{background:var(--sumi-bg);color:var(--washi);padding:122px 0;position:relative;overflow:hidden;margin-top:64px}
-  .invert::before{content:"";position:absolute;top:-20%;left:-10%;width:50vw;height:50vw;max-width:620px;max-height:620px;pointer-events:none;
-    background:radial-gradient(circle, rgba(216,179,94,.22), rgba(216,179,94,.05) 42%, transparent 66%)}
-  .invert .wrap{position:relative;z-index:2}
-  .invert .cnum2{font-family:var(--latin);font-style:italic;font-size:15px;color:#b3a684;letter-spacing:.2em;margin-bottom:24px}
-  .invert .big{font-family:var(--serif);font-weight:700;font-size:clamp(30px,5.4vw,60px);line-height:1.28;letter-spacing:.005em}
-  .invert .big .small{display:block;font-size:.55em;color:#b3a684;font-weight:500;margin-bottom:.45em}
-  .invert .big em{font-style:normal;background:linear-gradient(104deg,#caa24f,#f3da8e,#caa24f);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .ba{display:grid;grid-template-columns:1fr 1fr;margin-top:74px;border:1px solid rgba(216,179,94,.28);position:relative}
-  .ba > div{padding:40px 38px}
-  .ba .from{border-right:1px solid rgba(216,179,94,.28)}
-  .ba h4{font-family:var(--serif);font-size:22px;margin-bottom:8px;letter-spacing:.05em}
-  .ba .from h4{color:#b3a684}
-  .ba .to h4{background:linear-gradient(104deg,#caa24f,#f3da8e,#caa24f);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .ba p{font-size:14.5px;color:#d8cfbd;line-height:1.85}
-  .ba::after{content:"→";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:var(--gold-grad);color:#241b08;border-radius:50%;font-size:20px;z-index:3;font-weight:700;box-shadow:0 0 0 6px var(--sumi-bg)}
-
-  /* values */
-  .values{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
-  .values .v{padding:42px 30px 38px;border-bottom:1px solid var(--line)}
-  .values .v:not(:last-child){border-right:1px solid var(--line)}
-  .values .v .vn{font-family:var(--latin);font-style:italic;font-size:16px;letter-spacing:.08em}
-  .values .v h3{font-family:var(--serif);font-size:34px;font-weight:700;margin:10px 0 12px;letter-spacing:.06em}
-  .values .v p{font-size:14.5px;color:var(--ink-80)}
-
-  /* iceberg + twin */
-  .iceberg{border:1px solid var(--line);background:rgba(255,255,255,.45)}
-  .iceberg .row{padding:30px 34px}
-  .iceberg .row.top{border-bottom:1px dashed var(--line)}
-  .iceberg .row .rl{font-family:var(--latin);font-style:italic;font-size:15px;letter-spacing:.06em;margin-bottom:12px}
-  .iceberg .row.top .rl{color:var(--ink-soft)}
-  .iceberg .row.deep{background:linear-gradient(180deg,rgba(156,122,46,.06),rgba(156,122,46,.12))}
-  .iceberg .row.deep .rl{color:var(--gold-deep)}
-  .iceberg .row .items{display:flex;flex-wrap:wrap;gap:10px 22px;font-family:var(--serif);font-size:clamp(17px,2vw,21px)}
-  .iceberg .row.top .items{color:var(--ink-soft)}
-  .iceberg .row.deep .items{color:var(--sumi)}
-  .twin{display:grid;grid-template-columns:1fr auto 1fr;margin-top:36px;border:1px solid var(--line)}
-  .twin .t{padding:32px 30px}
-  .twin .t .tt{font-family:var(--latin);font-style:italic;font-size:15px;color:var(--gold-deep);margin-bottom:8px}
-  .twin .t h4{font-family:var(--serif);font-size:21px;font-weight:700;margin-bottom:8px}
-  .twin .t p{font-size:14px;color:var(--ink-80)}
-  .twin .x{display:flex;align-items:center;justify-content:center;padding:0 8px;border-left:1px solid var(--line);border-right:1px solid var(--line);font-family:var(--serif);font-size:26px;color:var(--gold);background:rgba(255,255,255,.45)}
-
-  /* steps */
-  .steps{display:flex;flex-wrap:wrap}
-  .steps .step{flex:1 1 auto;min-width:130px;padding:26px 20px;border:1px solid var(--line);margin:-1px 0 0 -1px;background:rgba(255,255,255,.4)}
-  .steps .step .sn{font-family:var(--latin);font-style:italic;font-size:15px;color:var(--gold-deep);letter-spacing:.05em}
-  .steps .step h4{font-family:var(--serif);font-size:20px;font-weight:700;margin-top:8px;letter-spacing:.04em}
-  .steps .step.accent{background:var(--sumi)}
-  .steps .step.accent h4{color:var(--washi)}
-  .steps .step.accent .sn{color:var(--gold-lt)}
-
-  /* services */
-  .svc{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-  .svc .s{padding:32px 32px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.32);transition:background .3s}
-  .svc .s:hover{background:rgba(255,255,255,.7)}
-  .svc .s .sno{font-family:var(--latin);font-style:italic;font-size:17px;letter-spacing:.06em}
-  .svc .s h4{font-family:var(--serif);font-size:21px;font-weight:700;margin:6px 0 10px;line-height:1.45}
-  .svc .s p{font-size:14px;color:var(--ink-80);line-height:1.8}
-
-  /* consult themes */
-  .consult{background:var(--sumi-bg);color:var(--washi);padding:120px 0;text-align:center;position:relative;overflow:hidden;margin-top:64px}
-  .consult::before{content:"";position:absolute;bottom:-24%;right:-12%;width:54vw;height:54vw;max-width:640px;max-height:640px;pointer-events:none;
-    background:radial-gradient(circle, rgba(216,179,94,.20), rgba(216,179,94,.05) 44%, transparent 66%)}
-  .consult .wrap{position:relative;z-index:2}
-  .consult .lbl{font-family:var(--latin);font-style:italic;font-size:16px;letter-spacing:.16em;color:#b3a684;margin-bottom:18px}
-  .consult h2{font-family:var(--serif);font-weight:700;font-size:clamp(28px,4.6vw,46px);line-height:1.4}
-  .consult h2 em{font-style:normal;background:linear-gradient(104deg,#caa24f,#f3da8e,#caa24f);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .consult p.sub{margin:22px auto 38px;max-width:620px;color:#d8cfbd;font-size:16px}
-  .themes{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:820px;margin:0 auto 46px}
-  .themes span{font-size:13.5px;color:#e7ddca;border:1px solid rgba(216,179,94,.4);border-radius:100px;padding:9px 18px;background:rgba(216,179,94,.05)}
-  .consult .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .consult .btn.ghost{color:var(--washi);border-color:rgba(216,179,94,.5)}
-  .consult .btn.ghost:hover{background:var(--gold-grad);color:#241b08;border-color:transparent}
-
-  /* developer */
-  .dev{display:grid;grid-template-columns:1fr;gap:0;text-align:center;max-width:840px;margin:0 auto}
-  .dev .pq{font-family:var(--serif);font-size:clamp(22px,3.2vw,34px);line-height:1.62;color:var(--sumi)}
-  .dev .id{font-family:var(--latin);font-style:italic;font-size:16px;color:var(--gold-deep);margin-top:30px;letter-spacing:.04em}
-  .dev .name{font-family:var(--serif);font-size:26px;font-weight:700;letter-spacing:.18em;margin-top:6px}
-  .dev .role{font-size:13px;color:var(--ink-soft);letter-spacing:.06em;margin-top:6px}
-  .dev .body{margin:26px auto 0;font-size:15px;color:var(--ink-80);max-width:600px}
-
-  .minicta{display:flex;justify-content:center;margin-top:56px}
-  .minicta a{font-family:var(--latin);font-style:italic;font-size:18px;color:var(--ink-soft);display:inline-flex;flex-direction:column;align-items:center;gap:8px;transition:color .25s}
-  .minicta a:hover{color:var(--gold-deep)}
-  .minicta a .ar{font-family:var(--sans);font-size:13px;letter-spacing:.2em}
-
-  /* footer */
-  footer{background:#141009;color:#c8bca4;padding:64px 0 34px}
-  footer .frow{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
-  footer .logo-f img{height:62px;width:auto}
-  footer .tag{margin-top:16px;font-size:13px;color:#9a8f78;max-width:300px;line-height:1.8}
-  footer .fnav{display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px}
-  footer .fnav a{color:#c8bca4;transition:color .2s}
-  footer .fnav a:hover{color:var(--gold-lt)}
-  footer .fbot{margin-top:44px;padding-top:22px;border-top:1px solid rgba(216,179,94,.18);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#9a8f78;letter-spacing:.04em}
-  .draftnote{margin-top:14px;font-size:11.5px;color:#7c7058}
-
-  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-  .js .reveal.in{opacity:1;transform:none}
-  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
-
-  @media(max-width:860px){
-    nav.links{display:none}
-    .split,.split.offset{grid-template-columns:1fr;gap:34px}
-    .values,.svc{grid-template-columns:1fr}
-    .values .v:not(:last-child){border-right:none}
-    .ba{grid-template-columns:1fr}
-    .ba .from{border-right:none;border-bottom:1px solid rgba(216,179,94,.28)}
-    .ba::after{transform:translate(-50%,-50%) rotate(90deg)}
-    .twin{grid-template-columns:1fr}
-    .twin .x{border:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px}
-    .block{padding:48px 0 74px}
-    .invert,.consult{padding:88px 0}
-  }
-  @media(prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-    .js .reveal{opacity:1;transform:none}
-    .hero h1 .line span{transform:none;opacity:1}
-    .hero .logo-hero,.hero .lede,.hero .tagline,.hero .cta{opacity:1}
-  }
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <div class="progress" id="progress"></div>
 
-<header>
+<header class="dark">
   <div class="nav">
-    <a href="#top" class="logo-h" aria-label="希爆Style ホーム"><img src="assets/logo_mark.png" alt="希爆Style"></a>
+    <a href="#top" class="logo-h" aria-label="希爆塾 ホーム"><img src="assets/logo_mark_light.png" alt="希爆Style ｜ 希爆塾"></a>
     <nav class="links">
-      <a href="#about">希爆Styleとは</a>
-      <a href="#theory">理論</a>
-      <a href="#services">事業内容</a>
-      <a href="#consult">ご相談</a>
+      <a href="#outline">希爆塾について</a>
+      <a href="#pricing">料金</a>
+      <a href="#philosophy">なぜ伸びるのか</a>
+      <a href="#founder">主催者挨拶</a>
     </nav>
-    <a href="#consult" class="btn">お問い合わせ</a>
+    <a href="contact.html" class="btn">公式LINEで相談・申込</a>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow gold">希望の成長OS ｜ KIBAKU STYLE</p>
-      <img class="logo-hero" src="assets/logo_full.png" alt="希爆Style ロゴ" width="360">
+  <!-- HERO：ロゴ・シネマティック（stickyで固定→スクロールでじっくり再生）＋コピー -->
+  <section class="hero dark">
+    <div class="logo-stage" id="logoStage">
+      <div class="logo-pin">
+        <p class="eyebrow gold">希爆塾 ｜ KIBAKU JUKU ｜ オンライン</p>
+        <canvas class="logo-hero" id="heroLogoCanvas" role="img" aria-label="ムーンブラスト希爆 ｜ 希爆塾"></canvas>
+        <div class="scroll-hint" id="scrollHint">SCROLL<span>↓</span></div>
+      </div>
+    </div>
+    <div class="wrap hero-copy">
       <h1>
-        <span class="line"><span>人は、変われる。</span></span>
-        <span class="line"><span>人は、育つ。</span></span>
-        <span class="line"><span>人は何度でも、<em class="gold">再挑戦</em>できる。</span></span>
+        <span class="line"><span>半年で、</span></span>
+        <span class="line"><span><em class="gold">自走・自立・リフレクション</em>を、</span></span>
+        <span class="line"><span>育てるオンライン塾。</span></span>
       </h1>
-      <p class="lede">「希爆Style（きばくスタイル）」は、人間の無限の可能性を信じ、<b>構造で引き出す</b>——希望の成長OS。</p>
-      <p class="tagline gold">― 思いを、構造に。 ―</p>
-      <div class="cta">
-        <a href="#about" class="btn gold">希爆Styleを知る <span class="arr">→</span></a>
-        <a href="#consult" class="btn ghost">ご相談ください</a>
+      <p class="lede">宿題を教材に、子どもが「自分から動き出す」力を育てる——小学生・中学生のためのオンライン塾です。「能力」ではなく<b>「状態（OS）」</b>を見て、<b>構造</b>で伸ばします。</p>
+      <div class="tags" style="justify-content:center;margin-top:30px">
+        <span class="tag">小学生・中学生</span><span class="tag">完全オンライン</span><span class="tag">6ヶ月（半年）制</span><span class="tag">月額 ¥6,000〜</span>
+      </div>
+      <div class="cta" style="margin-top:34px">
+        <a href="contact.html" class="btn gold">公式LINEで相談・申込 <span class="arr">→</span></a>
+        <a href="#outline" class="btn ghost">希爆塾について見る</a>
       </div>
     </div>
   </section>
 
-  <!-- 第一章 共感 -->
-  <div class="chapter">
+  <!-- ①〜③：ダーク基調＋円相コマ送りを背景に -->
+  <div class="scrub-region" id="scrubRegion">
+    <div class="scrub-bg" aria-hidden="true"><canvas id="scrubCanvas"></canvas><div class="scrub-dim"></div></div>
+
+  <!-- ① 希爆塾について（概要）＝トップ直後に前出し -->
+  <div class="chapter" id="outline">
     <div class="wrap reveal">
       <div class="cnum gold">01</div>
-      <div class="cmeta"><div class="ckick">Chapter One</div><div class="ctitle">いま、教室で</div></div>
+      <div class="cmeta"><div class="ckick">About the Juku</div><div class="ctitle">希爆塾について</div></div>
     </div>
   </div>
-  <section class="block" id="problem">
+  <section class="block">
     <div class="wrap">
-      <div class="split offset">
-        <div class="reveal">
-          <h2 class="head">その教室は、なぜ<br>静かに止まっていくのか。</h2>
-          <div class="tags mt40">
-            <span class="tag">40人学級</span><span class="tag">認知特性の多様化</span><span class="tag">感覚過敏・衝動性</span>
-            <span class="tag">自己肯定感の低下</span><span class="tag">所属の不安</span><span class="tag">教師の疲弊</span>
-          </div>
-        </div>
-        <div class="reveal d1">
-          <p class="lead dropcap">40人学級。ひとりひとり違う認知特性。感覚過敏、衝動性、自己肯定感の揺らぎ、所属の不安——。「統制」で抑えようとするほど、先生のエネルギーは少数のトラブル対応に吸い込まれ、学級全体の成長は止まっていきます。誰も、悪くない。足りないのは努力でも才能でもなく、<b>「人が動き出す構造」</b>です。</p>
-        </div>
+      <h2 class="head reveal depth">半年で、自分で動き出す子に。</h2>
+      <p class="lead mt16 reveal">学校の宿題を教材に、目標設定 → 実践 → リフレクション → フィードバック → 次の挑戦、のサイクルを回します。お子さまの「状態（OS）」に合わせて、自走・自立・振り返る力を育てるオンライン塾です。</p>
+
+      <div class="tags mt40 reveal d1">
+        <span class="tag">小学生・中学生</span><span class="tag">完全オンライン</span><span class="tag">6ヶ月（半年）制</span><span class="tag">宿題・学習習慣に悩む家庭</span><span class="tag">自己肯定感・自走力を育てたい家庭</span>
       </div>
-      <div class="pull mt56 reveal"><span class="qm">“</span> 問題は“人”ではない。<br>足りないのは、<span class="gold">人が動き出す構造</span>だ。 <span class="qm">”</span></div>
+
+      <!-- 学びの流れ（8ステップ・縦タイムライン） -->
+      <h3 class="head mt56 reveal" style="font-size:clamp(20px,3vw,28px)">希爆塾の学びの流れ</h3>
+      <div class="flow mt40 reveal depth">
+        <div class="fstep"><span class="fnum">01</span><div class="ftitle">状態（OS）を見る</div><div class="fdesc">いまのお子さまの状態を、まず見定める。</div></div>
+        <div class="fstep"><span class="fnum">02</span><div class="ftitle">目標の構造化</div><div class="fdesc">大きな目標を、今日の小さな一歩に分解する。</div></div>
+        <div class="fstep"><span class="fnum">03</span><div class="ftitle">実践（宿題）</div><div class="fdesc">学校の宿題を教材に、まず動いてみる。</div></div>
+        <div class="fstep"><span class="fnum">04</span><div class="ftitle">体験</div><div class="fdesc">やってみて、できた・つまずいたを実感する。</div></div>
+        <div class="fstep"><span class="fnum">05</span><div class="ftitle">リフレクション</div><div class="fdesc">何が起きたかを、一緒に振り返る。</div></div>
+        <div class="fstep"><span class="fnum">06</span><div class="ftitle">確信</div><div class="fdesc">「やればできる」という手応えをつかむ。</div></div>
+        <div class="fstep"><span class="fnum">07</span><div class="ftitle">OS更新</div><div class="fdesc">状態（OS）そのものが、書き換わっていく。</div></div>
+        <div class="fstep goal"><span class="fnum">08</span><div class="ftitle">自走の習慣へ</div><div class="fdesc">言われなくても、自分から動き続ける。</div></div>
+      </div>
+
+      <!-- 概要スペック（要確認はプレースホルダー） -->
+      <div class="mt56 reveal depth">
+        <table style="width:100%;border-collapse:collapse;font-size:15px">
+          <tbody>
+            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);width:34%;white-space:nowrap">対象</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">小学生・中学生とそのご家庭</td></tr>
+            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)">形式</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">完全オンライン<span style="color:var(--ink-soft)">（使用ツールは調整中）</span></td></tr>
+            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)">期間</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">6ヶ月（半年）制</td></tr>
+            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)">身につく力</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">自走・自立・リフレクション（振り返る力）</td></tr>
+            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)">指導方針</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">「状態（OS）を見て、構造で引き出す」</td></tr>
+            <tr><th style="text-align:left;padding:14px 12px">開講・曜日・定員</th><td style="padding:14px 12px;color:var(--ink-soft)">現在調整中（決まり次第ご案内します）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt24 reveal" style="font-size:13px;color:var(--ink-soft)">※ 対象学年・開講時期・使用ツール・定員は確定次第このページで更新します。</p>
     </div>
   </section>
 
-  <!-- 第二章 転換（反転・墨×金） -->
-  <section class="invert" id="shift">
+  <!-- ② 料金プラン ＝概要のすぐ後に前出し -->
+  <div class="chapter" id="pricing">
+    <div class="wrap reveal">
+      <div class="cnum gold">02</div>
+      <div class="cmeta"><div class="ckick">Pricing</div><div class="ctitle">料金プラン</div></div>
+    </div>
+  </div>
+  <section class="block">
     <div class="wrap">
-      <p class="cnum2">Chapter Two — 視点の転換</p>
-      <p class="big reveal">
-        <span class="small">必要なのは、もっと強い「統制」ではない。</span>
-        いま教室に必要なのは、<br><em>「自走する集団OS」</em>だ。
-      </p>
-      <div class="ba reveal d1">
-        <div class="from">
-          <h4>統制</h4>
-          <p>教師がひとりで回す。注意で抑える。エネルギーは少数に集中し、やがて限界が来て、学級全体の成長が止まる。</p>
+      <h2 class="head reveal depth">3つのプラン。</h2>
+      <p class="lead mt16 reveal">お子さまの状態（OS）とご家庭の関わり方に合わせて、3段階からお選びいただけます。いずれも<b>半年契約</b>が基本です。</p>
+      <div class="steps plans mt40 reveal depth">
+        <div class="step plan">
+          <p class="sn">Standard</p>
+          <h4>スタンダード</h4>
+          <p class="price"><span class="amount gold">¥6,000</span><span class="per">／月</span></p>
+          <p class="pdesc">基本のコーチングプランです。</p>
         </div>
-        <div class="to">
-          <h4>循環</h4>
-          <p>構造と文化で回る。挑戦と承認が連鎖する。教師が抱え込まなくても、子どもたちが自ら育ち続ける。</p>
+        <div class="step plan accent recommend">
+          <span class="badge">おすすめ</span>
+          <p class="sn">AI Powered</p>
+          <h4>AI活用込み</h4>
+          <p class="price"><span class="amount gold">¥12,000</span><span class="per">／月</span></p>
+          <p class="pdesc">スタンダードに加え、AIを活用した個別最適化サポートが付きます。</p>
         </div>
+        <div class="step plan">
+          <p class="sn">Full Support</p>
+          <h4>保護者面談込み</h4>
+          <p class="price"><span class="amount gold">¥20,000</span><span class="per">／月</span></p>
+          <p class="pdesc">AI活用込みに加え、保護者向けレポート・親子リフレクション・保護者面談が付く手厚いプランです。</p>
+        </div>
+      </div>
+      <p class="mt24 reveal" style="font-size:13.5px;color:var(--ink-soft)">※ 半年契約が基本です。お支払い方法など詳細は公式LINEでご案内します。</p>
+      <div class="minicta reveal mt40">
+        <a href="https://line.me/R/ti/p/@XXXXXXX?ref=juku" class="btn gold">公式LINEで希爆塾に申し込む →</a>
       </div>
     </div>
   </section>
 
-  <!-- 第三章 希爆Styleとは -->
-  <div class="chapter">
+  <!-- ③ なぜ、希爆塾で伸びるのか（理念・希爆Styleの考え方／圧縮版・offerの後ろ） -->
+  <div class="chapter" id="philosophy">
     <div class="wrap reveal">
       <div class="cnum gold">03</div>
-      <div class="cmeta"><div class="ckick">Chapter Three</div><div class="ctitle">希爆Styleとは</div></div>
+      <div class="cmeta"><div class="ckick">Why it works</div><div class="ctitle">なぜ、希爆塾で伸びるのか</div></div>
     </div>
   </div>
-  <section class="block" id="about">
+
+  <!-- 円相ビジュアル（ブランドの核）＋パララックス -->
+  <section class="block" style="padding:8px 0 0">
     <div class="wrap">
-      <div class="pull reveal"><span class="qm">“</span> 人間の無限の可能性を、<span class="gold">構造</span>で引き出す。<br>——希望の成長OS。 <span class="qm">”</span></div>
-      <div class="values mt56 reveal d1">
-        <div class="v"><span class="vn gold">i. 挑戦</span><h3>挑戦</h3><p>失敗を恐れず、一歩を踏み出す勇気。動き出した瞬間から、成長は始まる。</p></div>
-        <div class="v"><span class="vn gold">ii. 承認</span><h3>承認</h3><p>存在・努力・成長を認め合う文化。安心が、次の挑戦の土台になる。</p></div>
-        <div class="v"><span class="vn gold">iii. 再挑戦</span><h3>再挑戦</h3><p>失敗しても、何度でも立ち上がれるという確信。ここから希望が生まれる。</p></div>
+      <div class="split">
+        <div class="reveal depth">
+          <img src="assets/generated/child_study.jpg" data-parallax="0.3" alt="自分から机に向かい、集中して学ぶ子ども。希爆塾が育てる“自走”のイメージ" style="border-radius:2px;border:1px solid var(--line)">
+        </div>
+        <div class="reveal d1" style="display:flex;align-items:center">
+          <p class="pull">問題は、その子じゃない。<br>足りないのは、<span class="gold">自分から動き出す構造</span>だ。</p>
+        </div>
       </div>
-      <p class="lead mt40 reveal">この3つが循環しはじめると、人は驚くほど成長しはじめます。</p>
-      <div class="minicta reveal"><a href="#theory"><span>では、なぜ人は変わるのか</span><span class="ar">↓ READ ON</span></a></div>
     </div>
   </section>
 
-  <!-- 第四章 理論 -->
-  <div class="chapter" style="background:var(--washi-2)">
-    <div class="wrap reveal">
-      <div class="cnum gold">04</div>
-      <div class="cmeta"><div class="ckick">Chapter Four</div><div class="ctitle">独自理論 — OSと構造</div></div>
+  <!-- 視点の転換（統制→循環・ダーク） -->
+  <section class="invert" id="shift">
+    <div class="wrap">
+      <p class="cnum2">視点の転換</p>
+      <p class="big reveal">
+        <span class="small">必要なのは、もっと強い「言い聞かせ」ではない。</span>
+        いま必要なのは、<br><em>子どもが自分から動き出す「自走のOS」</em>だ。
+      </p>
+      <div class="shift-ba reveal d1">
+        <div class="from">
+          <span class="bakick">Before ― これまで</span>
+          <h4>統制</h4>
+          <p>大人が指示して動かす。言われないと動かない。親も本人も疲れ、やがて「どうせ無理」が積み重なっていく。</p>
+        </div>
+        <div class="ba-arrow" aria-hidden="true">→</div>
+        <div class="to">
+          <span class="bakick">After ― これから</span>
+          <h4>循環</h4>
+          <p>構造と習慣で回る。自分で決めて動き出し、できた実感が次の挑戦を生む。親が管理しなくても、子どもが自ら育ち続ける。</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <section class="block" id="theory" style="background:var(--washi-2);border-bottom:1px solid var(--line)">
+  </section>
+
+  <!-- 独自理論（OS×構造・氷山図） -->
+  <section class="block">
     <div class="wrap">
       <div class="split">
-        <div class="reveal">
+        <div class="reveal depth">
           <h2 class="head">「能力」ではなく、<br><span class="gold">「状態（OS）」</span>を見る。</h2>
-          <p class="lead mt24 dropcap">同じ人でも、希望があるとき・意味を感じているときは動けます。比較・不信・失敗への恐れが強まると、動けなくなる。問題は“その人”ではなく、いまどんな<b>OS（状態）</b>が起動しているか。希爆Styleは、その状態を動かす「構造」を設計します。</p>
+          <p class="lead mt24 dropcap">同じ子でも、意味を感じているとき・安心しているときは動けます。比較・不信・失敗への恐れが強まると、動けなくなる。問題は“その子”ではなく、いまどんな<b>OS（状態）</b>が起動しているか。希爆Styleは、その状態を動かす「構造」を設計します。</p>
         </div>
         <div class="reveal d1">
           <div class="iceberg">
@@ -367,110 +209,78 @@
             <div class="x">×</div>
             <div class="t"><div class="tt">prescribe — 処方</div><h4>希爆Style</h4><p>状態を動かす変容の“構造（手順）”を設計する。</p></div>
           </div>
-          <p class="lead mt24" style="font-size:15px">診断と処方がそろってこそ、人は変わる。</p>
+          <p class="lead mt24" style="font-size:15px">診断と処方がそろってこそ、子どもは変わる。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 第五章 変容 -->
-  <div class="chapter">
-    <div class="wrap reveal">
-      <div class="cnum gold">05</div>
-      <div class="cmeta"><div class="ckick">Chapter Five</div><div class="ctitle">変容のしくみ</div></div>
-    </div>
-  </div>
-  <section class="block" id="how">
+  <!-- 希爆Styleが大切にする3つ（values・圧縮） -->
+  <section class="block">
     <div class="wrap">
-      <h2 class="head reveal">人は、こうして変わる。</h2>
-      <div class="steps mt56 reveal d1">
-        <div class="step"><span class="sn">01</span><h4>OS（状態）</h4></div>
-        <div class="step"><span class="sn">02</span><h4>構造</h4></div>
-        <div class="step"><span class="sn">03</span><h4>行動</h4></div>
-        <div class="step"><span class="sn">04</span><h4>体験</h4></div>
-        <div class="step"><span class="sn">05</span><h4>振り返り</h4></div>
-        <div class="step"><span class="sn">06</span><h4>確信</h4></div>
-        <div class="step accent"><span class="sn">07</span><h4>OS更新</h4></div>
-        <div class="step accent"><span class="sn">08</span><h4>文化へ</h4></div>
+      <h3 class="head reveal" style="font-size:clamp(20px,3vw,28px)">希爆Styleが大切にする、3つのこと。</h3>
+      <div class="values mt40 reveal depth d1">
+        <div class="v"><span class="vn gold">i. 挑戦</span><h3>挑戦</h3><p>失敗を恐れず、一歩を踏み出す勇気。動き出した瞬間から、成長は始まる。</p></div>
+        <div class="v"><span class="vn gold">ii. 承認</span><h3>承認</h3><p>存在・努力・成長を認め合う。安心が、次の挑戦の土台になる。</p></div>
+        <div class="v"><span class="vn gold">iii. 再挑戦</span><h3>再挑戦</h3><p>失敗しても、何度でも立ち上がれるという確信。ここから希望が生まれる。</p></div>
       </div>
-      <p class="lead mt40 reveal">変化は一気には起きません。体験の積み重ねが、新しいOSをインストールする。そして<b>一人の変容が、やがて学級の「文化」になる</b>。希爆Styleには、これを支える<b>7つの成長サイクル</b>が組み込まれています。</p>
+      <p class="lead mt24 reveal">この3つが循環しはじめると、子どもは驚くほど伸びはじめます。</p>
     </div>
   </section>
 
-  <!-- 第六章 事業内容 -->
-  <div class="chapter" style="background:var(--washi-2)">
-    <div class="wrap reveal">
-      <div class="cnum gold">06</div>
-      <div class="cmeta"><div class="ckick">Chapter Six</div><div class="ctitle">事業内容</div></div>
-    </div>
-  </div>
-  <section class="block" id="services" style="background:var(--washi-2);border-bottom:1px solid var(--line)">
-    <div class="wrap">
-      <h2 class="head reveal">人を育てる、その現場へ。</h2>
-      <p class="lead mt16 reveal">希爆Styleが、授業・学級・組織それぞれの現場で提供していること。</p>
-      <div class="svc mt40 reveal d1">
-        <div class="s"><span class="sno gold">01</span><h4>主体性を育てる授業づくり</h4><p>子どもが「自分で考え、選び、動き出す」授業を設計・実践。主体性を引き出す授業モデルを研究・発信します。</p></div>
-        <div class="s"><span class="sno gold">02</span><h4>協働的な学びの研究</h4><p>対話・協働・共創が生まれる学びのデザインを研究。一人ひとりのよさが生きる学級・授業づくりを支援します。</p></div>
-        <div class="s"><span class="sno gold">03</span><h4>探究学習・総合学習の設計</h4><p>問いを立て、探究し、社会とつながる学びをデザイン。学校全体で取り組めるプログラムを提供します。</p></div>
-        <div class="s"><span class="sno gold">04</span><h4>AI時代に必要な「考える力」の育成</h4><p>AIに代替されない「思考力・判断力・表現力」を育成。未来を生き抜く力を、教室から育てます。</p></div>
-        <div class="s"><span class="sno gold">05</span><h4>学級経営の構造化</h4><p>学級がまるごと回る「仕組み」と「関係づくり」を構築。どの子も安心して挑戦できる環境をつくります。</p></div>
-        <div class="s"><span class="sno gold">06</span><h4>教師向けの発信・講演・研修</h4><p>全国での講演・研修・ワークショップを実施。教師の挑戦と成長をサポートします。</p></div>
-        <div class="s"><span class="sno gold">07</span><h4>挑戦と再挑戦を大切にした評価づくり</h4><p>結果だけでなく「挑戦のプロセス」を価値づける評価を設計。何度でも立ち上がれる土台をつくります。</p></div>
-        <div class="s"><span class="sno gold">08</span><h4>コミュニティ運営</h4><p>教育に本気で向き合う仲間が集い、学び合う場を運営。日本中・世界中に“希望をつなぐコミュニティ”を広げます。</p></div>
-      </div>
-    </div>
-  </section>
+  </div><!-- /scrub-region（①〜③ここまで） -->
 
-  <!-- 終章 開発者 -->
+  <!-- ④ 主催者挨拶 -->
   <div class="chapter">
     <div class="wrap reveal">
-      <div class="cnum gold">07</div>
-      <div class="cmeta"><div class="ckick">Epilogue — 終章</div><div class="ctitle">つくった人</div></div>
+      <div class="cnum gold">04</div>
+      <div class="cmeta"><div class="ckick">Message</div><div class="ctitle">主催者挨拶</div></div>
     </div>
   </div>
-  <section class="block" id="developer">
+  <section class="section-dark" id="founder">
     <div class="wrap">
       <div class="dev reveal">
+        <!-- 写真：掲載可能な顔写真を佐野さんに確認後に差し替え -->
         <p class="pq">「一人ひとりの無限の可能性を信じ、輝かせる。<br>人が育つことで、社会が変わり、<br>世界はきっと良くなる。<br><span class="gold">その一歩を、あなたと一緒に。</span>」</p>
         <p class="id">A person who proves the infinite possibility of human beings</p>
         <p class="name">佐野 伸之</p>
-        <p class="role">人間の無限の可能性を証明する人 ／ 希爆Style 開発者　NOBUYUKI SANO</p>
-        <p class="body">教育の現場のただ中で、一人の教育者として子どもたちと向き合いながら、「誰がやっても、人が育ち、希望が循環する」教育のOSを設計してきた。希爆Styleは、理屈ではなく“現場”から生まれた実践理論です。</p>
+        <p class="role">希爆Style 開発者 ／ ムーンブラスト希爆 主宰　NOBUYUKI SANO</p>
+        <p class="body">元・小学校教師。教育の現場のただ中で子どもたちと向き合いながら、「誰がやっても、人が育ち、希望が循環する」教育のOSを設計してきました。希爆Styleは、理屈ではなく“現場”から生まれた実践理論です。その実践を、家庭にいる一人でも多くの子どもへ届けるために立ち上げたのが、この「希爆塾」です。</p>
+        <p class="tagline gold mt24" style="text-align:left">HumanOS × 希爆Style</p>
       </div>
     </div>
   </section>
 
-  <!-- 相談・CTA -->
-  <section class="consult" id="consult">
+  <!-- 申込・相談 -->
+  <section class="consult section-dark" id="consult">
     <div class="wrap">
-      <p class="lbl">Let's talk</p>
-      <h2>教育のことも、それ以外も。<br><em>あなたの可能性</em>を、一緒に最大化します。</h2>
-      <p class="sub">教育関係だけでなく、人を育てることや成長に関することなら、なんでもご相談ください。</p>
-      <div class="themes">
-        <span>子育て・家庭教育</span><span>キャリア・人生の方向性</span><span>人間関係・チームづくり</span><span>目標設定・やる気スイッチ</span>
-        <span>メンタル・自己肯定感</span><span>挑戦・再挑戦のサポート</span><span>習慣化・行動設計</span><span>組織・リーダーシップ</span>
-      </div>
+      <p class="lbl">Join us</p>
+      <h2>まずは、<em>公式LINE</em>で。<br>相談も、お申込みも。</h2>
+      <p class="sub">希爆塾のご相談・お申込みは公式LINEにて承っています。<b>対象学年・オンラインの進め方・プランの違いなど、ご質問には公式LINEのAIがすぐお答えします。</b>友だち追加後、チャットでお気軽にどうぞ。</p>
       <div class="cta">
-        <a href="#consult" class="btn gold">お問い合わせ <span class="arr">→</span></a>
-        <a href="#services" class="btn ghost">事業内容を見る</a>
+        <a href="https://line.me/R/ti/p/@XXXXXXX?ref=juku" class="btn gold">公式LINEを友だち追加する <span class="arr">→</span></a>
+        <a href="#pricing" class="btn ghost">料金プランを見る</a>
       </div>
+      <p class="mt40" style="font-size:12.5px;color:#9a8f78">※ メールでのお問い合わせは現在準備中です。</p>
     </div>
   </section>
 
 </main>
 
-<footer>
+<footer class="dark">
   <div class="wrap">
     <div class="frow">
       <div>
-        <a href="#top" class="logo-f" aria-label="希爆Style"><img src="assets/logo_full.png" alt="希爆Style"></a>
-        <p class="tag">人間の無限の可能性を信じ、構造で引き出す——希望の成長OS。<br>― 思いを、構造に。 ―</p>
+        <a href="#top" class="logo-f" aria-label="希爆塾"><img src="assets/logo_mark_light.png" alt="希爆Style ｜ ムーンブラスト希爆"></a>
+        <p class="tag">半年で、自走・自立・リフレクションを育てるオンライン塾。<span class="ft-line">― 思いを、構造に。 ―</span></p>
       </div>
       <nav class="fnav">
-        <a href="#about">希爆Styleとは</a>
-        <a href="#theory">理論</a>
-        <a href="#services">事業内容</a>
-        <a href="#consult">ご相談</a>
+        <a href="#outline">希爆塾について</a>
+        <a href="#pricing">料金</a>
+        <a href="#philosophy">なぜ伸びるのか</a>
+        <a href="#founder">主催者挨拶</a>
+        <a href="contact.html">公式LINEで相談・申込</a>
+        <a href="guide.html">コミュニティのご案内</a>
         <a href="https://www.instagram.com/kibakustyle" target="_blank" rel="noopener">Instagram</a>
         <a href="https://note.com/charm_wren1513" target="_blank" rel="noopener">note</a>
         <a href="https://www.tiktok.com/@kibaku_style" target="_blank" rel="noopener">TikTok</a>
@@ -478,35 +288,13 @@
       </nav>
     </div>
     <div class="fbot">
-      <span>© 2026 希爆Style（KIBAKU STYLE）. All rights reserved.</span>
+      <span>© 2026 ムーンブラスト希爆 ／ 希爆Style. All rights reserved.</span>
       <span>人は変われる。人は育つ。人は何度でも再挑戦できる。</span>
     </div>
     <p class="draftnote">※ 本ページは構成・デザインの叩き台（ドラフト）です。掲載文言・実績・写真等は今後の打ち合わせで確定します。</p>
   </div>
 </footer>
 
-<script>
-  (function(){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
-    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-
-    var bar = document.getElementById('progress');
-    var ticking = false;
-    function onScroll(){
-      if(ticking) return; ticking = true;
-      requestAnimationFrame(function(){
-        var h = document.documentElement;
-        var max = h.scrollHeight - h.clientHeight;
-        var p = max > 0 ? (h.scrollTop || window.pageYOffset) / max : 0;
-        bar.style.width = (p*100).toFixed(2) + '%';
-        ticking = false;
-      });
-    }
-    window.addEventListener('scroll', onScroll, {passive:true});
-    onScroll();
-  })();
-</script>
+<script src="assets/script.js"></script>
 </body>
 </html>
