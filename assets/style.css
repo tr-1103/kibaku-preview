@@ -478,6 +478,17 @@ footer .tag{
   overflow-wrap: break-word;
 }
 
+/* ===== 2026-07-26 追加：学びの流れを2カラム化（左タイムライン／右に3段の転換イメージ） ===== */
+.flow-split{display:grid;grid-template-columns:1fr .72fr;gap:48px;align-items:start;margin-top:40px}
+.flow-split .flow{margin-top:0}
+.flow-img img{width:100%;display:block;border-radius:8px;border:1px solid rgba(216,179,94,.28);
+  box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.flow-img .flow-cap{margin-top:14px;font-size:12.5px;line-height:1.7;color:#b6a988;text-align:center;letter-spacing:.02em}
+@media(max-width:860px){
+  .flow-split{grid-template-columns:1fr;gap:30px}
+  .flow-img{max-width:340px;margin:4px auto 0}
+}
+
 /* ===== 2026-07-25 追加：①「学びの流れ」＝縦タイムライン ===== */
 .flow{position:relative;margin-top:44px}
 /* 中央を貫く金の縦線（ノードの背面） */
