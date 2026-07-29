@@ -348,7 +348,8 @@ footer.dark .fnav a:hover{color:var(--washi)}
 .scrub-region table td{color:#cabfa8!important}
 .scrub-region table th,.scrub-region table td{border-color:rgba(216,179,94,.18)!important}
 .scrub-region table td span{color:#9c8f74!important}
-.scrub-region .minicta a{color:#cabfa8}
+.scrub-region .minicta a:not(.btn){color:#cabfa8}
+.scrub-region .minicta a.btn.gold{color:#241b08}
 .scrub-region p[style*="ink-soft"]{color:#a89c82!important}
 .scrub-region td[style*="ink-soft"]{color:#a89c82!important}
 
