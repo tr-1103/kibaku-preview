@@ -532,3 +532,31 @@ footer .tag{
   .shift-ba{grid-template-columns:1fr;gap:10px}
   .shift-ba .ba-arrow{transform:rotate(90deg);margin:4px auto}
 }
+
+/* ===== 2026-08-16 追加：事業者情報／特商法表記の定義テーブル（company.html・legal.html 共通） ===== */
+.corp{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
+.corp th{
+  width:30%;white-space:nowrap;vertical-align:top;
+  padding:16px 12px;border-bottom:1px solid rgba(216,179,94,.18);
+  color:var(--washi);font-weight:700;letter-spacing:.04em;
+}
+.corp td{
+  padding:16px 12px;border-bottom:1px solid rgba(216,179,94,.18);
+  color:#d8cfba;line-height:1.9;
+}
+.corp tr:last-child th,.corp tr:last-child td{border-bottom:0}
+.corp ol,.corp ul{margin:0;padding-left:1.3em}
+.corp ol li,.corp ul li{margin:0 0 .5em;padding-left:.2em}
+.corp ol li:last-child,.corp ul li:last-child{margin-bottom:0}
+.corp a{color:var(--gold-lt);text-decoration:underline;text-underline-offset:3px}
+.corp .note{display:block;margin-top:6px;font-size:13px;color:#a89c82}
+/* 未確定項目のマーカー（公開前に必ず実データへ差し替える） */
+.corp .tbd{
+  display:inline-block;padding:2px 10px;border-radius:999px;font-size:12.5px;letter-spacing:.06em;
+  color:#f0d79a;background:rgba(216,179,94,.14);border:1px solid rgba(216,179,94,.42);
+}
+@media (max-width:680px){
+  .corp,.corp tbody,.corp tr,.corp th,.corp td{display:block;width:100%}
+  .corp th{border-bottom:0;padding:18px 0 4px;color:var(--gold-lt);font-size:13px;letter-spacing:.1em;white-space:normal}
+  .corp td{padding:0 0 18px;border-bottom:1px solid rgba(216,179,94,.18)}
+}
