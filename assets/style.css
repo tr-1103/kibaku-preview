@@ -573,3 +573,28 @@ footer .tag{
   .corp th{border-bottom:0;padding:18px 0 4px;color:var(--gold-lt);font-size:13px;letter-spacing:.1em;white-space:normal}
   .corp td{padding:0 0 18px;border-bottom:1px solid rgba(216,179,94,.18)}
 }
+
+/* ===== 2026-08-23 追加：狭い画面での折り返しを整える =====
+   指摘＝「携帯で見ると語尾が一文字だけ改行される。すっきり1行・2行に収めたい」。
+   実機測定で原因が3つに分かれた。
+     A. 2026-07-25 に入れた word-break:auto-phrase が限定セレクタだったため、
+        td / li / クラスなしの p / .note / .flow-cap が対象外。結果、
+        「ご案内しま／す。」「そのご家／庭」のように語の途中で割れていた。
+     B. text-wrap:pretty 未使用のため、auto-phrase が効いている要素でも
+        最終行に「こと。」だけ残っていた。
+     C. デスクトップ向けに手で入れた <br> が、狭い画面では短い行を作っていた。
+   実測：index 5箇所→0／legal 7箇所→0（390px）。横スクロールの発生なし。 */
+
+/* A: 文節での折り返しをページ全体へ広げる（非対応ブラウザは従来動作＝害なし） */
+body, body *{ word-break: auto-phrase; }
+
+/* B: 本文＝pretty（最終行の孤立を防ぐ）／見出し＝balance（行の長さを均す）
+      ※h1 はヒーローの .line 構造で手動改行しているため対象外にする */
+p, li, td, th, dd, dt, blockquote, figcaption,
+.note, .pdesc, .lead, .lede, .sub, .flow-cap, .fdesc, .ftitle{ text-wrap: pretty; }
+h2, h3, h4, .head, .big, .pull, .ctitle{ text-wrap: balance; }
+
+/* C: 手動 <br> は狭い画面では畳み、折り返しに任せる */
+@media (max-width:760px){
+  .head br, .big br, .pull br{ display: none; }
+}
