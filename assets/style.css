@@ -455,6 +455,19 @@ footer .tag .ft-line{display:block;margin-top:6px;font-family:var(--latin);font-
   box-shadow:0 6px 16px rgba(0,0,0,.45);
 }
 
+/* ===== 2026-08-22 更新：半年一括が基本。月あたりの金額を併記する行 =====
+   8/21に入れた一括5%OFFの併記行は、割引の取りやめにより撤去し、
+   半年総額の下に「月あたり」を出す形へ置き換えた。 */
+.plans .step .psub{
+  margin-top:16px;padding-top:14px;
+  border-top:1px solid rgba(216,179,94,.28);
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;
+  line-height:1.5;
+}
+.plans .step .psub .plabel{font-size:13px;color:#b6a988;letter-spacing:.04em}
+.plans .step .psub .pamount{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--gold-lt)}
+.plans .step.recommend .psub .pamount{font-size:24px}
+
 /* モバイル：縦積みにして、おすすめは通常位置（せり上げ解除） */
 @media(max-width:760px){
   .plans{grid-template-columns:1fr;gap:26px}
