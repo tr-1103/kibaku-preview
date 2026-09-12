@@ -252,6 +252,34 @@ header.dark .btn{border-color:var(--gold);background:var(--gold-grad);color:#241
 /* 明るい読み物パネル（理念本文・塾概要・料金表を和紙白で見せる） */
 .washi-panel{background:var(--washi);color:var(--sumi)}
 
+/* ===== 2026-09-12 追加：プロモーション動画セクション ===== */
+/* 佐野様がリチカで制作した30秒動画（黒×金）。#outline と #pricing の間に置き、
+   「学びの流れ」を読んだ直後に映像で確かめてもらう。自前ホスト＝外部ロゴを乗せない。 */
+.promo{text-align:center;margin-top:64px}
+.promo::before{content:"";position:absolute;top:-22%;right:-12%;width:52vw;height:52vw;max-width:620px;max-height:620px;pointer-events:none;
+  background:radial-gradient(circle, rgba(216,179,94,.20), rgba(216,179,94,.05) 42%, transparent 66%)}
+.promo .wrap{position:relative;z-index:2}
+.promo .lbl{font-family:var(--latin);font-style:italic;font-size:16px;letter-spacing:.16em;color:#b3a684;margin-bottom:18px}
+.promo h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,4.2vw,42px);line-height:1.4}
+.promo h2 em{font-style:normal;background:linear-gradient(104deg,#caa24f,#f3da8e,#caa24f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.promo p.sub{margin:20px auto 40px;max-width:620px;color:#d8cfbd;font-size:16px}
+
+/* 金の罫でふち取った額装。1px の枠は背景のグラデーションを覗かせて作る */
+.promo-frame{max-width:900px;margin:0 auto;padding:1px;background:var(--gold-grad);
+  box-shadow:0 26px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(216,179,94,.18)}
+.promo-video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+
+.promo .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.promo .btn.ghost{color:var(--washi);border-color:rgba(216,179,94,.5)}
+.promo .btn.ghost:hover{background:var(--gold-grad);color:#241b08;border-color:transparent}
+
+@media(max-width:760px){
+  .promo{padding:76px 0}
+  .promo p.sub{margin-bottom:30px}
+  .promo .cta{margin-top:30px}
+  .promo .cta .btn{width:100%}
+}
+
 /* ダークフッター */
 footer.dark{background:var(--sumi-bg);color:#cabfa8;border-top:1px solid rgba(216,179,94,.28)}
 footer.dark .fnav a,footer.dark .fbot span{color:#cabfa8}
