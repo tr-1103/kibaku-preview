@@ -456,7 +456,8 @@ footer .tag .ft-line{display:block;margin-top:6px;font-family:var(--latin);font-
 
 /* ===== 2026-07-25 追加：料金プランを3枚均等の横並び＋「おすすめ」強調 ===== */
 /* .steps(flex,可変幅) を上書きし、料金は常に3列均等グリッドで揃える（8ステップの学びの流れには影響させない） */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+/* 2026-09-27 更新：3プラン→2プランへ改定に伴い2列均等グリッドへ。.recommend強調は今回未使用（定義は残置、配色・トーン見直し時に再検討） */
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:stretch}
 .plans .step{margin:0;border-radius:6px;display:flex;flex-direction:column;padding:36px 26px 30px;position:relative;min-width:0}
 .plans .step h4{font-size:22px;margin-top:8px}
 .plans .step .price{margin-top:20px;font-family:var(--serif);line-height:1}
