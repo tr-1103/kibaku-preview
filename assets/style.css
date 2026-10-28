@@ -632,3 +632,32 @@ h2, h3, h4, .head, .big, .pull, .ctitle{ text-wrap: balance; }
 @media (max-width:760px){
   .head br, .big br, .pull br{ display: none; }
 }
+
+/* ===== 2026-10-28 追加：新コンセプト（一生使える、自分の育て方。）の新ブロック ===== */
+.hero-copy .hero-sub{margin-top:14px;font-family:var(--serif);font-weight:600;font-size:clamp(16px,2vw,20px)}
+.hero-copy .hero-sub em{display:inline-block}
+/* 目指す姿：日々の場面 → 育てていきたい姿 */
+.scenes{display:grid;gap:0;border-top:1px solid rgba(216,179,94,.22)}
+.scene{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:24px;padding:18px 4px;border-bottom:1px solid rgba(216,179,94,.22)}
+.scene .sc-when{font-family:var(--serif);font-weight:600;color:var(--gold-lt);font-size:15.5px;line-height:1.7}
+.scene .sc-to{color:#e3dac6;font-size:15px;line-height:1.85}
+/* 宿題の例 */
+.example{background:rgba(20,16,12,.55);border:1px solid rgba(216,179,94,.25);border-radius:6px;padding:30px 32px}
+.example .ex-kick{font-family:var(--serif);font-weight:700;font-size:clamp(18px,2.4vw,22px);color:var(--washi)}
+.example .ex-steps{margin:18px 0 0;padding-left:1.4em;display:grid;gap:12px;color:#d8cfba;font-size:15px;line-height:1.85}
+.example .ex-steps b{color:var(--washi)}
+.example .ex-steps li::marker{color:var(--gold-lt);font-family:var(--latin);font-weight:600}
+.example .ex-note{margin-top:18px;padding-top:14px;border-top:1px dashed rgba(216,179,94,.3);color:var(--gold-lt);font-size:14.5px}
+.scrub-region .example + div table th,.scrub-region .example + div table td{color:#e3dac6}
+/* 成長の7視点 */
+.seven{list-style:none;counter-reset:seven;margin:0;padding:0;display:grid;grid-template-columns:1fr;max-width:760px;border-top:1px solid rgba(216,179,94,.22)}
+.seven li{counter-increment:seven;display:flex;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(216,179,94,.22);font-family:var(--serif);font-weight:600;font-size:16.5px;color:var(--washi);line-height:1.7}
+.seven li::before{content:counter(seven);font-family:var(--latin);font-style:italic;font-size:22px;color:var(--gold-lt);min-width:1.2em}
+.scrub-region p[style*="ink-soft"]{color:#b6a988 !important}
+/* 主催者挨拶の写真 */
+.dev .founder-photo{width:min(100%,560px);height:auto;margin:0 auto 34px;border-radius:4px;border:1px solid rgba(216,179,94,.35);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+@media(max-width:760px){
+  .scene{grid-template-columns:1fr;gap:4px;padding:16px 2px}
+  .example{padding:22px 20px}
+  .seven{grid-template-columns:1fr}
+}
