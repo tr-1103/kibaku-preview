@@ -666,3 +666,35 @@ h2, h3, h4, .head, .big, .pull, .ctitle{ text-wrap: balance; }
   .example .ex-steps .ex-b{grid-column:1 / -1;margin-top:8px}
   .seven{grid-template-columns:1fr}
 }
+
+/* ===== 2026-10-29 追加：著書の節 ===== */
+.book{border-top:1px solid rgba(216,179,94,.18)}
+.book-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:start}
+.book .lbl{font-family:var(--latin);font-style:italic;font-size:16px;letter-spacing:.16em;color:#b3a684;margin-bottom:14px}
+.book-badge{display:inline-block;padding:6px 16px;border:1px solid rgba(216,179,94,.55);border-radius:999px;font-size:13.5px;letter-spacing:.06em;color:var(--gold-lt) !important}
+.book-badge b{color:var(--washi) !important;font-size:15px}
+.book-badge span{color:#b6a988;font-size:12.5px}
+.book h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.4vw,34px);line-height:1.5;margin-top:18px}
+.book-kicker{margin-top:20px;font-size:13px;letter-spacing:.2em;color:#b6a988 !important}
+.book h2 span{display:inline-block}
+.book h2{margin-top:4px !important}
+.book-sub{margin-top:4px;font-family:var(--serif);font-weight:600;font-size:clamp(17px,2.2vw,22px);color:#e3dac6 !important}
+.book-lead{margin-top:18px;font-size:15px;line-height:1.95}
+.book-ranks{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.book-ranks li{padding:10px 12px;border:1px solid rgba(216,179,94,.25);border-radius:4px;background:rgba(20,16,12,.5);font-size:13.5px;line-height:1.6;color:#e3dac6}
+.book-ranks li::before{content:"1位";display:inline-block;margin-right:8px;font-family:var(--serif);font-weight:700;color:var(--gold-lt)}
+.book-ranks-cap{margin-top:8px;font-size:12.5px;color:#b6a988 !important}
+.book-review{margin:28px 0 0;padding:20px 22px;border-left:2px solid var(--gold-lt);background:rgba(20,16,12,.55)}
+.book-review .stars{color:var(--gold-lt) !important;letter-spacing:.12em;font-size:15px}
+.book-review .rv-title{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--washi) !important;margin-top:4px}
+.book-review p{font-size:14.5px;line-height:1.9;margin-top:6px}
+.book-review cite{display:block;margin-top:10px;font-style:normal;font-size:12.5px;color:#b6a988}
+.book .cta{margin-top:30px}
+.book-img img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid rgba(216,179,94,.35);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+@media(max-width:860px){
+  .book-grid{grid-template-columns:1fr;gap:36px}
+  .book-img{max-width:420px;margin:0 auto}
+}
+@media(max-width:480px){
+  .book-ranks{grid-template-columns:1fr}
+}
