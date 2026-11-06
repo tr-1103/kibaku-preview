@@ -684,6 +684,7 @@ h2, h3, h4, .head, .big, .pull, .ctitle{ text-wrap: balance; }
 .book-ranks li{padding:10px 12px;border:1px solid rgba(216,179,94,.25);border-radius:4px;background:rgba(20,16,12,.5);font-size:13.5px;line-height:1.6;color:#e3dac6}
 .book-ranks li::before{content:"1位";display:inline-block;margin-right:8px;font-family:var(--serif);font-weight:700;color:var(--gold-lt)}
 .book-ranks-cap{margin-top:8px;font-size:12.5px;color:#b6a988 !important}
+.book-ranks-img{display:block;width:100%;height:auto;margin:24px 0 0;border-radius:4px;border:1px solid rgba(216,179,94,.35)}
 .book-review{margin:28px 0 0;padding:20px 22px;border-left:2px solid var(--gold-lt);background:rgba(20,16,12,.55)}
 .book-review .stars{color:var(--gold-lt) !important;letter-spacing:.12em;font-size:15px}
 .book-review .rv-title{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--washi) !important;margin-top:4px}
