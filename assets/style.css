@@ -699,3 +699,163 @@ h2, h3, h4, .head, .big, .pull, .ctitle{ text-wrap: balance; }
 @media(max-width:480px){
   .book-ranks{grid-template-columns:1fr}
 }
+
+/* =====================================================================
+   2026-11-23 追加：会社HP（7タブ）。index.html／各ページ共通のヘッダー・フッター・問い合わせの帯
+   黒×金。接頭辞 .co-。以前の index 専用クラス（.hero・.logo-stage など）は使わなくなったが残してある。
+   ===================================================================== */
+:root{--co-hh:68px;--co-th:52px}
+body.co{background:var(--sumi-bg);color:#d8cfba}
+.co-in{max-width:880px;margin:0 auto;padding:0 24px}
+
+/* ヘッダー：ロゴ＋社名／お問い合わせ */
+.co-nav{gap:14px}
+.co-brand{display:flex;align-items:center;gap:12px;min-width:0}
+.co-brand img{height:42px;width:auto;flex:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
+.co-brand span{font-family:var(--serif);font-weight:700;font-size:16px;letter-spacing:.06em;color:var(--washi);line-height:1.35}
+@media(max-width:560px){
+  .nav.co-nav{padding:9px 16px}
+  .co-brand{gap:9px}
+  .co-brand img{height:34px}
+  .co-brand span{font-size:12.5px;letter-spacing:.02em}
+  .nav.co-nav .btn{padding:9px 13px;font-size:12.5px}
+}
+
+/* ヒーロー（全タブ共通・高さは内容なり） */
+.co-hero{background:var(--sumi-bg);text-align:center;padding:64px 0 44px;position:relative;overflow:hidden}
+.co-hero::before{content:"";position:absolute;top:-30%;right:-10%;width:60vw;height:60vw;max-width:700px;max-height:700px;pointer-events:none;
+  background:radial-gradient(circle at 60% 40%,rgba(216,179,94,.22),rgba(216,179,94,.06) 40%,transparent 64%)}
+.co-hero .co-in{position:relative;z-index:1}
+.co-hero h1{font-family:var(--serif);font-weight:700;color:var(--washi);font-size:clamp(30px,5.6vw,58px);line-height:1.3;margin-bottom:22px;word-break:auto-phrase}
+.co-hero-gold{font-family:var(--serif);font-weight:700;font-size:clamp(17px,2.6vw,26px);line-height:1.7;letter-spacing:.04em;margin-bottom:20px;word-break:auto-phrase}
+.co-hero-sub{font-size:13.5px;letter-spacing:.14em;color:#a89c82}
+@media(max-width:560px){.co-hero{padding:40px 0 28px}.co-hero h1{margin-bottom:16px}.co-hero-gold{margin-bottom:14px}}
+
+/* タブ：ヘッダーの下に貼りつく */
+.co-tabs{position:sticky;top:var(--co-hh);z-index:60;background:rgba(21,17,13,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(216,179,94,.22);border-bottom:1px solid rgba(216,179,94,.28)}
+.co-tablist{max-width:1000px;margin:0 auto;display:flex;justify-content:center;gap:2px;overflow-x:auto;scrollbar-width:none;padding:0 12px}
+.co-tablist::-webkit-scrollbar{display:none}
+.co-tablist [role=tab]{flex:none;appearance:none;background:none;border:0;border-bottom:3px solid transparent;color:#b3a684;font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.06em;padding:15px 18px 12px;cursor:pointer;white-space:nowrap;transition:color .2s,border-color .2s}
+.co-tablist [role=tab]:hover{color:var(--washi)}
+.co-tablist [role=tab][aria-selected=true]{color:var(--gold-lt);border-bottom-color:var(--gold-lt)}
+.co-tablist [role=tab]:focus-visible{outline:2px solid var(--gold-lt);outline-offset:-4px}
+@media(max-width:860px){.co-tablist{justify-content:flex-start}}
+@media(max-width:560px){.co-tablist [role=tab]{font-size:14px;padding:14px 13px 11px}}
+
+/* パネル */
+.js .co-panel:not(.on){display:none}
+.co-panel{padding:56px 0 72px}
+.co-panel:focus{outline:none}
+.co-panel p{font-size:16px;line-height:2.05;margin:0 0 1.15em;color:#d8cfba;word-break:auto-phrase;overflow-wrap:break-word}
+.co-panel strong,.co-panel b{color:var(--washi);font-weight:700}
+.co-panel a{color:var(--gold-lt);text-decoration:underline;text-underline-offset:3px}
+.co-panel .gr{color:var(--gold-lt);font-weight:700}
+.co-eyebrow{font-family:var(--latin);font-style:italic;font-size:16px;letter-spacing:.18em;color:var(--gold-lt);margin:0 0 14px}
+.co-panel .co-eyebrow{font-size:16px;line-height:1.5;margin-bottom:14px;color:var(--gold-lt)}
+.co-h2{font-family:var(--serif);font-weight:700;color:var(--washi);font-size:clamp(25px,4vw,38px);line-height:1.5;margin:0 0 24px;word-break:auto-phrase}
+.co-h3{font-family:var(--serif);font-weight:700;color:var(--washi);font-size:clamp(20px,2.8vw,26px);line-height:1.55;margin:0 0 14px;word-break:auto-phrase}
+.co-h3.sm{font-size:19px}
+.co-h3 a{color:var(--washi);text-decoration:none}
+.co-h3 a:hover{color:var(--gold-lt)}
+.co-h4{font-family:var(--serif);font-weight:700;color:var(--gold-lt);font-size:clamp(18px,2.4vw,22px);line-height:1.6;margin:2em 0 .8em;word-break:auto-phrase}
+.co-panel p.co-lead{font-family:var(--serif);font-weight:600;font-size:clamp(17px,2.2vw,21px);line-height:1.9;color:var(--washi)}
+.co-panel .co-lbl{font-size:13.5px;letter-spacing:.12em;color:var(--gold-lt);margin:0 0 6px;line-height:1.6}
+.co-panel p.co-role{font-weight:700;color:var(--washi);margin-bottom:.6em}
+.co-panel p.co-note,.co-note{font-size:13.5px;line-height:1.9;color:#a89c82}
+.co-panel p.co-ref{font-size:13.5px;line-height:1.9;color:#a89c82;border-top:1px solid rgba(216,179,94,.2);padding-top:14px;margin-top:2em}
+.co-sec{margin-top:2.6em}
+.co-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:2.2em 0 1.6em}
+.co-card,.co-box{border:1px solid rgba(216,179,94,.32);background:rgba(216,179,94,.06);border-radius:6px;padding:28px 26px 14px}
+.co-card p:last-child,.co-box p:last-child{margin-bottom:.9em}
+.co-box{margin:1.8em 0}
+.co-card .co-h3,.co-box .co-h3{font-size:clamp(19px,2.4vw,23px)}
+@media(max-width:760px){.co-cols{grid-template-columns:1fr}.co-card,.co-box{padding:24px 20px 10px}}
+.co-more{font-weight:700}
+.co-ul{list-style:none;margin:0 0 1.2em;padding:0}
+.co-ul li{position:relative;padding:.25em 0 .25em 1.3em;font-size:16px;line-height:1.85;color:#d8cfba}
+.co-ul li::before{content:"";position:absolute;left:.1em;top:1.05em;width:6px;height:6px;border-radius:50%;background:var(--gold-lt)}
+.co-ul2{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
+@media(max-width:480px){.co-ul2{grid-template-columns:1fr}}
+.co-panel p.co-band{text-align:center;font-family:var(--serif);font-weight:700;font-size:clamp(15px,2.2vw,19px);color:var(--gold-lt);background:rgba(216,179,94,.08);border:1px solid rgba(216,179,94,.3);border-radius:6px;padding:16px 14px;margin:1.4em 0}
+.co-pres{display:grid;grid-template-columns:minmax(0,280px) 1fr;gap:28px;align-items:center;margin-bottom:1.6em}
+.co-photo{width:100%;height:auto;border-radius:4px;border:1px solid rgba(216,179,94,.35);box-shadow:0 14px 40px rgba(0,0,0,.45)}
+.co-pres .co-h2{margin-bottom:12px}
+.co-pres .co-lead{margin-bottom:0}
+@media(max-width:640px){.co-pres{grid-template-columns:1fr;gap:18px}.co-photo{max-width:340px}}
+.co-book{display:grid;grid-template-columns:1fr minmax(0,220px);gap:28px;align-items:start}
+.co-bookimg img{width:100%;height:auto;border-radius:4px;border:1px solid rgba(216,179,94,.35);box-shadow:0 12px 32px rgba(0,0,0,.45)}
+@media(max-width:640px){.co-book{grid-template-columns:1fr}.co-bookimg{max-width:240px}}
+.co-video{max-width:760px;margin:1.6em 0 2em}
+
+/* 開閉（アコーディオン） */
+.co-tools{display:flex;gap:10px;flex-wrap:wrap;margin:1.6em 0 1em}
+.co-tool{appearance:none;background:transparent;color:var(--gold-lt);border:1px solid rgba(216,179,94,.5);border-radius:2px;padding:9px 18px;font-family:var(--sans);font-weight:700;font-size:13.5px;letter-spacing:.06em;cursor:pointer;transition:background .2s,color .2s}
+.co-tool:hover{background:var(--gold-grad);color:#241b08;border-color:transparent}
+.co-accs{border-top:1px solid rgba(216,179,94,.28)}
+.co-acc{border-bottom:1px solid rgba(216,179,94,.28)}
+.co-acc summary{list-style:none;display:flex;align-items:baseline;gap:16px;cursor:pointer;padding:22px 4px;position:relative}
+.co-acc summary::-webkit-details-marker{display:none}
+.co-acc summary:focus-visible{outline:2px solid var(--gold-lt);outline-offset:-2px}
+.co-acc .no{flex:none;min-width:2.2em;font-family:var(--latin);font-style:italic;font-weight:600;font-size:22px;color:var(--gold-lt);line-height:1.3}
+.co-acc.nonum .no{min-width:0;width:0}
+.co-acc .tt{flex:1;min-width:0;font-family:var(--serif);font-weight:700;font-size:clamp(17px,2.4vw,22px);line-height:1.6;color:var(--washi);word-break:auto-phrase}
+.co-acc .pm{flex:none;width:22px;height:22px;position:relative;align-self:center}
+.co-acc .pm::before,.co-acc .pm::after{content:"";position:absolute;left:3px;right:3px;top:50%;height:2px;margin-top:-1px;background:var(--gold-lt);transition:transform .25s}
+.co-acc .pm::after{transform:rotate(90deg)}
+.co-acc[open] .pm::after{transform:rotate(0)}
+.co-acc summary:hover .tt{color:var(--gold-lt)}
+.co-acc-body{padding:4px 4px 34px 4px}
+.co-acc-body>*:first-child{margin-top:0}
+.co-acc-body .co-h4:first-child{margin-top:.4em}
+@media(max-width:560px){.co-acc summary{gap:10px;padding:18px 0}.co-acc .no{font-size:19px;min-width:1.9em}.co-acc-body{padding:2px 0 28px}}
+
+/* 料金カード */
+.co-pricing{margin-top:3.4em;padding-top:2.2em;border-top:1px solid rgba(216,179,94,.28)}
+.co-plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:1.6em 0 1.4em}
+.co-plan{border:1px solid rgba(216,179,94,.4);border-radius:6px;background:rgba(216,179,94,.06);padding:28px 24px 14px}
+.co-plan-name{font-family:var(--serif);font-weight:700;font-size:23px;color:var(--washi);margin:0 0 14px}
+.co-panel .co-plan p.co-plan-name{font-size:23px;line-height:1.5;color:var(--washi);margin:0 0 14px}
+.co-plan dt{font-size:13px;letter-spacing:.1em;color:var(--gold-lt);margin-top:14px}
+.co-plan dd{margin:2px 0 0;font-size:16px;line-height:1.85}
+.co-plan dd.amt{font-family:var(--serif);font-weight:700;font-size:28px;color:var(--washi);line-height:1.4}
+.co-plan dd.amt small{font-size:14px;margin-left:4px;color:#d8cfba;font-weight:500}
+@media(max-width:760px){.co-plans{grid-template-columns:1fr}}
+
+/* 問い合わせの帯（全ページ共通） */
+.co-contact{background:#100d0a;border-top:1px solid rgba(216,179,94,.4);padding:72px 0 80px;scroll-margin-top:calc(var(--co-hh) + var(--co-th))}
+.co-contact h2{font-family:var(--serif);font-weight:700;font-size:clamp(23px,3.6vw,34px);color:var(--washi);text-align:center;margin:0 0 36px;line-height:1.5}
+.co-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:820px;margin:0 auto}
+.co-contact-item{border:1px solid rgba(216,179,94,.32);background:rgba(216,179,94,.05);border-radius:6px;padding:28px 24px 18px;text-align:center}
+.co-contact-item .co-lbl{font-size:14px;letter-spacing:.12em;color:var(--gold-lt);margin:0 0 12px}
+.co-contact-item p{margin:0 0 14px;color:#d8cfba}
+.co-mail-addr{font-family:var(--sans);font-weight:700;font-size:clamp(16px,2.2vw,20px);color:var(--washi);user-select:all;-webkit-user-select:all;overflow-wrap:anywhere}
+.co-contact .btn.ghost{color:var(--washi);border-color:rgba(216,179,94,.55)}
+.co-contact .btn.ghost:hover{background:var(--gold-grad);color:#241b08;border-color:transparent}
+.co-pending{font-size:14px;line-height:1.8;color:#b3a684}
+a[data-timerex]{display:none}
+a[data-timerex].on{display:inline-flex}
+.co-contact-page{margin-top:0;padding-top:96px;min-height:50vh}
+@media(max-width:760px){.co-contact-grid{grid-template-columns:1fr}.co-contact{padding:56px 0 60px}}
+
+/* フッター（会社HP） */
+footer.dark .fnav{max-width:520px}
+footer.dark .tag{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--washi);margin-top:14px}
+
+/* 事業者情報・特商法のお問い合わせ欄 */
+.corp .co-mail-addr{font-size:15px}
+.corp a.btn{margin-top:10px;display:none;color:#241b08;text-decoration:none}
+.corp a.btn.on{display:inline-flex}
+
+/* ===== 2026-11-23 修正：タブの端フェード／問い合わせの飛び先／塾タブの導線 ===== */
+.co-tabs{position:sticky}
+.co-tabs::before,.co-tabs::after{content:"";position:absolute;top:0;bottom:0;width:34px;pointer-events:none;z-index:2;opacity:0;transition:opacity .2s}
+.co-tabs::before{left:0;background:linear-gradient(90deg,#15110D 25%,rgba(21,17,13,0))}
+.co-tabs::after{right:0;background:linear-gradient(270deg,#15110D 25%,rgba(21,17,13,0))}
+.co-tabs.fade-l::before,.co-tabs.fade-r::after{opacity:1}
+.co-contact{scroll-margin-top:calc(var(--co-hh) + var(--co-th) + 8px)}
+html{scroll-padding-top:calc(var(--co-hh) + var(--co-th) + 8px)}
+.co-panel p.co-jump{font-size:14px;margin:-.4em 0 1.4em}
+.co-panel p.co-jump a{font-weight:700}
+.co-panel p.co-plan-cta{margin:1.6em 0 0}
+.co-panel p.co-plan-cta a.btn{color:#241b08;text-decoration:none}
+[data-timerex-pending][hidden]{display:none!important}

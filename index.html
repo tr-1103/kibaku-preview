@@ -4,387 +4,1077 @@
 <script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>希爆塾 ｜ 一生使える、自分の育て方。小学生・中学生のオンライン塾</title>
-<meta name="description" content="希爆塾（きばくじゅく）は、小学生・中学生が勉強や日々の経験を通して、自分で自分を育てる力を学ぶオンライン塾。考える力・意味を作る力・違いを認め合う力を育てます。小学生・中学生対象／完全オンライン／6ヶ月制。半年¥79,200〜（税込）。運営：ムーンブラスト希爆。">
+<title>株式会社ムーンブラスト希爆 ｜ 一生使える、自分の育て方「希爆Style」</title>
+<meta name="description" content="株式会社ムーンブラスト希爆は、子どもから大人、組織まで、それぞれが望む未来の実現を支える会社です。希爆Styleを土台に、塾・コーチング・人材コンサル・講演・研修を届けます。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=20261029">
+<link rel="stylesheet" href="assets/style.css?v=20261123">
 </head>
-<body>
+<body class="co">
 
 <div class="progress" id="progress"></div>
 
 <header class="dark">
-  <div class="nav">
-    <a href="#top" class="logo-h" aria-label="希爆塾 ホーム"><img src="assets/logo_mark_light.png" alt="希爆Style ｜ 希爆塾"></a>
-    <nav class="links">
-      <a href="#outline">希爆塾について</a>
-      <a href="#promo">動画</a>
-      <a href="#pricing">料金</a>
-      <a href="#philosophy">大切にすること</a>
-      <a href="#founder">主催者挨拶</a>
-      <a href="#book">著書</a>
-    </nav>
-    <a href="contact.html" class="btn">公式LINEで無料相談・申込</a>
+  <div class="nav co-nav">
+    <a href="index.html" class="co-brand" aria-label="株式会社ムーンブラスト希爆 トップへ"><img src="assets/logo_mark_light.png" alt=""><span>株式会社ムーンブラスト希爆</span></a>
+    <a href="#contact" class="btn">お問い合わせ</a>
   </div>
 </header>
 
-<main id="top">
-
-  <!-- HERO：ロゴ・シネマティック（stickyで固定→スクロールでじっくり再生）＋コピー -->
-  <section class="hero dark">
-    <div class="logo-stage" id="logoStage">
-      <div class="logo-pin">
-        <p class="eyebrow gold">希爆塾 ｜ KIBAKU JUKU ｜ オンライン</p>
-        <canvas class="logo-hero" id="heroLogoCanvas" role="img" aria-label="ムーンブラスト希爆 ｜ 希爆塾"></canvas>
-        <div class="scroll-hint" id="scrollHint">SCROLL<span>↓</span></div>
-      </div>
-    </div>
-    <div class="wrap hero-copy">
-      <h1>
-        <span class="line"><span>一生使える、</span></span>
-        <span class="line"><span><em class="gold">自分の育て方</em>。</span></span>
-      </h1>
-      <p class="lede">自分で考え、意味をつくり、仲間と育ち合う。<br>希爆塾は、小学生・中学生が、勉強や日々の経験を通して、<b>自分で自分を育てる力</b>を学ぶオンライン塾です。</p>
-      <p class="lede hero-sub">自分で自分を育てる。けれど、<em class="gold">一人で育たなくていい。</em></p>
-      <div class="tags" style="justify-content:center;margin-top:30px">
-        <span class="tag">小学生・中学生</span><span class="tag">完全オンライン</span><span class="tag">6ヶ月（半年）制</span><span class="tag">半年 ¥79,200〜（税込）</span>
-      </div>
-      <div class="cta" style="margin-top:34px">
-        <a href="contact.html" class="btn gold">公式LINEで無料相談 <span class="arr">→</span></a>
-        <a href="#outline" class="btn ghost">希爆塾について見る</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ①〜③：ダーク基調＋円相コマ送りを背景に -->
-  <div class="scrub-region" id="scrubRegion">
-    <div class="scrub-bg" aria-hidden="true"><canvas id="scrubCanvas"></canvas><div class="scrub-dim"></div></div>
-
-  <!-- ① 希爆塾について（概要）＝トップ直後に前出し -->
-  <div class="chapter" id="outline">
-    <div class="wrap reveal">
-      <div class="cnum gold">01</div>
-      <div class="cmeta"><div class="ckick">About the Juku</div><div class="ctitle">希爆塾について</div></div>
-    </div>
+<section class="co-hero" id="top">
+  <div class="co-in">
+    <h1>あなたの欲しい未来を現実に。</h1>
+    <p class="co-hero-gold"><span class="gold">無限の可能性を開く、</span><br><span class="gold">一生使える、自分の育て方「希爆Style」。</span></p>
+    <p class="co-hero-sub">塾 ／ コーチング ／ 人材コンサル ／ 講演・研修</p>
   </div>
-  <section class="block">
-    <div class="wrap">
-      <!-- 2026-10-28: 佐野様の新コンセプト資料（希爆塾_コンセプト資料.pdf）に合わせて差し替え。旧＝「半年で、自分で動き出す子に。」と8ステップの学びの流れ -->
-      <h2 class="head reveal depth">自分の次の一歩を、<br>自分でつくれるようになる。</h2>
-      <p class="lead mt16 reveal">「自分で自分を育てる」とは、何でも一人でできることではありません。自分の状態や困っていることを知り、いくつかの方法を考え、自分に合う一歩を選ぶ。試して分かったことを、次に生かす。必要なときには、人の力を借りる。</p>
+</section>
 
-      <div class="tags mt40 reveal d1">
-        <span class="tag">小学生・中学生</span><span class="tag">完全オンライン</span><span class="tag">6ヶ月（半年）制</span><span class="tag">宿題・学習習慣に悩む家庭</span><span class="tag">自分で考える力を育てたい家庭</span>
-      </div>
+<div class="co-tabs" id="coTabs">
+  <div class="co-tablist" role="tablist" aria-label="事業とご紹介の切り替え"><button type="button" role="tab" id="tab-company" data-tab="company" aria-controls="panel-company" aria-selected="false" tabindex="-1">会社紹介</button><button type="button" role="tab" id="tab-president" data-tab="president" aria-controls="panel-president" aria-selected="false" tabindex="-1">社長紹介</button><button type="button" role="tab" id="tab-concept" data-tab="concept" aria-controls="panel-concept" aria-selected="false" tabindex="-1">コンセプト</button><button type="button" role="tab" id="tab-juku" data-tab="juku" aria-controls="panel-juku" aria-selected="false" tabindex="-1">塾</button><button type="button" role="tab" id="tab-coaching" data-tab="coaching" aria-controls="panel-coaching" aria-selected="false" tabindex="-1">コーチング</button><button type="button" role="tab" id="tab-consulting" data-tab="consulting" aria-controls="panel-consulting" aria-selected="false" tabindex="-1">人材コンサル</button><button type="button" role="tab" id="tab-lecture" data-tab="lecture" aria-controls="panel-lecture" aria-selected="true" tabindex="0">講演・研修</button></div>
+</div>
 
-      <!-- 目指す姿（日々の場面 → 育てていきたい姿） -->
-      <h3 class="head mt56 reveal" style="font-size:clamp(20px,3vw,28px)">希爆塾が目指す姿</h3>
-      <div class="scenes mt24 reveal depth">
-        <div class="scene"><p class="sc-when">勉強で分からないことがある</p><p class="sc-to">「ここまでは分かる。ここを教えてほしい」と、必要な助けを求められる</p></div>
-        <div class="scene"><p class="sc-when">計画どおりに進まなかった</p><p class="sc-to">「量が多かったかな」「始め方を変えてみよう」と、方法や条件を見直せる</p></div>
-        <div class="scene"><p class="sc-when">仲間と考えが違った</p><p class="sc-to">「どうしてそう考えたの？」と聞き、自分の見方を広げられる</p></div>
-        <div class="scene"><p class="sc-when">一つの活動が終わった</p><p class="sc-to">「何が分かった？」「次にどう使える？」と、自分の経験から学べる</p></div>
-        <div class="scene"><p class="sc-when">次に何をするか迷っている</p><p class="sc-to">自分の思いと今の状況を確かめ、相談しながら次の一歩を選べる</p></div>
-      </div>
-      <p class="mt24 reveal" style="font-size:13.5px;color:var(--ink-soft)">これは、全員を同じ姿にそろえるための到達表ではありません。一人ひとりの現在地から、選べること、試せること、学べることを広げていくための方向です。</p>
-
-      <!-- 成長の螺旋（7ステップ・縦タイムライン＋右に転換イメージ） -->
-      <h3 class="head mt56 reveal" style="font-size:clamp(20px,3vw,28px)">学びの仕組み「成長の螺旋」</h3>
-      <p class="lead mt16 reveal">学んで終わりではなく、次の自分につなげる。この一周を繰り返しながら、見方・考え方と選択肢を育てていきます。</p>
-      <div class="flow-split">
-        <div class="flow reveal depth">
-          <div class="fstep"><span class="fnum">01</span><div class="ftitle">見る</div><div class="fdesc">今の自分や状況を見る。</div></div>
-          <div class="fstep"><span class="fnum">02</span><div class="ftitle">広がる</div><div class="fdesc">先生や仲間、新しい情報との出会いから、見方や選択肢を広げる。</div></div>
-          <div class="fstep"><span class="fnum">03</span><div class="ftitle">選ぶ</div><div class="fdesc">その中から、自分に合う一歩を選ぶ。</div></div>
-          <div class="fstep"><span class="fnum">04</span><div class="ftitle">試す</div><div class="fdesc">完璧を待たず、小さく試す。</div></div>
-          <div class="fstep"><span class="fnum">05</span><div class="ftitle">振り返る</div><div class="fdesc">何が起きたのか、何が役立ったのか、何が必要だったのかを確かめる。</div></div>
-          <div class="fstep"><span class="fnum">06</span><div class="ftitle">気づく</div><div class="fdesc">経験から、自分にとっての学びをつかむ。</div></div>
-          <div class="fstep goal"><span class="fnum">07</span><div class="ftitle">また見る</div><div class="fdesc">気づきを持って、もう一度、自分や状況を見る。</div></div>
-        </div>
-        <div class="flow-img reveal d1">
-          <img src="assets/generated/flow_transform.jpg" alt="学習に興味が向かない状態から、自分の状態と手立てに気づき、自ら机に向かうまでの3段階の変化">
-          <p class="flow-cap">興味が向かない → 自分の状態に気づく → 自ら机に向かう</p>
-        </div>
-      </div>
-
-      <!-- 実際の学び（宿題が進まない場面の例） -->
-      <div class="example mt56 reveal depth">
-        <p class="ex-kick">たとえば、「宿題がなかなか進まない」とき</p>
-        <ol class="ex-steps">
-          <li><p class="ex-h">今を見る</p><p class="ex-b">やっていないという結果だけでなく、どこで困っているのかを一緒に確かめます。分からないのか、量が多く感じるのか、何から始めればよいか分からないのか。</p></li>
-          <li><p class="ex-h">見方と方法を広げる</p><p class="ex-b">「最初の一問を一緒にやる」「量を分ける」「先に分からないところを聞く」。方法を知ったうえで、本人が試す一歩を選びます。</p></li>
-          <li><p class="ex-h">やってみて、振り返る</p><p class="ex-b">「全部できた？」だけでなく、「始めやすかったのは、どんなとき？」「何が助けになった？」と確かめます。</p></li>
-          <li><p class="ex-h">気づいたことを、次に生かす</p><p class="ex-b">「宿題が全部嫌なのではなく、分からないまま一人で始めるのが嫌だった」と気づいたら、次は「最初に分からないところを確かめてから始めよう」につながります。</p></li>
-        </ol>
-        <p class="ex-note">宿題に取り組むと同時に、自分に合う学び方を考え、経験から学び、次を選ぶ練習をしています。</p>
-      </div>
-
-      <!-- 概要スペック（要確認はプレースホルダー） -->
-      <div class="mt56 reveal depth">
-        <table style="width:100%;border-collapse:collapse;font-size:15px">
-          <tbody>
-            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);width:34%;white-space:nowrap">対象</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">小学生・中学生とそのご家庭</td></tr>
-            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)">形式</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">完全オンライン<span style="color:var(--ink-soft)">（Zoomを使用）</span></td></tr>
-            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)">期間</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">6ヶ月（半年）制</td></tr>
-            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)">身につく力</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">考える力／意味を作る力／仲間の違いを受け止めて、良いところを認め合う力</td></tr>
-            <tr><th style="text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)">指導方針</th><td style="padding:14px 12px;border-bottom:1px solid var(--line)">勉強・日々の経験・仲間との対話を材料に、「成長の螺旋」を回す</td></tr>
-            <tr><th style="text-align:left;padding:14px 12px">開講・曜日・定員</th><td style="padding:14px 12px;color:var(--ink-soft)">現在調整中（決まり次第ご案内します）</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="mt24 reveal" style="font-size:13px;color:var(--ink-soft)">※ 対象学年・開講時期・定員は確定次第このページで更新します。</p>
-    </div>
-  </section>
-
-  <!-- プロモーション動画（佐野様ご提供・リチカ制作） -->
-  <section class="promo section-dark" id="promo">
-    <div class="wrap">
-      <p class="lbl">Movie</p>
-      <h2 class="reveal">30秒で、<em>希爆塾</em>のすべてを。</h2>
-      <p class="sub reveal">状態（OS）を見るところから、自走の習慣が身につくまで。半年で子どもに起きる変化を、30秒の映像にまとめました。</p>
-      <div class="promo-frame reveal depth">
-        <video
-          class="promo-video"
-          controls
-          playsinline
-          preload="none"
-          poster="assets/video/kibaku_promo_poster.jpg"
-          aria-label="ムーンブラスト希爆 希爆塾 プロモーション動画（30秒）">
-          <source src="assets/video/kibaku_promo.mp4" type="video/mp4">
-          お使いのブラウザは動画の再生に対応していません。
-        </video>
-      </div>
-      <div class="cta reveal">
-        <a href="https://line.me/R/ti/p/@929dknui" class="btn gold">公式LINEで相談する <span class="arr">→</span></a>
-        <a href="#pricing" class="btn ghost">料金プランを見る</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ② 料金プラン ＝概要のすぐ後に前出し -->
-  <!-- 2026-09-27: 3プラン（スタンダード/AI活用込み/保護者面談込み）→ 2プラン（子ども伴走プラン/親子伴走Full）へ改定。
-       スタンダード¥39,600を廃止し、残り2つは金額そのまま名称変更。出典：佐野様提供PDF「QR版 希爆塾 保護者資料」。
-       配色・トーンの見直しは別途対応（今回は価格・プラン名のみ反映）。 -->
-  <div class="chapter" id="pricing">
-    <div class="wrap reveal">
-      <div class="cnum gold">02</div>
-      <div class="cmeta"><div class="ckick">Pricing</div><div class="ctitle">料金プラン</div></div>
-    </div>
-  </div>
-  <section class="block">
-    <div class="wrap">
-      <h2 class="head reveal depth">2つのプラン。</h2>
-      <p class="lead mt16 reveal">お子さまの状態（OS）とご家庭の関わり方に合わせて、2つからお選びいただけます。いずれも<b>6ヶ月（半年）制</b>で、お支払いは<b>半年分を一括</b>でお願いしています。</p>
-      <div class="steps plans mt40 reveal depth">
-        <div class="step plan">
-          <p class="sn">Kids Plan</p>
-          <h4>子ども伴走プラン</h4>
-          <p class="price"><span class="amount gold">¥79,200</span><span class="per">／半年（税込）</span></p>
-          <p class="psub"><span class="plabel">月あたり</span><span class="pamount">¥13,200</span></p>
-          <p class="pdesc">週1回60分のGROUP（最大10人）と隔週15分の1on1で、お子さまが「自分の攻略法」を育てていくプランです。</p>
-        </div>
-        <div class="step plan">
-          <p class="sn">Family Plan Full</p>
-          <h4>親子伴走Full</h4>
-          <p class="price"><span class="amount gold">¥132,000</span><span class="per">／半年（税込）</span></p>
-          <p class="psub"><span class="plabel">月あたり</span><span class="pamount">¥22,000</span></p>
-          <p class="pdesc">子ども伴走プランのすべてに加え、保護者セッション・親子リフレクション・個別相談・「わが子の見方レポート」など、ご家庭への伴走が付く手厚いプランです。</p>
-        </div>
-      </div>
-      <p class="mt24 reveal" style="font-size:13.5px;color:var(--ink-soft)">※ 6ヶ月（半年）制です。表示価格はすべて税込で、お支払いは半年分を一括でお願いしています。月々のお支払いをご希望の場合はご相談ください（金額は上記の「月あたり」と同額です）。入会金・教材費はかかりません。お支払いは銀行振込にて承ります（詳細は<a href="legal.html" style="color:var(--gold-lt);text-decoration:underline;text-underline-offset:3px">特定商取引法に基づく表記</a>をご覧ください）。</p>
-      <div class="minicta reveal mt40">
-        <a href="https://line.me/R/ti/p/@929dknui" class="btn gold">公式LINEで希爆塾に申し込む →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ③ なぜ、希爆塾で伸びるのか（理念・希爆Styleの考え方／圧縮版・offerの後ろ） -->
-  <div class="chapter" id="philosophy">
-    <div class="wrap reveal">
-      <div class="cnum gold">03</div>
-      <div class="cmeta"><div class="ckick">What we value</div><div class="ctitle">希爆塾が大切にすること</div></div>
-    </div>
-  </div>
-
-  <!-- 円相ビジュアル（ブランドの核）＋パララックス -->
-  <section class="block" style="padding:8px 0 0">
-    <div class="wrap">
-      <div class="split">
-        <div class="reveal depth">
-          <img src="assets/generated/child_study.jpg" data-parallax="0.3" alt="自分から机に向かい、集中して学ぶ子ども。希爆塾が育てる“自走”のイメージ" style="border-radius:2px;border:1px solid var(--line)">
-        </div>
-        <div class="reveal d1" style="display:flex;align-items:center">
-          <p class="pull">今の「できない」だけで、<br><span class="gold">これからを決めない。</span></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 視点の転換（統制→循環・ダーク） -->
-  <section class="invert" id="shift">
-    <div class="wrap">
-      <p class="cnum2">保護者の方へ</p>
-      <p class="big reveal">
-        <span class="small">「もっと頑張って」の前に、</span>
-        <em>一緒に見つけたいこと</em>があります。
-      </p>
-      <p class="lead reveal" style="max-width:720px;margin:20px auto 0;text-align:center">宿題を始めない。すぐに「無理」と言う。希爆塾では、子どもをすぐに「やる気がない」と決めつけません。保護者の関わり方だけに原因を求めることもしません。今どこで困っているのか、何が分かれば取り組みやすくなるのか。子どもの状態と、周囲の条件の両方を見ながら考えます。</p>
-      <div class="shift-ba reveal d1">
-        <div class="from">
-          <span class="bakick">目指さないこと</span>
-          <h4>管理か、放任か</h4>
-          <p>大人が管理し続けなければ動けない状態。あるいは、子どもにすべてを任せてしまうこと。</p>
-        </div>
-        <div class="ba-arrow" aria-hidden="true">→</div>
-        <div class="to">
-          <span class="bakick">希爆塾の伴走</span>
-          <h4>支えて、返していく</h4>
-          <p>大人が必要な支えを渡しながら、少しずつ、考えること・選ぶこと・振り返ることを本人へ返していく。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 独自理論（OS×構造・氷山図） -->
-  <section class="block">
-    <div class="wrap">
-      <div class="split">
-        <div class="reveal depth">
-          <h2 class="head">「能力」ではなく、<br><span class="gold">「状態（OS）」</span>を見る。</h2>
-          <p class="lead mt24 dropcap">同じ子でも、意味を感じているとき・安心しているときは動けます。比較・不信・失敗への恐れが強まると、動けなくなる。問題は“その子”ではなく、いまどんな<b>OS（状態）</b>が起動しているか。希爆Styleは、その状態を動かす「構造」を設計します。</p>
-        </div>
-        <div class="reveal d1">
-          <div class="iceberg">
-            <div class="row top"><div class="rl">visible — 見えているもの</div><div class="items"><span>行動</span><span>結果</span><span>態度</span></div></div>
-            <div class="row deep"><div class="rl">beneath — その奥にある“本質”</div><div class="items"><span>状態</span><span>感情</span><span>前提・レンズ</span><span>信念</span><span>関係性</span></div></div>
-          </div>
-          <div class="twin">
-            <div class="t"><div class="tt">diagnose — 診断</div><h4>Human OS</h4><p>いまどんな状態か。なぜそうなっているかを“見える化”する。</p></div>
-            <div class="x">×</div>
-            <div class="t"><div class="tt">prescribe — 処方</div><h4>希爆Style</h4><p>状態を動かす変容の“構造（手順）”を設計する。</p></div>
-          </div>
-          <p class="lead mt24" style="font-size:15px">診断と処方がそろってこそ、子どもは変わる。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 希爆Styleが大切にする3つ（values・圧縮） -->
-  <section class="block">
-    <div class="wrap">
-      <h3 class="head reveal" style="font-size:clamp(20px,3vw,28px)">希爆塾が育てる、3つの力。</h3>
-      <div class="values mt40 reveal depth d1">
-        <div class="v"><span class="vn gold">i. Think</span><h3>考える力</h3><p>見方を広げ、自分で考え、選ぶ。答えを知るだけでなく、「なぜ？」「ほかには？」「そのうえで、自分はどうする？」と、自分から問いを持てるようになる。</p></div>
-        <div class="v"><span class="vn gold">ii. Meaning</span><h3>意味を作る力</h3><p>学びや経験を自分とつなげ、次に生かす。「何のために取り組む？」「やってみて、何が分かった？」「次にどう生かす？」</p></div>
-        <div class="v"><span class="vn gold">iii. Together</span><h3>認め合う力</h3><p>仲間の違いを受け止めて、良いところを認め合う。同じになるのではなく、違いから学び合う。「その工夫、参考になったよ」</p></div>
-      </div>
-      <p class="lead mt24 reveal">この3つは、順番に修了する別々の講座ではありません。一つの学習や経験の中で、重なり合いながら育てていく力です。</p>
-
-      <!-- 成長の7視点（2026-10-28 新コンセプトから追加） -->
-      <h3 class="head mt56 reveal" style="font-size:clamp(20px,3vw,28px)">日々の学びで大切にする「成長の７視点」</h3>
-      <ol class="seven mt24 reveal depth">
-        <li>自分も、相手も、大切にする。</li>
-        <li>今の「できない」で、自分の可能性を決めない。</li>
-        <li>一つの見方で決めつけず、見方を広げる。</li>
-        <li>自分が大切にしたいことを考えて、選ぶ。</li>
-        <li>完璧を待たず、小さく試す。</li>
-        <li>結果だけで終わらせず、経験から学ぶ。</li>
-        <li>学んだことをもとに、選び直す。</li>
-      </ol>
-      <p class="mt24 reveal" style="font-size:14px;color:var(--ink-soft)">これは、７つ全部ができる子を「よい子」とする評価表ではありません。休む、頼る、やめる、保留することも、状況に応じた選択です。できない日も、その子が大切にされることは変わりません。</p>
-    </div>
-  </section>
-
-  </div><!-- /scrub-region（①〜③ここまで） -->
-
-  <!-- ④ 主催者挨拶 -->
-  <div class="chapter">
-    <div class="wrap reveal">
-      <div class="cnum gold">04</div>
-      <div class="cmeta"><div class="ckick">Message</div><div class="ctitle">主催者挨拶</div></div>
-    </div>
-  </div>
-  <section class="section-dark" id="founder">
-    <div class="wrap">
-      <div class="dev reveal">
-        <!-- 写真：2026-10-28 佐野様ご提供 -->
-        <img class="founder-photo" src="assets/sano_portrait.jpg" width="1024" height="760" loading="lazy" alt="希爆Style開発者・ムーンブラスト希爆主宰 佐野伸之">
-        <p class="pq">「一人ひとりの無限の可能性を信じ、輝かせる。<br>人が育つことで、社会が変わり、<br>世界はきっと良くなる。<br><span class="gold">その一歩を、あなたと一緒に。</span>」</p>
-        <p class="id">A person who proves the infinite possibility of human beings</p>
-        <p class="name">佐野 伸之</p>
-        <p class="role">希爆Style 開発者 ／ ムーンブラスト希爆 主宰　NOBUYUKI SANO</p>
-        <p class="body">元・小学校教師。教育の現場のただ中で子どもたちと向き合いながら、「誰がやっても、人が育ち、希望が循環する」教育のOSを設計してきました。希爆Styleは、理屈ではなく“現場”から生まれた実践理論です。その実践を、家庭にいる一人でも多くの子どもへ届けるために立ち上げたのが、この「希爆塾」です。</p>
-        <p class="tagline gold mt24" style="text-align:left">HumanOS × 希爆Style</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 著書（2026-10-29 佐野様ご依頼。出版記念の個別相談は料金・申込先を確認中のため未掲載） -->
-  <section class="book section-dark" id="book">
-    <div class="wrap">
-      <div class="book-grid">
-        <div class="book-text reveal">
-          <p class="lbl">Book</p>
-          <p class="book-badge">Amazon Kindle <b>4部門1位</b>・ベストセラー獲得<span>（2026年10月）</span></p>
-          <p class="book-kicker">著書</p>
-          <h2><span>『うちの子は、</span><span>壊れていない』</span></h2>
-          <p class="book-sub">止まっているだけ?!</p>
-          <p class="book-lead">15年間、教育現場で子どもたちと向き合ってきた経験を、一冊の本にまとめました。「やる気がない」のではなく、行動が動き出す構造が止まっているだけ。子どもが動き出すきっかけや、関わり方を考えるヒントを届けます。</p>
-
-          <blockquote class="book-review">
-            <p class="stars" aria-label="星5つ">★★★★★</p>
-            <p class="rv-title">今の教育を考えさせられます</p>
-            <p>なかなか子どもを叱れなくなってきた世の中、このように真剣に子ども達に向き合って、根本原因まで考えられる方がいるのだと安心しました。このような塾が広がってくれたら、子ども達も安心できると思います。</p>
-            <cite>Amazon カスタマーレビューより</cite>
-          </blockquote>
-          <div class="cta">
-            <a href="https://www.amazon.co.jp/dp/B0HNV2RFBP" class="btn gold" target="_blank" rel="noopener">Amazonで本を見る <span class="arr">→</span></a>
-          </div>
-        </div>
-        <div class="book-img reveal d1">
-          <img src="assets/book_banner.jpg" width="1086" height="1448" loading="lazy" alt="佐野伸之 著『うちの子は、壊れていない 止まっているだけ?!』。Amazon Kindle 売れ筋ランキング3冠・最新リリースランキング4冠。売れ筋3冠のうち、ベストセラー2冠（企業倫理／ビジネスの意思決定）">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 申込・相談 -->
-  <section class="consult section-dark" id="consult">
-    <div class="wrap">
-      <p class="lbl">Join us</p>
-      <h2>まずは、<em>無料相談</em>で<br>わが子の今を、一緒に整理しませんか。</h2>
-      <p class="sub">「うちの子には、どんな関わり方が合うのだろう？」その問いから、一緒に考えます。お子さんの今の様子や日々困っていることを伺いながら、どこでつまずいているのか、どんな関わり方が考えられるのかを整理し、今のその子に合う次の一歩を探します。</p>
-      <p class="sub">無料相談・お申込みは公式LINEにて承っています。<b>対象学年・オンラインの進め方・プランの違いなど、ご質問には公式LINEのAIがすぐお答えします。</b>友だち追加後、チャットでお気軽にどうぞ。</p>
-      <div class="cta">
-        <a href="https://line.me/R/ti/p/@929dknui" class="btn gold">公式LINEを友だち追加する <span class="arr">→</span></a>
-        <a href="#pricing" class="btn ghost">料金プランを見る</a>
-      </div>
-      <p class="mt40" style="font-size:12.5px;color:#9a8f78">※ メールでのお問い合わせは現在準備中です。</p>
-    </div>
-  </section>
-
+<main id="main">
+<section class="co-panel" id="panel-company" role="tabpanel" aria-labelledby="tab-company" tabindex="0" data-panel="company">
+<div class="co-in">
+<p class="co-eyebrow">COMPANY</p>
+<h2 class="co-h2">人と組織の「欲しい未来」を、ともにつくる。</h2>
+<p>株式会社ムーンブラスト希爆は、子どもから大人、組織まで、それぞれが望む未来の実現を支える会社です。</p>
+<p>「一生使える、自分の育て方」を体系化した希爆Styleを共通の土台に、塾・コーチング・人材コンサル・講演・研修を届けます。</p>
+<div class="co-cols">
+<div class="co-card">
+<p class="co-lbl">私たちの信念</p>
+<h3 class="co-h3">無限の可能性を開く。</h3>
+<p>今の姿やこれまでの経験だけで、人の可能性を決めない。</p>
+<p>今望んでいる未来を目指す中で、新しい選択肢や、自分でも気づいていなかった力に出会う。私たちは、その先に広がる可能性も大切にします。</p>
+</div>
+<div class="co-card">
+<p class="co-lbl">お客様に届ける価値</p>
+<h3 class="co-h3">一生使える、自分の育て方。</h3>
+<p>何を望み、どう進むかを考える。必要なことを学び、人の力も借りながら試し、経験から次の一歩を選ぶ。</p>
+<p>希爆Styleを通してその力を育て、家庭や職場で力を発揮できる環境を整えます。</p>
+<p><a class="co-more" href="#concept">希爆Styleの考え方を見る →</a></p>
+</div>
+</div>
+<div class="co-box">
+<p class="co-lbl">支援の土台</p>
+<h3 class="co-h3">約15年間の教育実践から生まれた、希爆Style。</h3>
+<p>代表・佐野伸之が、子ども一人ひとりと学級全体の成長に向き合い、積み重ねた実践を体系化。個人への支援と集団づくりの両方で培った経験をもとに、それぞれの目的と状況に合わせて支援を組み立てます。</p>
+<p><a class="co-more" href="#president">代表・佐野伸之について →</a></p>
+</div>
+<div class="co-sec">
+<p class="co-lbl">私たちが目指す社会</p>
+<h3 class="co-h3">一人の成長を、周りの人の可能性へ。</h3>
+<p>子どもの挑戦を見守る保護者に、時間と心の余白が生まれる。社員が力を発揮し、会社が新しい価値を生み出す。一人の挑戦が、誰かの「自分もやってみたい」につながる。</p>
+<p>私たちは、そんな未来を目指しています。一人ひとりの望む未来を支える仕事を通じて、家庭・学校・職場へ、成長と希望を広げていきます。</p>
+</div>
+</div>
+</section>
+<section class="co-panel" id="panel-president" role="tabpanel" aria-labelledby="tab-president" tabindex="0" data-panel="president">
+<div class="co-in">
+<p class="co-eyebrow">PRESIDENT</p>
+<div class="co-pres">
+<img class="co-photo" src="assets/sano_portrait.jpg" width="1024" height="760" loading="lazy" alt="代表取締役 佐野 伸之">
+<div>
+<h2 class="co-h2">代表取締役　佐野 伸之</h2>
+<p class="co-lead">約15年間の教育実践を、人と組織の「これから」へ。</p>
+</div>
+</div>
+<p>小学校教員として約15年間、子ども一人ひとりの学びと、互いに支え合う集団づくりに向き合ってきました。子どもが自分で考え、選び、動き出すために、何を教え、どこを支え、何を任せるか。その実践を重ね、希爆Styleを体系化しました。</p>
+<p>現在は、塾・コーチング・人材コンサル・講演・研修を通して、子どもから大人、組織まで、それぞれが望む未来の実現を支援しています。</p>
+<p class="co-role">希爆Style開発者 ／ 教育実践家</p>
+<ul class="co-ul">
+<li>未来チケットアンバサダー 第1号</li>
+<li>ギフテッド教育公認アドバイザー</li>
+</ul>
+<div class="co-box co-book">
+<div>
+<p class="co-lbl">Kindle出版</p>
+<h3 class="co-h3"><a href="https://www.amazon.co.jp/dp/B0HNV2RFBP" target="_blank" rel="noopener">うちの子は、壊れていない　止まっているだけ?!</a></h3>
+<p>約15年間の教育実践から、子どもが動き出すための見方と関わり方を伝える一冊。</p>
+<ul class="co-ul">
+<li>7冠｜Amazonランキング1位</li>
+<li>2冠｜ベストセラー</li>
+</ul>
+<p class="co-note">2026年10月時点。7冠には売れ筋ランキングと最新リリースランキングを含みます。ベストセラーは「企業倫理」「ビジネスの意思決定」の2部門。</p>
+</div>
+<a class="co-bookimg" href="https://www.amazon.co.jp/dp/B0HNV2RFBP" target="_blank" rel="noopener" aria-label="Amazonで『うちの子は、壊れていない』を見る（新しいタブで開きます）"><img src="assets/book_banner.jpg" width="1086" height="1448" loading="lazy" alt="佐野伸之 著『うちの子は、壊れていない 止まっているだけ?!』の表紙バナー"></a>
+</div>
+<div class="co-sec">
+<h3 class="co-h3 sm">掲載・発信活動</h3>
+<!-- ライブドアニュースの記事URLは佐野さんに確認 -->
+<ul class="co-ul">
+<li>WEBプラットフォーム「KIZUNA EXECUTIVE」インタビュー掲載</li>
+<li>ポッドキャスト番組「みらいVision 発掘コーチング：5年後のわたしたちへ」月1レギュラー</li>
+<li>YouTube「題名は未定」</li>
+<li>ライブドアニュース掲載　「子どもは壊れていない」自発的な変化を促す鍵</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="co-panel" id="panel-concept" role="tabpanel" aria-labelledby="tab-concept" tabindex="0" data-panel="concept">
+<div class="co-in">
+<p class="co-eyebrow">CONCEPT</p>
+<h2 class="co-h2">一生使える、自分の育て方「希爆Style」。</h2>
+<p class="co-lead">いま叶えたいことに向かいながら、その先の挑戦にも使える力を育てる。</p>
+<p>自分の強みを生かして働きたい。新しいことに挑戦したい。子どもや仲間の可能性を、もっと広げたい。</p>
+<p>希爆Styleが出発点にするのは、その人や組織が望む未来です。必要なことを学び、自分で選び、行動し、経験から次の成長につなげる。その力と、それを支える関わり方を、約15年間の教育実践から体系化しました。</p>
+<div class="co-sec">
+<p class="co-lbl">自分を知り、選択肢を広げる</p>
+<h3 class="co-h3">自分の可能性に気づく。</h3>
+<p>何が得意で、何を大切にしているのか。どんなときに力を発揮できるのか。自分の経験や周囲の環境を見直すことで、まだ気づいていなかった強みや、選べる道を見つけていきます。</p>
+<p>今望んでいる未来へ進む中で、やってみたいことや、目指したい未来そのものも広がっていきます。</p>
+</div>
+<div class="co-sec">
+<p class="co-lbl">五つの領域・30のスキル</p>
+<h3 class="co-h3">望む未来に向かう力を身につける。</h3>
+<p>自分の願いを行動に変えるには、状況を捉え、方法を考え、選び、伝え、周囲と協力する力が必要です。希爆Styleでは、成長を支えるスキルを五つの領域に整理しています。</p>
+<ul class="co-ul co-ul2">
+<li>見る・考える力</li>
+<li>判断し、選ぶ力</li>
+<li>表現し、伝える力</li>
+<li>他者と関わる力</li>
+<li>自分を育てる力</li>
+</ul>
+<p>必要な力を選んで学び、勉強や仕事、日常の場面で使っていきます。自分一人では難しいときに、人に学び、必要な助けを借りることも、その力の一つです。</p>
+</div>
+<div class="co-sec">
+<p class="co-lbl">挑戦と振り返りの循環</p>
+<h3 class="co-h3">経験を、次の成長に変える。</h3>
+<p>何ができたのか。どんな工夫が役立ったのか。難しかったところはどこか。その経験から気づきを見つけ、次に試すことを選びます。</p>
+<p class="co-band">見る → 広がる → 選ぶ → 試す → 振り返る → 気づく → また見る</p>
+<p>うまくいった経験も、思うように進まなかった経験も、自分を知り、方法を増やす材料になります。経験を重ねるたびに、使える方法や考え方が少しずつ増えていきます。</p>
+</div>
+<div class="co-sec">
+<p class="co-lbl">人と環境の両方を整える</p>
+<h3 class="co-h3">成長を支える関わりと環境をつくる。</h3>
+<p>知識や方法を教える。一緒に整理する。試せる機会をつくる。自分で判断できる範囲を広げる。一人ひとりの状態を捉え、必要な支えを選びます。</p>
+<p>「本質・流れ・主語」は、その支援を考えるための視点です。背景に何があるか、経験がどうつながっているか、誰の思いや判断を大切にするか。言葉のかけ方や、家庭・職場の仕組みまで整えていきます。</p>
+<p>心のコンパス、言葉のレシピ、主語返し、気づきの地図、自極ノートなどの道具を使い、学びを実際の行動につなげます。</p>
+</div>
+<div class="co-box">
+<h3 class="co-h3">環境が変わっても、自分を育て続けられるように。</h3>
+<p>学び、自分で選び、人の力も借りながら試し、経験から次の一歩を見つける。その力を、塾・コーチング・人材コンサル・講演・研修という四つの事業を通して育てていきます。</p>
+</div>
+</div>
+</section>
+<section class="co-panel" id="panel-juku" role="tabpanel" aria-labelledby="tab-juku" tabindex="0" data-panel="juku">
+<div class="co-in">
+<p class="co-eyebrow">KIBAKU JUKU</p>
+<h2 class="co-h2">宿題一つで、自分の未来を切り開く力を。</h2>
+<p class="has-gr"><span class="gr">一生使える、自分の育て方「希爆Style」。</span><br>
+小学生・中学生のためのオンライン塾 ／ 6か月のプログラム</p>
+<p class="co-jump"><a href="#juku-pricing" data-jump="juku-pricing">料金・プランを見る ↓</a></p>
+<div class="promo-frame co-video">
+<video class="promo-video" controls playsinline preload="none" poster="assets/video/kibaku_promo_poster.jpg" aria-label="ムーンブラスト希爆 希爆塾 プロモーション動画（30秒）">
+<source src="assets/video/kibaku_promo.mp4" type="video/mp4">
+お使いのブラウザは動画の再生に対応していません。
+</video>
+</div>
+<div class="co-tools"><button type="button" class="co-tool" data-acc="open">すべて開く</button><button type="button" class="co-tool" data-acc="close">すべて閉じる</button></div>
+<div class="co-accs">
+<details class="co-acc"><summary><span class="no">01</span><span class="tt">宿題一つで、自分の未来を切り開く力を。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>あなたは、もしお子さんが、いつもの宿題を通して「自分の未来を切り開く力」を身につけ、しかも、あなたの子育ても今より少し楽になるとしたら、どう感じますか？</p>
+<p>「そんなはずない」「うちの子には無理かもしれない」「変わっていく姿が、まだ想像できない」。そんな思いが浮かぶかもしれません。</p>
+<p>自分で考えて動けるようになってほしい。好きなことや得意なことを見つけ、もっと可能性を広げてほしい。そして、その成長を楽しみに見守っていたい。</p>
+<p>その願いはあっても、毎日の生活の中で、何をどう変えればよいのか分からない。どこまで手伝い、どこから任せればよいのか迷ってしまう。応援したいのに、気づけば心配や声かけが増えている。</p>
+<p>では、子どもが自分の未来を切り開いていくために、どんな力を育てればよいのでしょうか。</p>
+<h4 class="co-h4">自分の未来を切り開く力とは。</h4>
+<p>たとえば、大谷翔平選手は、高校時代の目標達成シートに大きな目標を掲げ、体づくりや技術など、その実現に必要なことを書き出していました。また、二刀流への挑戦には、指導者や球団の支えもありました。［1・2］</p>
+<p>私たちがその歩みから学びたいのは、目指す未来を描き、自分で考え、選び、周囲の支えも借りながら挑戦し、成功も失敗も次へ進むための材料にして、自分を育て続ける姿勢です。</p>
+<p>うまくいった経験から、自分の強みや役立った工夫に気づく。うまくいかなかった経験から、見方や方法を見直し、次に試すことを考える。その気づきを、新しい挑戦につなげていく。</p>
+<p><strong>自分の未来を切り開く力とは、経験から学び、選び直しながら、自分の可能性を広げ続ける力。</strong></p>
+<p>お子さんにも、その力を育てる機会が、毎日の中にあります。いつもの宿題も、好きなことへの挑戦も、友達との関わりも、自分を知り、次の一歩を見つける材料になります。</p>
+<p>希爆塾は、そうした身近な経験を通して「一生使える、自分の育て方」を学ぶ、小学生・中学生のためのオンライン塾です。講師や仲間と学びながら、その子に合う方法を見つけ、自分で考えて進められることを少しずつ増やしていきます。</p>
+<h4 class="co-h4">半年後の親子の毎日を、想像してみてください。</h4>
+<p>お子さんへの見方をほんの少し変え、その子が考え、選び、動き出せるように、学びと関わり方を整えていく。その積み重ねによって、半年後、今とは違う姿が見られるとしたら、どうでしょう。</p>
+<p>お子さんが「今日はこれをやってみる」と、自分の考えを話してくれる。困ったときには「ここを手伝ってほしい」と伝えられる。うまくいかなかった日にも、「次はこうしてみよう」と、自分なりの一歩を見つけている。</p>
+<p>好きなことに夢中になり、できたことや発見したことを、あなたに聞かせてくれる。そんな姿を見て、あなたも「ここは任せてみよう」と思えるようになる。</p>
+<p>お子さんに任せられることが増えれば、あなたの毎日にも、ひと息つける時間と心の余白が生まれていきます。</p>
+<p>その余白があったら、お子さんへの関わり方も、少し変わっていくと思いませんか？</p>
+<p>急いで答えを出す前に、子どもの考えを聞いてみる。結果に至るまでの工夫や、自分なりに挑戦していたことにも目を向けてみる。</p>
+<p>「そんなことを考えていたんだ」「前より、自分で工夫できるようになったんだね」「今回は難しかったけれど、次の作戦を考えているんだね」。</p>
+<p>わが子の成長が見えると、声をかける言葉や、見守る気持ちも変わっていく。親子で喜べることが増え、子育てが今より少し楽になる。そして、「この子は、これから何に挑戦するんだろう」と、未来を楽しみにできる。</p>
+<p><strong>子どもは、自分の経験を力に変え、可能性を広げていく。保護者は、心に余白を持ち、その成長を楽しめるようになる。</strong></p>
+<p>希爆塾が目指すのは、そんな親子の毎日です。</p>
+<p><strong>宿題一つで、自分の未来を切り開く力を。</strong></p>
+<p>一生使える、自分の育て方「希爆Style」を、希爆塾で。</p>
+<!-- 参考リンクのURLは佐野さんに確認 -->
+<p class="co-ref">参考：大谷翔平選手の目標達成シート・指導者への取材 ／ 北海道日本ハムファイターズ・大谷翔平選手の会見</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">02</span><span class="tt">成長を支える、約15年間の教育実践と希爆Style。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>希爆塾の土台にある「希爆Style」は、塾長・佐野伸之が、約15年間、小学校教員として子どもたちと向き合ってきた経験をもとに体系化した教育理論です。</p>
+<p>教室には、考えを言葉にすることが難しい子、自信が持てずに一歩を踏み出せない子、友達との関わりに悩む子がいました。一人ひとりの様子を見ながら、声のかけ方、学ぶ環境、本人に任せる範囲を工夫し、その後の言葉や行動を確かめてきました。</p>
+<p>学校での実践では、子どもたちが自分たちで話し合い、問題を解決する場面が増えていった学級がありました。オンラインでの支援では、子どもが自分で学習目標を決めたことに、保護者から「まさか自分で目標を考えるとは」という驚きの声も寄せられています。</p>
+<p>大切にしてきたのは、子どもが変わった姿とともに、その一歩を何が支えたのかを考えることです。</p>
+<p>どんな場面なら、自分の考えを話せたのか。何が分かると、動き出せたのか。どのような関わりが、自分で選ぶきっかけになったのか。そして、その経験をどう振り返ると、次の挑戦につながったのか。</p>
+<p>うまくいった関わりも、思うように届かなかった関わりも見直しながら、子どもの成長を支える見方と方法を整理してきました。その実践の積み重ねが、希爆Styleの土台になっています。</p>
+<h4 class="co-h4">一人ひとりに合わせて、成長への道筋をつくる。</h4>
+<p>希爆Styleでは、子どもの今の状態を捉え、必要な知識や方法を伝え、一緒に試しながら、本人が考えて選べる範囲を広げていきます。</p>
+<p>挑戦した後には、何ができたか、どんな工夫が役立ったか、どこで難しさを感じたかを振り返る。そこから得た気づきを、次の行動に使っていきます。</p>
+<p><strong>自分を知る。見方や方法を増やす。選んで試す。経験から学び、次の一歩を選び直す。</strong></p>
+<p>この流れを、いつもの宿題や仲間との活動、日々の挑戦の中に組み込んでいるのが希爆塾です。</p>
+<p>講師は、本人の言葉や行動を見ながら、その子に必要な支えを考えます。方法を教えることが助けになるときもあれば、一緒に整理することや、自分で試す時間をつくることが助けになるときもあります。実際の反応を確かめながら、関わり方を調整していきます。</p>
+<p><strong>現場で得た経験を、目の前のお子さんに合う支援を考えるために使う。ここに、実践から生まれた理論の強みがあります。</strong></p>
+<p>そして、授業で見られた工夫や変化を保護者にも伝え、わが子の成長を知る手がかりを増やしていきます。「何ができるようになったか」「どこなら任せられそうか」が見えてくることは、安心して見守るための支えにもなります。</p>
+<p>子ども自身が、成功も失敗も次へ進む材料にできること。その姿を見ながら、保護者もわが子の未来を楽しみにできること。</p>
+<p>希爆塾は、子どもたちとの実践から得た知見を、そんな親子の毎日につなげていきます。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">03</span><span class="tt">週1回の授業を、毎日の成長につなぐ。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p><strong>希爆Style × ゲーミフィケーション。専用アプリで、日常が成長の舞台になる。</strong></p>
+<p>「授業は週1回ですよね。そのほかの日は、どうするの？」</p>
+<p>希爆塾の説明を聞いて、そんな疑問を持たれる方もいらっしゃると思います。</p>
+<p>週に1回、60分のオンライン授業。その時間に子どもが新しい考え方を学び、自分で目標を決め、挑戦する経験ができたとしても、残りの6日間はどうするのでしょうか。</p>
+<p>せっかく授業で「やってみよう」と思っても、翌日には忘れてしまうかもしれません。いつもと同じように宿題が待っている。学校では、思うようにいかないこともある。そして保護者は、また「宿題やったの？」「早くしなさい」と声をかけることになる。</p>
+<p>それでは、週1回の授業だけで本当に変わっていけるのか、不安になりますよね。</p>
+<p>希爆塾が大切にしているのは、週1回の授業で学んだことを、残りの6日間にもつなげていくことです。</p>
+<p>毎日の宿題、学校での出来事、友達との関わり、家庭での小さな挑戦。その一つひとつが、自分で考え、選び、行動し、経験から学ぶ機会になります。</p>
+<p>希爆塾では、その日常の経験を成長につなげるために、専用アプリを開発しています。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">04</span><span class="tt">授業で学び、日常で試し、次の挑戦へ。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>希爆塾では、週1回の授業で、子どもたちが自分の目標や作戦を考えます。</p>
+<p>例えば、宿題を始めるまでに時間がかかるお子さん。「宿題を早く終わらせよう」と目標を決めるだけでは、なかなか行動は変わらないかもしれません。</p>
+<p>そこで、まずは何が難しいのかを一緒に考えます。問題が難しいのか。量が多く感じるのか。始め方が分からないのか。それとも、別のことを優先したいのか。</p>
+<p>今の状態を確かめたうえで、本人が取り組めそうな作戦を選びます。</p>
+<p>「まずは1問だけやってみる」「5分だけ取り組んでみる」「最初に簡単な問題から始めてみる」「分からないところは、誰かに聞いてみる」。</p>
+<p>必要な方法を教えたり、一緒に考えたりしながら、少しずつ本人が選べるようにしていきます。</p>
+<p>そして、授業で決めた作戦を、次の日から実際の生活で試してみます。ここを支える道具として、専用アプリを設計しています。</p>
+<h4 class="co-h4">自分で決めた目標を、毎日の生活の中で思い出す。</h4>
+<p>アプリでは、授業で決めた目標を確認し、今日の自分が何に挑戦するのかを考えられるようにします。</p>
+<p>例えば、昨日は宿題を始められなかったお子さんが、今日は「最初の1問だけやってみよう」と思い出す。実際に取り組んでみたら、思ったより進められた。あるいは、やっぱり難しかった。どちらも大切な経験です。</p>
+<p>「今日は1問できた」「5分だけなら始められた」「最初の問題が難しくて止まった」「お母さんに最初だけ手伝ってもらった」。こうした経験を残していきます。</p>
+<h4 class="co-h4">経験を、次の作戦を考える材料にする。</h4>
+<p>なぜできたのか。どこで難しくなったのか。何が助けになったのか。その経験を振り返り、次の作戦を考える材料にしていきます。</p>
+<p>例えば、「最初の1問が難しかったから、明日は簡単な問題から始めてみよう」と考える。あるいは、「一緒に始めてもらうと取り組みやすかったから、次は最初の準備だけ手伝ってもらおう」と考える。</p>
+<p>こうして、自分に合う方法を少しずつ見つけていくのです。</p>
+<p><strong>うまくいった経験も、うまくいかなかった経験も、次に使える方法を見つける材料にしていきます。</strong></p>
+</div></details>
+<details class="co-acc"><summary><span class="no">05</span><span class="tt">ゲームの夢中になれる仕組みを、現実の成長へ。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>「目標を確認して、毎日振り返るなんて、子どもが続けられるの？」「結局、親がアプリを開きなさいと言うことになるのでは？」</p>
+<p>確かに、毎日の目標確認や振り返りが、単なる義務になってしまっては意味がありません。</p>
+<p>そこで希爆塾が取り入れるのが、ゲーミフィケーションという考え方です。ゲームが持つ「夢中になる仕組み」を、ゲーム以外の活動に応用することです。</p>
+<p>例えば、子どもがゲームに夢中になるとき、そこにはさまざまな仕組みがあります。目指すゴールがある。次に何をすればよいかが分かる。自分で方法を選べる。挑戦すると結果が返ってくる。失敗しても、別の方法でもう一度挑戦できる。</p>
+<p>そして、以前は難しかったことができるようになると、自分の成長を実感できます。</p>
+<p>こうした仕組みを、宿題や学校生活、日々の挑戦にも取り入れられないでしょうか。</p>
+<p><strong>現実の宿題や生活そのものを、自分が成長していく挑戦として捉えられるようにする。</strong></p>
+<p>それが希爆塾専用アプリの発想です。</p>
+<p>自分で目標を決める。作戦を選ぶ。実際に挑戦する。経験を記録する。前の自分と比べてみる。そして、次の挑戦へ進む。その過程を、子どもが分かりやすく、取り組みたくなる形で支えていきます。</p>
+<p>子ども自身が「今日はこれをやってみよう」「次はこうしてみよう」と考えるための道具として、アプリをつくっていきます。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">06</span><span class="tt">専用アプリを共につくる開発者の経験。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>このアプリを共同開発するのは、ゲームの仕組みを教育や仕事に応用する「ゲーミフィケーション」の専門家です。</p>
+<p>プログラマーとして約5年間勤務した後、27歳で独立。本人の説明によれば、これまでに数十本のゲームやシステムの開発に携わってきました。</p>
+<p>その開発領域は、学校教育、企業研修、人材育成、業務支援、さらには社会課題の解決まで、多岐にわたります。ゲームの仕組みを使って、現実の学習や仕事をより進めやすくすることに取り組んでいます。</p>
+<p>以下は、共同開発者本人の説明に基づく開発事例と構想です。</p>
+<h4 class="co-h4">新潟県の教育委員会向け プログラミング学習ゲーム</h4>
+<p>中学生がゲームを通してプログラミングを学ぶ教材です。ゲームの中に登場する敵の動きを、パズルを使ってプログラミングする仕組みです。</p>
+<p>子どもは、まず「こう動かせばうまくいくのではないか」と予測します。そして、実際に動かしてみる。思ったように動かなければ、どこが違ったのかを考え、プログラムを修正する。もう一度試す。</p>
+<p>こうした経験を通して、プログラミングの知識とともに、予測し、実行し、結果を確かめ、修正するという学習の過程を体験できるようにしています。</p>
+<p>これは、希爆Styleが大切にしている「試して、振り返り、次の方法を考える」という考え方とも重なります。</p>
+<h4 class="co-h4">スーパーマーケット向け 仕事を覚えながら成長する人材育成システム</h4>
+<p>日々の仕事をゲームのクエストに変える人材育成システムです。</p>
+<p>新人社員が仕事を覚えるとき、何をどこまで身につけたのか分かりにくいことがあります。そこで、業務を小さな課題に分け、順番に取り組めるようにする。仕事を一つ覚えたら、その経験が記録される。新しい仕事に挑戦すると、できることが増えていく。</p>
+<p>さらに、社員の得意分野や身につけた力を見える化することで、本人の成長実感と、周囲が適切な仕事や支援を考えることにつなげています。</p>
+<p><strong>現実の仕事でできることが増え、その成長を本人も周囲も理解できるようにする仕組みです。</strong></p>
+<h4 class="co-h4">飲食店向け 接客や仕事の習得をゲーム化</h4>
+<p>接客や業務知識の習得、日々の仕事への取り組みなどを、ゲームの経験値や成長の仕組みと結びつけるシステムです。</p>
+<p>AIキャラクターに質問できる機能や、習熟状況を確認する仕組みなども取り入れ、仕事を覚える過程を支えています。</p>
+<p>これまで難しかった仕事ができるようになる。自分の得意なことが分かる。次に挑戦できる仕事が見えてくる。こうした仕組みは、子どもの学習にも応用できる考え方です。</p>
+<h4 class="co-h4">経営者や管理職向け 失敗から学ぶ経営シミュレーション</h4>
+<p>経営判断をゲームの中で体験するシミュレーションです。</p>
+<p>企業のデジタル化や業務改革について、ゲームの中で経営判断を行い、その結果を体験する。判断がうまくいかなければ、何が問題だったのかを考える。別の選択肢を試すことで、結果がどう変わるのかを確かめる。</p>
+<p>失敗を、次の判断を考えるための経験に変える仕組みです。</p>
+<h4 class="co-h4">社会課題への応用 遠隔ゴミ分別ゲームの構想</h4>
+<p>新潟の分別設備とゲームを連動させた、遠隔ゴミ分別の仕組みにも取り組んでいます。</p>
+<p>AIカメラで取得した情報を使い、ゲームを通してゴミを判別する。その操作を現実の分別設備とつなげる構想です。子どもや高齢者、障害のある人など、さまざまな人が社会参加できる仕組みとしても検討されています。</p>
+<p><strong>ゲームの仕組みを、現実の学習、仕事、社会参加へとつなげること。</strong></p>
+<p>その経験と技術を、今度は希爆塾の子どもたちの成長に生かしていきます。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">07</span><span class="tt">希爆Styleとゲーム開発でつくる、成長の循環。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>なぜ、この開発者と希爆塾が一緒にアプリをつくるのでしょうか。それは、希爆Styleとゲーミフィケーションが、大切にしている部分で重なるからです。</p>
+<p>希爆Styleは、約15年間の小学校教員としての実践を土台に体系化してきた教育の考え方です。その中心には、子どもが自分で考え、選び、試し、経験から学び、次の一歩を見つけていくという成長の循環があります。</p>
+<p><strong>見る → 広がる → 選ぶ → 試す → 振り返る → 気づく → また見る</strong></p>
+<p>この循環を、授業や日常生活の中で経験できるようにすることを大切にしています。</p>
+<p>一方、ゲーミフィケーションでは、目標や挑戦、フィードバック、成長の実感といった仕組みを、活動に取り組みやすくするために使います。</p>
+<p>希爆Styleが「どのような経験を通して子どもの成長を支えるか」を考え、ゲーミフィケーションが「その経験を日常の中でどう続けやすくするか」を支えるのです。</p>
+<p><strong>子どもの成長を支えてきた教育実践と、挑戦を続けたくなる仕組みをつくる開発技術。</strong></p>
+<p>この二つを組み合わせることで、授業で学んだことを日常の行動へつなげる環境をつくっていきます。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">08</span><span class="tt">挑戦と工夫を、本人にも保護者にも見えるように。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>アプリで大切にしたいことの一つが、子どもの成長を記録し、振り返れるようにすることです。</p>
+<p>子どもの成長には、テストの点数や宿題の量に表れにくい変化もあります。</p>
+<p>以前は始められなかった宿題に、自分から取り組んでみた。分からないときに「ここを教えて」と言えた。うまくいかなかったときに、別の方法を考えてみた。友達の工夫を聞いて、自分も試してみようと思った。</p>
+<p>こうした変化も、大切な成長です。しかし、忙しい毎日の中では、その一つひとつを見逃してしまうことがあります。</p>
+<p>だからこそ、挑戦したこと、試した方法、そこから得た気づきを記録していきます。</p>
+<p>例えば、1か月前の記録には「宿題を始めるのが難しかった」と書かれている。でも、今の記録には「最初の1問なら自分で始められるようになった」と残っている。</p>
+<p>その変化を本人が見返すことで、「前よりできることが増えた」と気づく機会になります。</p>
+<p>講師も、記録や本人との対話を通して、どのような支援が役立ったのかを確かめ、次の授業や個別支援に生かしていきます。保護者にも、具体的な成長の様子を共有していきます。</p>
+<p><strong>結果だけでは見えにくかった、子どもの挑戦や工夫、考え方の変化を見つけられるようにする。</strong></p>
+<p>それも、希爆塾が大切にしていることです。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">09</span><span class="tt">子どもの成長とともに、保護者の毎日にも余白を。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>今までは、宿題の時間になると「早くやりなさい」と何度も声をかけていた。それでもなかなか始めず、気づけば親子で言い合いになってしまう。</p>
+<p>そんな毎日だったお子さんが、少しずつ自分で作戦を考えるようになったら、どうでしょう。</p>
+<p>「今日は先に漢字をやってみる」「昨日は難しかったから、今日は5問だけやってみよう」「分からないところがあるから、ここだけ教えて」。</p>
+<p>最初は小さな変化かもしれません。でも、自分で考えて動こうとする場面が少しずつ増えていく。すると、保護者も「ここは任せてみよう」と思えるようになるかもしれません。</p>
+<p>今まで全部を確認し、声をかけ、段取りを考えていたところから、少しずつお子さん自身に任せられることが増えていく。その分、毎日の中に、ひと息つける時間が生まれる。</p>
+<p><strong>子育てに、心の余白が生まれていく。</strong></p>
+<p>そして、その余白が生まれることで、保護者の見方や関わり方にも変化が起きるかもしれません。</p>
+<p>以前なら「まだ宿題が終わっていない」と思っていた場面で、「今日は自分から始めようとしていたんだ」と気づく。「また失敗した」と思っていた場面で、「前とは違う方法を試していたんだ」と気づく。「どうしてできないの？」と問い詰める前に、「どこが難しかった？」と聞いてみる。</p>
+<p>子どもが自分で考える機会が増え、保護者も子どもの成長を見つけられるようになる。その積み重ねが、親子の関係を少しずつ変えていく可能性があります。</p>
+<p>子育てが今より少し楽になれば、お子さんの未来を楽しみにできる時間も増えていくのではないでしょうか。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">10</span><span class="tt">6か月後に目指すのは、自分の育て方を知っている姿。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>宿題ができるようになることも、学習習慣が身につくことも大切です。希爆塾は、その経験を通して、自分を育てるための方法を知っていくことを目指しています。</p>
+<p>自分がどんなときに取り組みやすいのか。困ったときには、どんな方法が使えるのか。自分一人では難しいとき、誰にどのように助けを求めればよいのか。失敗したときに、何を見直せばよいのか。そして、自分はこれから何に挑戦してみたいのか。</p>
+<p>そうしたことを、実際の経験を通して少しずつ知っていく。</p>
+<p>目指す未来を描き、今できることを考え、周囲の支えも借りながら挑戦していく。成功も失敗も、次に進むための材料にして成長し続ける。</p>
+<p><strong>それが、希爆塾の考える「自分の未来を切り開く力」です。</strong></p>
+<p>中学校、高校、大学、そして社会に出てからも、自分で考え、選び、挑戦するときに使っていける力を育てたいと考えています。</p>
+<h4 class="co-h4">毎週の学びと実践を、6か月間積み重ねる。</h4>
+<p>週1回の授業で、新しい見方や考え方を知る。残りの6日間で、実際の生活の中で試す。その経験を残し、次の授業で講師や仲間と振り返る。そして、また新しい作戦を考える。</p>
+<p>この循環を6か月間積み重ねていきます。開発中の専用アプリは、目標の確認や経験の記録、振り返りを日常で続けるために使えるよう設計しています。</p>
+<p><strong>宿題一つで、自分の未来を切り開く力を。一生使える、自分の育て方「希爆Style」。</strong></p>
+<p>希爆塾は、教育実践から生まれた希爆Styleと、ゲーミフィケーションの専門技術を組み合わせ、子どもが自分の可能性を広げていく6か月を支えます。</p>
+<p>お子さんの成長を通して、保護者にも心の余白が生まれ、わが子の未来が今よりもっと楽しみになる。そんな親子の毎日を目指しています。</p>
+<p><strong>できない、で未来を決めない。子どもの可能性を、もっと先へ。</strong></p>
+</div></details>
+<details class="co-acc"><summary><span class="no">11</span><span class="tt">半年間の成長ドラマが、ここにはあります。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<h4 class="co-h4">これは、魔法ではありません。だからこそ、6か月かけて育てます。</h4>
+<p>ここまで読んで、「本当にそんなふうに変わるの？」と思われたかもしれません。</p>
+<p>希爆塾が取り組むのは、日々の経験を通した成長です。その土台にあるのは、約15年間の教育実践から生まれた希爆Styleの「本質・流れ・主語」という三つの視点です。</p>
+<p class="has-gr"><span class="gr"><strong>本質を見る。</strong></span><br>
+目の前の「できた」「できなかった」とともに、その背景に何があるのかを考える。なぜ動き出せないのか。何があれば始められるのか。どんな支えが必要なのか。</p>
+<p class="has-gr"><span class="gr"><strong>流れを見る。</strong></span><br>
+今日という一日を、昨日までの経験と、これからの成長につなげて考える。どんなことに挑戦し、何に気づき、何を変えてきたのか。その積み重ねを見る。</p>
+<p class="has-gr"><span class="gr"><strong>主語を見る。</strong></span><br>
+子ども自身が何を考え、何を望み、何を選ぶのかを大切にする。最初は大人が方法を教え、一緒に考えながら、少しずつ本人が選び、動ける範囲を広げていく。</p>
+<p>この三つの視点を土台に、子どもの成長を支えていきます。</p>
+<h4 class="co-h4">成長は、一直線ではありません。</h4>
+<p>昨日は自分から宿題を始められたのに、今日はなかなか動き出せない。先週は「やってみる！」と言っていたのに、今週は「やっぱり無理」と言う。</p>
+<p>そんな姿を見ると、「せっかく変わってきたと思ったのに、元に戻ってしまった」と感じるかもしれません。でも、本当に元に戻ったのでしょうか。</p>
+<p>以前は、できない理由さえ分からなかった子が、今は「ここが難しい」と伝えられるようになっているかもしれません。</p>
+<p>以前は、失敗すると諦めていた子が、今は少し時間を置いて、もう一度挑戦できるようになっているかもしれません。</p>
+<p>以前は、大人に方法を決めてもらっていた子が、今は「次は違う方法を試したい」と考えているかもしれません。</p>
+<p><strong>その瞬間だけを切り取れば、変わっていないように見える。でも、これまでの流れで見れば、育っている力に気づけるかもしれない。</strong></p>
+<p>希爆Styleでは、成長を螺旋として捉えています。見る。広がる。選ぶ。試す。振り返る。気づく。そして、また見る。</p>
+<p>同じような課題に出会っても、以前の経験があるからこそ、違う見方ができる。別の方法を選べる。必要な助けを求められる。</p>
+<p>一度できたことが、次も必ずできるとは限りません。それでも、挑戦と振り返りを重ねる中で、使える方法や考え方が少しずつ増えていく。</p>
+<p>立ち止まった経験からも、次の一歩につながる気づきを見つけていく。それが、私たちの大切にしている成長の捉え方です。</p>
+<h4 class="co-h4">子ども自身が、未来を選べるようになっていく。</h4>
+<p>最初は、どうすればよいか分からなかった。だから、大人が方法を教え、一緒に考える。やがて、いくつかの方法を知り、自分で選んで試せるようになる。うまくいかなければ、別の方法を考える。困ったら、人の力を借りる。</p>
+<p>経験を重ねるたびに、見方が広がり、選択肢が増えていく。そして、その中から、自分にとって大切なことや、自分に合う方法を選べるようになっていく。</p>
+<p><strong>選択肢が増えることは、可能性が広がること。自分で選べるようになることは、自分の未来を切り開く力が育つこと。</strong></p>
+<p>その力を、身近な宿題から、学校生活へ。そして、これからの人生へとつなげていきたいのです。</p>
+<p>こうした経験を重ねるために、希爆塾は6か月のプログラムとして設計しています。一度の成功からも、一度の失敗からも学び、挑戦し、振り返り、選び直す経験を何度も重ねながら、その子自身の成長を支えていきます。</p>
+<p>そして、その過程を見守る保護者も、少しずつお子さんへの見方を広げていく。「まだできない」から「こんな工夫ができるようになったんだ」へ。「大丈夫かな」から「次は何に挑戦するんだろう」へ。</p>
+<p>子どもの成長を知ることで、任せられることが増え、心に余白が生まれていく。</p>
+<p><strong>子どもが自分の可能性を広げていく6か月。保護者が、わが子の新しい一面に出会っていく6か月。</strong></p>
+<p>思うように進まない日も、予想もしなかった成長に驚く日もあるでしょう。その一つひとつが、親子にとって大切な経験になっていく。</p>
+<p><strong>半年間の成長ドラマが、ここにはあります。</strong></p>
+<p>宿題一つで、自分の未来を切り開く力を。</p>
+<p>一生使える、自分の育て方「希爆Style」。</p>
+<p><strong>できない、で未来を決めない。</strong></p>
+<p>株式会社ムーンブラスト希爆｜覚醒!! 希爆塾</p>
+</div></details>
+</div>
+<div class="co-pricing" id="juku-pricing">
+<h3 class="co-h3">料金・プラン</h3>
+<h4 class="co-h4">お子さんの成長を支える、二つのプラン。</h4>
+<p>どちらも、6か月分のアプリのアカウント料金を含みます。</p>
+<div class="co-plans">
+<div class="co-plan">
+<p class="co-plan-name">子ども伴走</p>
+<dl>
+<dt>月換算</dt><dd class="amt">13,200円<small>（税込）</small></dd>
+<dt>6か月総額</dt><dd class="amt">79,200円<small>（税込）</small></dd>
+<dt>内容</dt>
+<dd><ul class="co-ul">
+<li>週1回60分のグループ授業</li>
+<li>隔週15分の個別支援</li>
+<li>アプリ・自極ノートで日常の挑戦を支える</li>
+<li>仲間との交流・共同制作</li>
+<li>お子さんの成長を保護者に共有</li>
+</ul></dd>
+</dl>
+</div>
+<div class="co-plan">
+<p class="co-plan-name">親子伴走Full</p>
+<dl>
+<dt>月換算</dt><dd class="amt">22,000円<small>（税込）</small></dd>
+<dt>6か月総額</dt><dd class="amt">132,000円<small>（税込）</small></dd>
+<dt>内容</dt>
+<dd><p>子ども伴走の内容に加えて、家庭での関わりも一緒に整えます。</p><ul class="co-ul">
+<li>保護者面談</li>
+<li>親子での振り返り</li>
+<li>家庭での関わり方の個別相談</li>
+<li>わが子の見方レポート</li>
+</ul></dd>
+</dl>
+</div>
+</div>
+<p class="co-note">月換算は6か月の総額を6で割った金額です。受講期間は6か月。受講料は原則一括、月々のお支払いはご相談ください。専用アプリは現在開発中です。</p>
+<p class="co-note">入会金・教材費はかかりません。お支払いは銀行振込にて承ります（詳細は<a href="legal.html">特定商取引法に基づく表記</a>）。</p>
+<p class="co-plan-cta"><a class="btn gold" href="#contact">このプランについて相談する <span class="arr">→</span></a></p>
+</div>
+</div>
+</section>
+<section class="co-panel" id="panel-coaching" role="tabpanel" aria-labelledby="tab-coaching" tabindex="0" data-panel="coaching">
+<div class="co-in">
+<p class="co-eyebrow">COACHING</p>
+<h2 class="co-h2">あなたの欲しい未来を、現実に。</h2>
+<p class="has-gr"><span class="gr">本気で人生を変えたい人のための、希爆Styleコーチング</span><br>
+希爆Styleコーチング</p>
+<p>もし、欲しい未来が手に入るとしたら。<br>
+あなたは、どんな人生を選びますか？</p>
+<div class="co-tools"><button type="button" class="co-tool" data-acc="open">すべて開く</button><button type="button" class="co-tool" data-acc="close">すべて閉じる</button></div>
+<div class="co-accs">
+<details class="co-acc nonum"><summary><span class="no"></span><span class="tt">あなたが望む未来から、始めます。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>もっと稼いで、お金を理由に諦めることを減らしたい。</p>
+<p>好きなことや得意なことを仕事にして、自分の力で成果を出したい。</p>
+<p>働き方を自分で選び、大切な人と過ごす時間も増やしたい。</p>
+<p>周りの評価に振り回されず、自分が納得できる人生を送りたい。</p>
+<p>今の仕事や生活をさらに充実させ、まだ知らない自分の可能性を試してみたい。</p>
+<p>その未来が現実になったら、あなたの毎日はどう変わるでしょう。</p>
+<p>朝、どんな気持ちで目覚めていますか。</p>
+<p>誰と、どんな時間を過ごしていますか。</p>
+<p>どんな仕事をして、何に挑戦していますか。</p>
+<p>そして、どんな自分になっていますか。</p>
+<p><strong>その「いつか」を、現実にしていくために。</strong></p>
+<p>希爆Styleコーチングは、あなたが本当に欲しい未来を明確にし、今の自分との間にある課題を整理し、実際の行動と成果につなげていく個別コーチングです。</p>
+<p>経験や強みを生かし、必要な知識や方法を学び、仕事や生活の中で実践する。</p>
+<p>その結果を確かめながら、目標の実現に向けて進め方を変えていきます。</p>
+<p><strong>あなたの欲しい未来について、まずは聞かせてください。</strong></p>
+</div></details>
+<details class="co-acc"><summary><span class="no">01</span><span class="tt">「自分も、あんなふうに生きてみたい」と思ったことはありませんか。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>SNSを開けば、好きなことを仕事にしている人。</p>
+<p>自分の事業を育て、成果を出している人。</p>
+<p>働く時間や場所を選び、自由に暮らしている人。</p>
+<p>「いいな。自分も、あんな人生を送りたい」</p>
+<p>「自分だって、もっとできるはずなのに」</p>
+<p>そう思って調べてみる。本を買う。やりたいことを書き出してみる。</p>
+<p>でも、いざ動こうとすると、手が止まる。</p>
+<p>失敗したら、今あるものを失うかもしれない。</p>
+<p>周りにどう思われるだろう。</p>
+<p>自分には、まだ準備が足りない気がする。</p>
+<p>あるいは、家族や仕事を優先するうちに、自分のやりたいことが後回しになっている。</p>
+<p>今の生活に大きな不満はないけれど、興味のあることが多く、次に何を選ぶか決められない。</p>
+<p><strong>欲しい未来はある。けれど、そこへ向かう道が、今の毎日とつながっていない。</strong></p>
+<p>その間にあるものを、一緒に明らかにしていきます。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">02</span><span class="tt">「もっと稼ぎたい」も、「もっと自由になりたい」も。あなたが欲しい結果から始めます。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p class="has-gr"><span class="gr">自分の経験や強みを、仕事の成果につなげたい。</span><br>
+これまでの経験を整理し、誰に、どんな価値を届けられるのかを考える。<br>
+新しい仕事や活動の候補をつくり、実際に伝え、反応を確かめていきます。</p>
+<p class="has-gr"><span class="gr">納得できる働き方や、生き方を選びたい。</span><br>
+収入、やりがい、時間、家族との暮らし。<br>
+あなたが大切にしたい条件を明らかにし、複数の選択肢を比べ、納得できる判断につなげます。</p>
+<p class="has-gr"><span class="gr">人との関係を変え、自分の希望も実現したい。</span><br>
+相手との関係と、自分の望みを整理する。<br>
+何を伝え、どんな協力を求め、どこから関わり方を変えるかを考え、実践します。</p>
+<p class="has-gr"><span class="gr">今ある力を生かして、さらに大きな挑戦をしたい。</span><br>
+すでにできていること、まだ使えていない経験、これから身につけたい力を確かめる。<br>
+次の挑戦を選び、実現に必要な行動を具体化します。</p>
+<p><strong>あなたが何を手に入れたいのかを出発点に、今の自分から進む道をつくっていきます。</strong></p>
+</div></details>
+<details class="co-acc"><summary><span class="no">03</span><span class="tt">CASE 01｜「子どもたちのために、何かしたい」</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<h4 class="co-h4">実際に、こんな未来が動き始めています。</h4>
+<p class="has-gr"><span class="gr">バラバラだった経験と想いがつながり、子ども食堂・行政との連携、農業の売上向上へ。</span></p>
+<p><strong>欲しかった未来：自分の農業経験を生かし、子どもたちのためになる活動を実現すること。</strong></p>
+<p class="has-gr"><span class="gr">スタートライン｜やりたいことはある。でも、どう実現すればいいか分からない。</span></p>
+<p>農業を営みながら、心の中には一つの想いがありました。</p>
+<p><strong>「子どもたちのために、何かしたい」</strong></p>
+<p>農業の経験がある。SNSも使える。人とのつながりもある。</p>
+<p>けれど、それぞれの経験や強みが、子どもたちのための活動にどうつながるのかが見えていませんでした。</p>
+<p>「新しいことを始めたい」</p>
+<p>「でも、自分に何ができるんだろう」</p>
+<p>やりたいという気持ちはあるのに、具体的な形にできない。</p>
+<p>そんなところから始まりました。</p>
+<p class="has-gr"><span class="gr">希爆Styleで変えたこと｜点と点だった経験が、一つの未来につながった。</span></p>
+<p>対話の中で、これまでの経験や大切にしている想いを整理していきました。</p>
+<p>農業で培ってきた経験。</p>
+<p>子どもたちのために何かしたいという願い。</p>
+<p>SNSを活用する可能性。</p>
+<p>これまで築いてきた人とのつながり。</p>
+<p>それぞれを別々に考えるのではなく、掛け合わせてみる。</p>
+<p><strong>農業 × 子ども × SNS × 人とのつながり</strong></p>
+<p>すると、それまで見えていなかった活動の形が、少しずつ見えてきました。</p>
+<p><strong>「掛け合わせるってやっと気づけた」</strong></p>
+<p><strong>「道が見えてきた」</strong></p>
+<p>見方が変わり、考え方が広がったことで、自分の経験をどう使えばよいのかが明確になっていったのです。</p>
+<p class="has-gr"><span class="gr">現実に起きた結果｜子ども食堂や行政とのつながりが生まれ、農業の売上も向上。</span></p>
+<p>その後、本人は実際に動き始めました。</p>
+<p>子ども食堂とのつながりが生まれ、行政とも関係を築きながら、子どもたちのための活動を具体化していきました。</p>
+<p>さらに、人とのつながりや活動の広がりは、農業の売上向上にもつながりました。</p>
+<p><strong>子どもたちの役に立ちたいという想いが、現実の活動になり、自分の事業にも成果を生み始めたのです。</strong></p>
+<p>そして何より大きいのは、本人が叶えたい夢がはっきりしたこと。</p>
+<p>以前は「自分に何ができるのかな」と模索していた人が、今は自分の経験と強みを生かし、実現したい未来に向かって進んでいます。</p>
+<p class="has-gr"><span class="gr">手に入れた変化</span></p>
+<p><strong>「何かしたい。でも、何ができるか分からない」から、</strong></p>
+<p><strong>「自分の経験を生かして、子どもたちのための活動を広げていく」へ。</strong></p>
+<p>夢が明確になった。</p>
+<p>人とのつながりが広がった。</p>
+<p>実際の活動が始まった。</p>
+<p>そして、農業の売上にも成果が生まれた。</p>
+<p><strong>見方が変わり、選択肢が増え、行動が変わったことで、望んでいた未来が現実に動き始めた事例です。</strong></p>
+</div></details>
+<details class="co-acc"><summary><span class="no">04</span><span class="tt">CASE 02｜「指示しなくても、仲間が自分で考えて動く組織をつくりたい」</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p class="has-gr"><span class="gr">指示待ちの組織から、メンバーが主体的に動く組織へ。営業成績「東京2位」を達成。</span></p>
+<p><strong>欲しかった未来：一人ひとりが自分の力を発揮し、仲間と協力しながら成果を生み出す、自走する組織をつくること。</strong></p>
+<p class="has-gr"><span class="gr">スタートライン｜リーダーが動かなければ、組織が動かない。</span></p>
+<p>人材育成と組織づくりに悩んでいたリーダーがいました。</p>
+<p>仲間を育てたい。</p>
+<p>一人ひとりが自分で考え、行動できる組織をつくりたい。</p>
+<p>そして、チームとして結果を出したい。</p>
+<p>しかし、現実は思い描いていた姿とは違いました。</p>
+<p>指示を出さなければ、なかなか動かない。</p>
+<p>メンバーが自分から考え、行動する場面が少ない。</p>
+<p>リーダーが頑張っても、組織全体の力につながらない。</p>
+<p>「どうすれば、みんなが自分から動いてくれるのか」</p>
+<p>試行錯誤しても思うように変わらず、次第に自信を失い、組織づくりを諦めかけていました。</p>
+<p><strong>目指していたのは自走する組織。しかし現実は、リーダーの指示に頼る組織だったのです。</strong></p>
+<p class="has-gr"><span class="gr">希爆Styleで変えたこと｜人を動かそうとする前に、人が動ける組織をつくる。</span></p>
+<p>まず取り組んだのは、メンバーにもっと頑張るよう求めることではありませんでした。</p>
+<p><strong>なぜ、メンバーは自分から動けないのか。</strong></p>
+<p><strong>どうすれば、一人ひとりが自分の力を発揮できるのか。</strong></p>
+<p>組織の現状を、希爆Styleの「本質・流れ・主語」から整理していきました。</p>
+<p><strong>本質を見る。</strong><br>
+メンバーの意欲や能力だけを問題にせず、目的の共有、役割、判断のしやすさ、周囲との関係など、行動に影響する条件を考える。</p>
+<p><strong>流れを見る。</strong><br>
+仕事が始まり、判断し、実行し、結果を振り返るまでの中で、どこに停滞があるのかを確かめる。</p>
+<p><strong>主語を見る。</strong><br>
+「リーダーが何をさせるか」から、「メンバー自身が何を考え、何を選び、どう行動するか」へ、関わり方の中心を移していく。</p>
+<p>そして、リーダー自身も、組織のあり方を考え直しました。</p>
+<p>「どうすればメンバーを動かせるか」ではなく、</p>
+<p><strong>「どうすれば、一人ひとりが自分から動きたくなる組織をつくれるか」</strong></p>
+<p>という視点です。</p>
+<p>その考え方を、実際のメンバーとの関わりに生かしていきました。</p>
+<p class="has-gr"><span class="gr">希爆Styleの実践｜一人ひとりと向き合い、組織の力を引き出す。</span></p>
+<p>リーダーは、メンバー一人ひとりとの対話を重ねました。</p>
+<p>それぞれが何を考え、何を大切にしているのか。</p>
+<p>どんな力や強みを持っているのか。</p>
+<p>チームとして何を実現したいのか。</p>
+<p>感謝を伝え、共通の目的を共有し、仲間とともに進む関係をつくっていきました。</p>
+<p>その後も、希爆Styleの見方や考え方を実践に生かしながら、一人ひとりが自分の力を発揮できる組織づくりに取り組みました。</p>
+<p>大切にしたのは、リーダーだけが頑張ることではありません。</p>
+<p><strong>メンバー一人ひとりが、自分の役割と可能性に気づき、仲間と協力して成果を生み出していくこと。</strong></p>
+<p>リーダー自身の関わり方が変わり、メンバーとの関係にも変化が生まれていきました。</p>
+<p class="has-gr"><span class="gr">現実に起きた結果｜仲間が動き出し、営業成績「東京2位」へ。</span></p>
+<p>その後、メンバー同士の協力が生まれ、協力者が増えていきました。</p>
+<p>リーダーが一人で組織を引っ張る状態から、仲間と目的を共有し、それぞれの力を生かして前へ進む組織へ。</p>
+<p>そして、本人から報告された結果が、</p>
+<p><strong>営業成績「東京2位」。</strong></p>
+<p>組織として、目に見える成果にもつながりました。</p>
+<p>この結果は、リーダー一人の力ではなく、メンバー一人ひとりの取り組みと協力によって生まれたものです。</p>
+<p><strong>「もう無理かもしれない」と諦めかけていた組織づくりが、仲間とともに結果を生み出す挑戦へと変わっていったのです。</strong></p>
+<p class="has-gr"><span class="gr">手に入れた変化</span></p>
+<p><strong>指示しなければ動かない組織から、仲間が主体的に協力し、成果を生み出す組織へ。</strong></p>
+<p>リーダー自身の見方と関わり方が変わった。</p>
+<p>メンバー一人ひとりとの関係が変わった。</p>
+<p>仲間の協力が生まれ、組織としての行動が変わった。</p>
+<p>そして、営業成績「東京2位」という結果につながった。</p>
+<p><strong>人の可能性を引き出す関わり方が、組織の力を広げ、現実の成果につながった事例です。</strong></p>
+</div></details>
+<details class="co-acc"><summary><span class="no">05</span><span class="tt">CASE 03｜「人生に、もっと刺激が欲しい」</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p class="has-gr"><span class="gr">「人生に味付けが欲しい」という漠然とした思いから、海外へ。自分の可能性を広げる新しい挑戦へ。</span></p>
+<p><strong>欲しかった未来：今まで知らなかった世界に触れ、新しい経験を通して、もっと面白く、充実した人生を生きること。</strong></p>
+<p class="has-gr"><span class="gr">スタートライン｜仕事は順調。でも、このままでいいのだろうか。</span></p>
+<p>SEとして働き、仕事にも慣れていた方がいました。</p>
+<p>仕事はある。生活にも大きな不満はない。</p>
+<p>でも、心のどこかに物足りなさがありました。</p>
+<p><strong>「人生に味付けが欲しい」</strong></p>
+<p>今のままでも悪くない。</p>
+<p>でも、もっと面白いことができるのではないか。</p>
+<p>まだ知らない世界があるのではないか。</p>
+<p>自分には、もっと違う可能性があるのではないか。</p>
+<p>そんな思いはありましたが、何をしたいのか、何から始めればよいのかは、まだ明確になっていませんでした。</p>
+<p><strong>変わりたいという気持ちはある。でも、どこへ向かえばよいのか分からない。</strong></p>
+<p>そこが、スタートラインでした。</p>
+<p class="has-gr"><span class="gr">希爆Styleで変えたこと｜バラバラだった思いがつながり、行動する目的が見えてきた。</span></p>
+<p>セッションでは、これまでの仕事や経験、興味のあること、人生で大切にしたいことを一緒に整理していきました。</p>
+<p>どんなときに心が動くのか。</p>
+<p>何に興味を持ち、どんな経験をしてみたいのか。</p>
+<p>これまでの経験を、違う角度から見たら何が見えてくるのか。</p>
+<p>そして、その先でどんな自分になりたいのか。</p>
+<p>一つひとつの思いを言葉にし、つながりを見つけていきました。</p>
+<p>それまで別々に存在していた興味や願いが、少しずつ一つの方向へとつながっていく。</p>
+<p><strong>点だった思いがつながり、未来への道筋になっていったのです。</strong></p>
+<p>「なんとなく刺激が欲しい」から、「自分は何を見て、何を経験したいのか」へ。</p>
+<p>そして、「その経験を通して、どんな可能性を広げたいのか」へ。</p>
+<p>セッションの中で、本人からこんな言葉が生まれました。</p>
+<p><strong>「自分の進む道が見えてきました」</strong></p>
+<p class="has-gr"><span class="gr">現実に起きた結果｜海外へ行くことを決め、実際に旅立った。</span></p>
+<p>そして、その後。</p>
+<p>本人は海外へ行くことを決め、新しい世界を見に旅立ちました。</p>
+<p>それまで漠然と抱いていた「人生にもっと刺激が欲しい」という思いが、実際の行動になったのです。</p>
+<p>海外へ行くこと自体が、人生の最終目標だったわけではありません。</p>
+<p>大切なのは、自分が何を求めているのかを考え、そのために新しい世界へ踏み出す選択をしたことです。</p>
+<p><strong>「何か面白いことがないかな」と待っていた状態から、「自分で新しい経験をつくりに行く」状態へ。</strong></p>
+<p>思いがつながり、行動する目的が明確になったことで、本人は実際に新しい挑戦へ進みました。</p>
+<p class="has-gr"><span class="gr">手に入れた変化</span></p>
+<p><strong>「今の人生に何かが足りない。でも、何をすればよいか分からない」から、</strong></p>
+<p><strong>「自分が求める経験を、自分で選び、実際に手に入れに行く」へ。</strong></p>
+<p>漠然としていた願いが、具体的な目的になった。</p>
+<p>これまで別々だった思いや経験がつながった。</p>
+<p>自分で次の行動を決めた。</p>
+<p>そして、実際に海外へ旅立った。</p>
+<p><strong>見方が広がり、考え方が変わり、選択が変わったことで、憧れていた新しい経験が現実になった事例です。</strong></p>
+</div></details>
+<details class="co-acc"><summary><span class="no">06</span><span class="tt">CASE 04｜「もう一度、教師として胸を張って働きたい」</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p class="has-gr"><span class="gr">指導に自信を失った元教師が、教員採用試験に合格。再び教師への道へ。</span></p>
+<p><strong>欲しかった未来：教師としての自信と誇りを取り戻し、もう一度教壇に立つこと。</strong></p>
+<p class="has-gr"><span class="gr">スタートライン｜教師を辞めても、教育への思いは消えなかった。</span></p>
+<p>かつて教師として働いていたものの、一度その仕事を離れ、指導員として子どもたちと関わっていた方がいました。</p>
+<p>子どもへの指導には悩みがありました。</p>
+<p>「どうして同じようにできないのだろう」</p>
+<p>「自分の関わり方は、これでいいのだろうか」</p>
+<p>子どもと真剣に向き合いたい気持ちがあるからこそ、自分の指導に自信が持てなくなっていました。</p>
+<p>でも、本当はもう一度、教師として働きたい。</p>
+<p>子どもの成長を支えられる先生になりたい。</p>
+<p><strong>教師という仕事に、自信と誇りを持ちたかったのです。</strong></p>
+<p class="has-gr"><span class="gr">希爆Styleで変えたこと｜「できない」から「成長の流れを見る」へ。</span></p>
+<p>対話では、目の前の子どもの行動だけでなく、そこに至るまでの経験や、少しずつ生まれている変化を一緒に整理しました。</p>
+<p>なぜできないのか、と考えるだけではなく、どこまでできるようになったのか。どんな関わりが助けになったのか。次に何を試せるのか。</p>
+<p>子どもの見方が変わることで、指導の考え方も変わっていきました。</p>
+<p>そして、実際の授業や子どもとの対話、保護者との関わりの中で、新しい方法を試し始めました。</p>
+<p class="has-gr"><span class="gr">現実に起きた結果｜再び教師になることを選び、採用試験に合格。</span></p>
+<p>その方から、こんな言葉が生まれました。</p>
+<p><strong>「もう一度担任をやっても良いかな」</strong></p>
+<p>それは、教師としての未来をもう一度考え始めた瞬間でした。</p>
+<p>そして本人は、もう一度教師になることを決め、教員採用試験を受験。</p>
+<p><strong>見事、合格しました。</strong></p>
+<p>一度は離れた教師という仕事に、再び挑戦する道を自分で選び、そのための行動を起こし、合格という結果を手に入れたのです。</p>
+<p><strong>自信を失っていた仕事に、もう一度挑戦する自分へ。</strong></p>
+<p>それは、本人が望んでいた未来に向かう、大きな変化でした。</p>
+<h4 class="co-h4">あなたは、どんな未来を手に入れたいですか？</h4>
+<p>ここで紹介した4人は、それぞれ違う未来を望んでいました。</p>
+<p>子どもたちのための活動を実現したい。</p>
+<p>仲間が自分から動き、成果を出す組織をつくりたい。</p>
+<p>まだ知らない世界に触れ、人生をもっと面白くしたい。</p>
+<p>もう一度、自信と誇りを持って教師として働きたい。</p>
+<p>そして、それぞれが自分の経験や考え方を見つめ直し、新しい選択をし、実際に行動しました。</p>
+<p>その結果、活動が生まれ、事業の売上が伸び、仲間との協力が広がり、海外への挑戦や教員採用試験の合格といった変化が生まれています。</p>
+<p><strong>人生が変わるとは、誰かが決めた成功を手に入れることではありません。</strong></p>
+<p><strong>自分が本当に望む未来に向かって、現実を変えていくことです。</strong></p>
+</div></details>
+<details class="co-acc"><summary><span class="no">07</span><span class="tt">なぜ、希爆Styleで変化が生まれるのか。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>希爆Styleは、約15年間の小学校教員としての教育実践を土台に、人が自分で考え、選び、行動し、成長していくための見方や方法を体系化したものです。</p>
+<p class="has-gr"><span class="gr">その中心にあるのが、<strong>「本質・流れ・主語」</strong>という三つの視点です。</span></p>
+<h4 class="co-h4">① 本質を見る｜本当の課題は何なのか。</h4>
+<p>例えば、「行動力がない」と悩んでいるとします。</p>
+<p>でも、本当に行動力がないのでしょうか。</p>
+<p>目標が曖昧なのかもしれません。</p>
+<p>何から始めればよいか分からないのかもしれません。</p>
+<p>必要な知識や方法が足りないのかもしれません。</p>
+<p>あるいは、今の環境では行動しにくいのかもしれません。</p>
+<p>希爆Styleでは、表面的な問題だけを見て、すぐに答えを出しません。</p>
+<p><strong>問題の表面ではなく、その背景にある構造を見つめます。</strong></p>
+<h4 class="co-h4">② 流れを見る｜これまでの経験を、未来にどう生かすか。</h4>
+<p>今のあなたは、これまでの経験の積み重ねによって形づくられています。</p>
+<p>成功した経験。</p>
+<p>失敗した経験。</p>
+<p>挑戦したこと。</p>
+<p>諦めたこと。</p>
+<p>その一つひとつが、今の考え方や行動に影響しているかもしれません。</p>
+<p>でも、過去の経験は、未来を制限するものとは限りません。</p>
+<p><strong>過去を変えることはできなくても、過去の経験をこれからどう使うかは、選び直すことができます。</strong></p>
+<h4 class="co-h4">③ 主語を見る｜あなたは、本当はどうしたいのか。</h4>
+<p>私たちは、知らず知らずのうちに、誰かの期待や社会の常識に合わせて生きていることがあります。</p>
+<p>「こうするべきだ」</p>
+<p>「普通はこうだ」</p>
+<p>「周りからどう思われるだろう」</p>
+<p>そんな考えが、自分の本当の望みを見えにくくしているのかもしれません。</p>
+<p>希爆Styleでは、あなた自身に問いかけます。</p>
+<p><strong>あなたは、どうしたいのですか？</strong></p>
+<p><strong>あなたは、何を手に入れたいのですか？</strong></p>
+<p><strong>あなたは、どんな人生を生きたいのですか？</strong></p>
+<p>その答えを一緒に探し、必要な知識や方法を学びながら、実際の行動につなげていきます。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">08</span><span class="tt">考えて終わらない。現実を動かすコーチング。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>例えば、あなたが「自分の事業を始めたい」と考えているとします。</p>
+<p>でも、何から始めればよいか分からない。</p>
+<p>自分に何ができるのかも分からない。</p>
+<p>失敗することが怖くて、一歩を踏み出せない。</p>
+<p>そんなとき、ただ「頑張りましょう」「あなたならできます」と励ますだけでは、現実は変わらないかもしれません。</p>
+<p>希爆Styleでは、まずあなたの経験や強みを整理します。</p>
+<p>これまで何をしてきたのか。</p>
+<p>どんなことが得意なのか。</p>
+<p>どんなときに喜びや手応えを感じたのか。</p>
+<p>その経験や力を組み合わせることで、どんな可能性が考えられるのか。</p>
+<p>そして、その中から挑戦したいことを選びます。</p>
+<p>必要な情報を集める。</p>
+<p>経験者に話を聞く。</p>
+<p>小さく試してみる。</p>
+<p>実際に誰かに提案してみる。</p>
+<p>行動した結果を振り返る。</p>
+<p>うまくいったら、何が役立ったのかを考える。</p>
+<p>うまくいかなければ、何を変えればよいのかを考える。</p>
+<p>そうして、次の一歩を決めていきます。</p>
+<p><strong>考えて終わらない。</strong></p>
+<p><strong>気づいて終わらない。</strong></p>
+<p><strong>実際の行動につなげ、経験から学び、次の挑戦へ進む。</strong></p>
+<p>それが、希爆Styleの実践型コーチングです。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">09</span><span class="tt">一つの目標を実現し、その先の未来も切り開く。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>もちろん、あなたが望む目標を実現することは大切です。</p>
+<p>収入を増やしたい。</p>
+<p>新しい仕事に挑戦したい。</p>
+<p>事業を成長させたい。</p>
+<p>人間関係を変えたい。</p>
+<p>もっと自由な時間を手に入れたい。</p>
+<p>その願いを、大切にします。</p>
+<p>でも、希爆Styleが目指すのは、その目標を達成することだけではありません。</p>
+<p>なぜなら、一つの目標を達成した先にも、新しい挑戦が待っているからです。</p>
+<p>今の状況を整理する力。</p>
+<p>必要な知識や情報を集める力。</p>
+<p>見方を広げ、選択肢を増やす力。</p>
+<p>自分で選び、行動する力。</p>
+<p>失敗から学び、方法を変える力。</p>
+<p>必要なときには周囲の支えを借りる力。</p>
+<p>こうした力を、実際の挑戦を通して育てていきます。</p>
+<p><strong>今、欲しい未来に近づくこと。</strong></p>
+<p><strong>そして、これから選べる未来を広げていくこと。</strong></p>
+<p>その両方を目指すのが、希爆Styleです。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">10</span><span class="tt">成長は一直線ではありません。螺旋のように進んでいきます。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>人生を変えようと決意しても、いつも順調に進むとは限りません。</p>
+<p>昨日は前向きだったのに、今日は不安になる。</p>
+<p>先週は行動できたのに、今週は立ち止まってしまう。</p>
+<p>一度は自信を持てたのに、また以前のように悩んでしまう。</p>
+<p>そんなこともあるでしょう。</p>
+<p>でも、それは必ずしも、元に戻ってしまったということではありません。</p>
+<p>以前は、何が不安なのかさえ分からなかった。</p>
+<p>でも今は、自分が何を恐れているのか分かるようになった。</p>
+<p>以前は、一つの方法しか知らなかった。</p>
+<p>でも今は、別の方法を考えられるようになった。</p>
+<p>以前は、失敗したら諦めていた。</p>
+<p>でも今は、失敗から次の作戦を考えられるようになった。</p>
+<p>希爆Styleでは、成長を螺旋として捉えています。</p>
+<p><strong>見る → 広がる → 選ぶ → 試す → 振り返る → 気づく → また見る</strong></p>
+<p>同じような課題に出会っても、以前とは違う見方ができる。</p>
+<p>新しい方法を選べる。</p>
+<p>必要な支えを求められる。</p>
+<p>そして、その経験から、さらに自分の可能性を広げていく。</p>
+<p><strong>成長とは、失敗しなくなることではありません。</strong></p>
+<p><strong>成功も失敗も、次の一歩に変えられるようになることです。</strong></p>
+</div></details>
+<details class="co-acc"><summary><span class="no">11</span><span class="tt">本気で人生を変えたい、あなたへ。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>ここまで読んで、あなたは何を感じましたか？</p>
+<p>今の人生を変えたい。</p>
+<p>もっと自分の可能性を試したい。</p>
+<p>これまでとは違う未来を手に入れたい。</p>
+<p>そんな思いがあるのなら、まずは自分自身に問いかけてみてください。</p>
+<p><strong>あなたは、本当はどんな未来が欲しいですか？</strong></p>
+<p>その未来のために、今の自分は何を変えたいのでしょうか。</p>
+<p>そして、最初の一歩として、何ができるでしょうか。</p>
+<p>最初から答えが分かっている必要はありません。</p>
+<p>自信がなくても構いません。</p>
+<p>今はまだ、何から始めればよいか分からなくても構いません。</p>
+<p>大切なのは、自分の未来を、今の自分の限界だけで決めないことです。</p>
+<p>あなたの中には、まだ気づいていない強みや、使っていない経験があるかもしれません。</p>
+<p>今まで見えていなかった選択肢があるかもしれません。</p>
+<p>その可能性を一緒に探し、実際の行動につなげていく。</p>
+<p>そして、あなた自身が、自分の未来を切り開いていく。</p>
+<p><strong>見方が変われば、意識が変わる。</strong></p>
+<p><strong>意識が変われば、選択が変わる。</strong></p>
+<p><strong>選択が変われば、行動が変わる。</strong></p>
+<p><strong>行動が変われば、未来が変わる。</strong></p>
+<p>今の自分で、未来の自分を決めない。</p>
+<h4 class="co-h4">あなたの欲しい未来を、現実に。</h4>
+<p><strong>一生使える、自分の育て方「希爆Style」。</strong></p>
+<p>株式会社ムーンブラスト希爆</p>
+</div></details>
+</div>
+</div>
+</section>
+<section class="co-panel" id="panel-consulting" role="tabpanel" aria-labelledby="tab-consulting" tabindex="0" data-panel="consulting">
+<div class="co-in">
+<p class="co-eyebrow">CONSULTING</p>
+<h2 class="co-h2">社員が自ら考え、動き、成果を生み出す組織へ。</h2>
+<p class="has-gr"><span class="gr">あなたがつくりたい組織を、現実に。</span><br>
+希爆Style｜企業人材育成・自走組織コンサルティング</p>
+<p>もし、社員一人ひとりが自分で考え、判断し、行動できるようになったら、あなたの会社はどう変わるでしょうか。</p>
+<div class="co-tools"><button type="button" class="co-tool" data-acc="open">すべて開く</button><button type="button" class="co-tool" data-acc="close">すべて閉じる</button></div>
+<div class="co-accs">
+<details class="co-acc nonum"><summary><span class="no"></span><span class="tt">目指す組織の姿と、いまの課題。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>社長が細かく指示しなくても、仕事が進む。</p>
+<p>管理職が自ら判断し、部下を育てる。</p>
+<p>社員が問題を発見し、仲間と協力して改善する。</p>
+<p>新しい事業に挑戦できる人材が育つ。</p>
+<p>そして、社員の成長が、会社の売上や利益、事業の発展につながっていく。</p>
+<p>そんな組織をつくりたいと思いませんか。</p>
+<p>しかし、現実には、</p>
+<p>「何度言っても、社員が自分から動かない」</p>
+<p>「管理職が育たず、結局すべて社長に戻ってくる」</p>
+<p>「研修を受けさせても、現場が変わらない」</p>
+<p>「社員にはもっと能力があるはずなのに、発揮されていない」</p>
+<p>そんな悩みを抱えている経営者も少なくありません。</p>
+<p><strong>本当に問題なのは、社員の能力や意欲だけなのでしょうか。</strong></p>
+<p>もしかすると、社員が自分で考え、判断し、行動できる条件が、まだ整っていないのかもしれません。</p>
+<p>希爆Styleは、人の可能性を引き出す関わり方と、主体的に動ける組織の仕組みを両面から整え、経営者が望む成果の実現を支援します。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">01</span><span class="tt">約15年間の教育実践から生まれた、人と組織を育てる技術</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>希爆Styleの原点は、約15年間の小学校教育の現場にあります。</p>
+<p>39人の学級経営。</p>
+<p>子ども主体の宿泊行事。</p>
+<p>一人ひとりが役割を持ち、自分たちで判断し、協力する集団づくり。</p>
+<p>そして、指導に悩む教員への支援。</p>
+<p>その実践の中で、一つの問いと向き合い続けてきました。</p>
+<p><strong>「どうすれば、人は言われて動く状態から、自分で考えて動く状態へ変わるのか」</strong></p>
+<h4 class="co-h4">実績①｜39人の学級が、自分たちで問題を解決する集団へ。</h4>
+<p>当初は、互いへの不信感や、問題を他人のせいにする言動が見られた39人の学級。</p>
+<p>問題が起きれば教師が対応し、子どもたちは指示を待つ。</p>
+<p>そこで取り組んだのは、教師がさらに厳しく管理することではありませんでした。</p>
+<p>子ども同士で考え、話し合う機会をつくる。</p>
+<p>一人ひとりに役割を渡す。</p>
+<p>自分たちで選び、実行する。</p>
+<p>そして、経験を振り返り、次の方法を考える。</p>
+<p>こうした実践を積み重ねました。</p>
+<p><strong>結果、子どもたち自身が話し合い、問題を解決する場面が増えていきました。</strong></p>
+<p>教師がすべてを判断する集団から、自分たちで考え、協力して動く集団へ。</p>
+<p>これは、希爆Styleの組織づくりの原点となる実践です。</p>
+<h4 class="co-h4">実績②｜「やらされる行事」から、自分たちでつくり上げる行事へ。</h4>
+<p>小学校6年生の宿泊行事。</p>
+<p>準備段階では、子どもたちから反発も見られました。</p>
+<p>そこで、教師がすべてを決めるのではなく、子ども自身が企画や運営について考え、判断できる機会を設けました。</p>
+<p>自分たちで考え、役割を担い、仲間と協力して進める。</p>
+<p>その結果、子ども自身が判断し、主体的に行動する場面が増え、支援員からもその姿に驚きの声が寄せられました。</p>
+<p><strong>指示されたことをこなす集団から、自分たちで活動をつくる集団へ。</strong></p>
+<p>主体性は、単に「自分でやりなさい」と言えば生まれるものではありません。</p>
+<p>目的を理解し、必要な方法を学び、判断する機会と責任を持つことで育っていくのです。</p>
+<h4 class="co-h4">実績③｜指示待ちの組織から、仲間が協力し成果を生み出す組織へ。</h4>
+<p>人材育成と組織づくりに悩んでいたリーダー。</p>
+<p>目指していたのは、一人ひとりが自分で考え、仲間と協力して結果を出す組織でした。</p>
+<p>しかし、現実は指示待ちが多く、リーダー自身も組織づくりを諦めかけていました。</p>
+<p>希爆Styleの視点を通して、組織のどこで行動が止まっているのか、リーダー自身の関わり方をどう変えられるのかを整理しました。</p>
+<p>そして、メンバー一人ひとりとの対話を実践。</p>
+<p>感謝を伝え、共通の目的を共有し、仲間の力を生かす関わり方へと変えていきました。</p>
+<p>その結果、協力者が増え、組織としての行動にも変化が生まれました。</p>
+<p>さらに本人からは、</p>
+<p><strong>営業成績「東京2位」</strong></p>
+<p>という成果が報告されています。</p>
+<p>リーダー一人が頑張る組織から、仲間と協力して成果を生み出す組織へ。</p>
+<p><strong>人材育成が、実際の組織の成果につながった事例です。</strong></p>
+<p>※営業成績は本人からの報告です。正式な集計対象・年度などは確認が必要です。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">02</span><span class="tt">「子どもと大人は違う」。その通りです。しかし、人が成長する原理には共通点があります。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>ここで、こう思われる方もいるでしょう。</p>
+<p>「小学校でできたからといって、会社でもできるとは限らない」</p>
+<p>その通りです。</p>
+<p>子どもと大人では、経験も責任も違います。</p>
+<p>学校と企業では、目的も評価も違います。</p>
+<p>学校では子どもの学びと成長が中心ですが、企業では顧客への価値提供、売上、利益、品質、納期などの成果が求められます。</p>
+<p>しかし、人が新しいことを理解し、判断し、行動できるようになるための基本的な条件には、共通する部分があります。</p>
+<p><strong>目的が分かること。</strong></p>
+<p><strong>必要な知識や方法を持っていること。</strong></p>
+<p><strong>自分で判断できる範囲があること。</strong></p>
+<p><strong>実際に試す機会があること。</strong></p>
+<p><strong>経験を振り返り、次の方法を考えられること。</strong></p>
+<p>そして、必要なときに周囲の助けを借りられること。</p>
+<p>例えば、仕事の目的が分からない社員に「主体的に動け」と言っても、何を目指して判断すればよいのか分かりません。</p>
+<p>判断基準を教えられていない社員に「自分で考えろ」と言っても、適切な判断は難しいでしょう。</p>
+<p>失敗したときに責められるばかりの環境では、新しい提案をためらうこともあります。</p>
+<p class="has-gr"><span class="gr">だからこそ、社員の意識だけを変えようとするのではなく、<strong>人が自ら動ける条件を、会社と社員の両方から整えること</strong>が必要です。</span></p>
+<p>学校で培った方法を、そのまま企業へ持ち込むわけではありません。</p>
+<p>人の成長に共通する原理を、企業の目的・責任・権限・業務に合わせて設計し直します。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">03</span><span class="tt">青山学院大学・原晋監督の組織改革にも、共通する考え方があります。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>青山学院大学陸上競技部を、箱根駅伝優勝へ導いた原晋監督。</p>
+<p>原監督の組織づくりで注目したいのは、最初から選手にすべてを任せたわけではないという点です。</p>
+<p>原監督は、著書で組織の進化を四つの段階として説明しています。その内容を要約すると、次のようになります。</p>
+<p class="has-gr"><span class="gr">第1段階｜必要な知識と技術を教える。</span><br>
+最初は、指導者が必要な知識や技術を具体的に教える。</p>
+<p class="has-gr"><span class="gr">第2段階｜少しずつ権限を渡す。</span><br>
+スタッフを育成し、判断や責任を段階的に任せていく。</p>
+<p class="has-gr"><span class="gr">第3段階｜選手の自主性を育てる。</span><br>
+選手が自分で考え、方法を選び、主体的に取り組めるようにする。</p>
+<p class="has-gr"><span class="gr">第4段階｜責任を担う自立した組織へ。</span><br>
+選手に責任を渡し、指導者はコーチングや支援を通して成長を支える。</p>
+<p>原監督は、こうした組織づくりとともに、共通の行動指針や、選手が自由に意見を出せる風土を大切にしてきました。</p>
+<p>そして2004年の就任から、2015年の箱根駅伝初優勝へ。</p>
+<p><strong>自主性を最初から要求するのではなく、自主的に動ける力と条件を育てながら、段階的に判断と責任を渡していく。</strong></p>
+<p>この考え方は、希爆Styleが教育現場で実践してきた支援の方向性とも重なります。</p>
+<p>ただし、原監督の方法と希爆Styleが同一というわけではありません。</p>
+<p>原監督は競技チーム全体の成熟と指導者の役割の変化を説明しています。</p>
+<p>一方、希爆Styleは、一人ひとりの状態や、実際に止まっている場面を見極め、必要な支援を選ぶことを重視しています。</p>
+<p>組織全体の成長と、一人ひとりの成長。その両方をつなぐことが、企業の人材育成には必要だと<strong>考えています。</strong></p>
+<p>※原監督の事例は、組織づくりの共通原理を考えるための参考事例です。希爆Styleとの共同実践や、原監督による推薦を意味するものではありません。</p>
+<!-- 参考リンクのURLは佐野さんに確認 -->
+<p class="co-ref">参考：原晋氏の著書抜粋・Number Web ／ 原晋氏公式プロフィール ／ 原晋氏対談・日本銀行 ／ 原晋氏の講演記録・ビジネス＋IT</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">04</span><span class="tt">だから、希爆Styleはこうアプローチします。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<h4 class="co-h4">社員を変えようとする前に、社員が育ち、成果を出せる組織を設計する。</h4>
+<p>希爆Styleでは、研修を実施して終わりにはしません。</p>
+<p>経営者が本当に実現したい組織の姿を明確にし、社員の育成と、会社側の仕組みづくりを一緒に進めます。</p>
+<h4 class="co-h4">STEP 01｜経営者が欲しい未来を明確にする。</h4>
+<p>最初に確認するのは、会社が何を実現したいのかということです。</p>
+<p>売上を伸ばしたいのか。</p>
+<p>社員に仕事を任せ、新規事業に集中したいのか。</p>
+<p>管理職を育て、組織を拡大したいのか。</p>
+<p>社長が不在でも、事業が安定して進む会社をつくりたいのか。</p>
+<p>同じ「社員を育てたい」でも、経営者が欲しい結果によって、必要な支援は変わります。</p>
+<p><strong>まず、あなたがつくりたい会社の未来を明確にします。</strong></p>
+<h4 class="co-h4">STEP 02｜人と組織が、どこで止まっているのかを見極める。</h4>
+<p>次に、実際の仕事の流れを確認します。</p>
+<p>社員が自分から動かないのは、なぜなのか。</p>
+<p>目的が分からないのか。</p>
+<p>判断基準がないのか。</p>
+<p>必要な知識や経験が足りないのか。</p>
+<p>権限がなく、上司の承認を待つしかないのか。</p>
+<p>それとも、失敗を恐れて挑戦しにくい環境なのか。</p>
+<p class="has-gr"><span class="gr">希爆Styleでは、<strong>「本質・流れ・主語」</strong>という三つの視点から問題を整理します。</span></p>
+<p><strong>本質：</strong><span class="gr">本当に必要なものは何か。</span></p>
+<p><strong>流れ：</strong><span class="gr">仕事のどの段階で止まっているのか。</span></p>
+<p><strong>主語：</strong><span class="gr">誰が考え、判断し、行動する状態を目指すのか。</span></p>
+<p>社員の能力や意欲だけに原因を求めず、仕事の仕組みや管理職の関わり方も確認します。</p>
+<h4 class="co-h4">STEP 03｜必要な知識・考え方・方法を教える。</h4>
+<p>自主性を育てることは、最初から本人に任せきりにすることではありません。</p>
+<p>必要な知識がなければ教える。</p>
+<p>判断方法が分からなければ、具体的に示す。</p>
+<p>一人で難しければ、一緒に考え、実践する。</p>
+<p>そのうえで、本人が理解し、できるようになった部分から、少しずつ判断を渡していきます。</p>
+<p>希爆Styleでは、心のコンパス、言葉のレシピ、主語返しなどの道具を使い、相手の状態に合わせて支援を調整します。</p>
+<p><strong>教えることと、任せること。その両方を大切にします。</strong></p>
+<h4 class="co-h4">STEP 04｜実際の仕事で試し、行動を変える。</h4>
+<p>研修で理解できても、現場で使えなければ意味がありません。</p>
+<p>例えば、これまで社長がすべて確認していた見積業務。</p>
+<p>社員が判断できるように、価格の基準、必要な情報、相談すべき条件を整理します。</p>
+<p>そして、社員に判断の方法を教え、実際の案件で試します。</p>
+<p>判断した理由を確認し、難しかった点を振り返る。</p>
+<p>うまくいかなければ、教え方や判断基準を見直す。</p>
+<p>こうして、実際の仕事の中で、社員が自分で進められる範囲を増やしていきます。</p>
+<h4 class="co-h4">STEP 05｜個人の成長を、組織の成果につなげる。</h4>
+<p>社員が自分で考えるようになった。</p>
+<p>それだけでは、企業の人材育成として十分ではありません。</p>
+<p>その変化によって、実際の仕事がどう変わったのかを確かめます。</p>
+<p>社長に戻ってくる判断は減ったのか。</p>
+<p>社員が自分で完了できる仕事は増えたのか。</p>
+<p>手戻りやミスは減ったのか。</p>
+<p>管理職が部下を育てられるようになったのか。</p>
+<p>顧客対応や業務の品質は向上したのか。</p>
+<p>そして、会社の売上や利益、経営者の時間にどのような変化が生まれたのか。</p>
+<p><strong>人が育ったという実感を、実際の仕事と成果につなげていきます。</strong></p>
+<h4 class="co-h4">STEP 06｜コンサルタントがいなくても、成長し続けられる組織へ。</h4>
+<p>最終的に目指すのは、外部のコンサルタントがいなければ動けない組織ではありません。</p>
+<p>社員が自分で課題を見つける。</p>
+<p>必要な知識を学び、方法を考える。</p>
+<p>仲間と協力して実行する。</p>
+<p>結果を振り返り、次の改善へつなげる。</p>
+<p>管理職が、その成長を支えられる。</p>
+<p><strong>人が育つ仕組みが、組織の日常に根づいている状態。</strong></p>
+<p>その実現を目指して、経営者・管理職・社員とともに取り組みます。</p>
+</div></details>
+<details class="co-acc"><summary><span class="no">05</span><span class="tt">人が育つ。組織が変わる。その先の成果へ。</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="co-acc-body">
+<p>あなたが欲しいのは、研修を受けた社員でしょうか。</p>
+<p>それとも、自分で考え、判断し、成果を生み出す社員でしょうか。</p>
+<p>あなたが欲しいのは、立派な理念が掲げられた会社でしょうか。</p>
+<p>それとも、その理念が日々の仕事の中で生き、社員一人ひとりが力を発揮する会社でしょうか。</p>
+<p>希爆Styleが目指すのは、経営者の思いだけで動く組織ではありません。</p>
+<p><strong>経営者が望む会社の未来と、社員一人ひとりの成長がつながり、組織として成果を生み出していくこと。</strong></p>
+<p>学校と企業では、目的も責任も違います。</p>
+<p>しかし、人が学び、判断し、行動し、成長していくための条件には共通する部分があります。</p>
+<p>約15年間の教育実践で培った、人の状態を見極め、必要なことを教え、本人に判断を渡し、集団を育てる技術。</p>
+<p>その技術を、企業の実際の仕事に合わせて設計し、実践と振り返りを重ねていきます。</p>
+<p><strong>社員が育てば、任せられる仕事が増える。</strong></p>
+<p><strong>任せられる仕事が増えれば、組織の可能性が広がる。</strong></p>
+<p><strong>組織の可能性が広がれば、経営者が描く未来へ、さらに挑戦できる。</strong></p>
+<p>あなたは、どんな会社をつくりたいですか。</p>
+<p>その未来を実現するために、今、何を変えたいですか。</p>
+<h4 class="co-h4">あなたがつくりたい組織を、現実に。</h4>
+<p><strong>人が育つ。組織が変わる。成果が生まれる。</strong></p>
+<p>希爆Style｜企業人材育成・自走組織コンサルティング</p>
+<p>株式会社ムーンブラスト希爆</p>
+</div></details>
+</div>
+</div>
+</section>
+<section class="co-panel on" id="panel-lecture" role="tabpanel" aria-labelledby="tab-lecture" tabindex="0" data-panel="lecture">
+<div class="co-in">
+<p class="co-eyebrow">LECTURES &amp; TRAINING</p>
+<h2 class="co-h2">見方が変われば、可能性が広がる。</h2>
+<p class="co-lead">講演・研修</p>
+<p><strong>子育て、教育、人材育成、組織づくり、そして自分自身の人生まで。</strong></p>
+<p>株式会社ムーンブラスト希爆では、約15年間の教育実践をもとに体系化した「希爆Style」を活用し、保護者・PTA・学校・教職員・企業・経営者・地域団体など、幅広い対象に向けた講演を行います。</p>
+<p>子どもが自分から動かない。</p>
+<p>学級がまとまらない。</p>
+<p>若手教員が育たない。</p>
+<p>社員が指示を待っている。</p>
+<p>自分の可能性をもっと広げたい。</p>
+<p>一見異なるこれらの課題にも、人の行動や成長を理解するうえで共通する視点があります。</p>
+<p>講演では、実際の教育現場や個別支援での経験、具体的な事例を交えながら、人が自ら考え、選び、行動できるようになるための見方・考え方をお伝えします。</p>
+<p><strong>知識を聞いて終わるのではなく、明日からの関わり方や行動が一つ変わる。</strong></p>
+<p>そんな講演を目指しています。</p>
+<h4 class="co-h4">主な講演対象</h4>
+<p>保護者・PTA／教職員／学校・教育委員会／経営者・企業／学生・地域団体</p>
+<h4 class="co-h4">講演テーマ</h4>
+<p>子どもの可能性、主体性・自己決定感、子育て、授業改善、学級経営、教員育成、人材育成、自走組織づくり、自己理解、挑戦と成長など。</p>
+<p>講演内容は、主催者の目的や参加者の課題に合わせてご提案します。</p>
+<p><strong>あなたが届けたい学びを、一緒に形にします。</strong></p>
+<p>株式会社ムーンブラスト希爆<br>
+代表取締役・希爆Style開発者　佐野伸之</p>
+</div>
+</section>
 </main>
+
+<section class="co-contact" id="contact">
+  <div class="co-in">
+    <h2>問合せ・相談・面談はこちらから</h2>
+    <div class="co-contact-grid">
+      <div class="co-contact-item">
+        <p class="co-lbl">メールで連絡する</p>
+        <p class="co-mail"><span class="co-mail-addr">kibakustyle@gmail.com</span></p>
+        <p><a class="btn ghost" href="mailto:kibakustyle@gmail.com">メールを送る <span class="arr">→</span></a></p>
+      </div>
+      <div class="co-contact-item">
+        <p class="co-lbl">相談・面談の日程を選ぶ</p>
+        <p><a class="btn gold co-timerex" data-timerex href="" target="_blank" rel="noopener">TimeRexで日程を選ぶ ↗</a></p>
+        <p class="co-pending" data-timerex-pending>日程の予約ページは準備中です。メールでご連絡ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="dark">
   <div class="wrap">
     <div class="frow">
       <div>
-        <a href="#top" class="logo-f" aria-label="希爆塾"><img src="assets/logo_mark_light.png" alt="希爆Style ｜ ムーンブラスト希爆"></a>
-        <p class="tag">一生使える、自分の育て方。小学生・中学生のオンライン塾。<span class="ft-line">― 思いを、構造に。 ―</span></p>
+        <a href="index.html" class="logo-f" aria-label="株式会社ムーンブラスト希爆"><img src="assets/logo_mark_light.png" alt=""></a>
+        <p class="tag">株式会社ムーンブラスト希爆</p>
       </div>
-      <nav class="fnav">
-        <a href="#outline">希爆塾について</a>
-        <a href="#promo">紹介動画</a>
-        <a href="#pricing">料金</a>
-        <a href="#philosophy">大切にすること</a>
-        <a href="#founder">主催者挨拶</a>
-        <a href="#book">著書</a>
-        <a href="contact.html">公式LINEで無料相談・申込</a>
-        <a href="guide.html">コミュニティのご案内</a>
+      <nav class="fnav" aria-label="フッターのリンク">
+        <a href="#company">会社紹介</a><a href="#president">社長紹介</a><a href="#concept">コンセプト</a><a href="#juku">塾</a><a href="#coaching">コーチング</a><a href="#consulting">人材コンサル</a><a href="#lecture">講演・研修</a>
         <a href="company.html">事業者情報</a>
         <a href="legal.html">特定商取引法に基づく表記</a>
+        <a href="guide.html">コミュニティのご案内</a>
         <a href="https://www.instagram.com/kibakustyle" target="_blank" rel="noopener">Instagram</a>
         <a href="https://note.com/charm_wren1513" target="_blank" rel="noopener">note</a>
         <a href="https://www.tiktok.com/@kibaku_style" target="_blank" rel="noopener">TikTok</a>
@@ -393,12 +1083,10 @@
     </div>
     <div class="fbot">
       <span>© 2026 ムーンブラスト希爆 ／ 希爆Style. All rights reserved.</span>
-      <span>人は変われる。人は育つ。人は何度でも再挑戦できる。</span>
     </div>
-    <p class="draftnote">※ 本ページは構成・デザインの叩き台（ドラフト）です。掲載文言・実績・写真等は今後の打ち合わせで確定します。</p>
   </div>
 </footer>
 
-<script src="assets/script.js"></script>
+<script src="assets/script.js?v=20261123"></script>
 </body>
 </html>

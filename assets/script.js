@@ -1,3 +1,6 @@
+/* ===== 2026-11-23：TimeRex の予約URL。ここに入れると全ページでボタンが出る（空の間は「準備中」の一文を出す） ===== */
+var TIMEREX_URL = "https://timerex.net/s/kamenobu0524_c67a/97b27436";
+
   (function(){
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -9,6 +12,7 @@
     function onScroll(){
       if(ticking) return; ticking = true;
       requestAnimationFrame(function(){
+        if(!bar){ ticking = false; return; }
         var h = document.documentElement;
         var max = h.scrollHeight - h.clientHeight;
         var p = max > 0 ? (h.scrollTop || window.pageYOffset) / max : 0;
@@ -214,3 +218,143 @@
       })(i);
     }
   })();
+
+/* ===== 2026-11-23 追加：TimeRexボタン（全ページ共通） ===== */
+(function(){
+  var btns = document.querySelectorAll('a[data-timerex]');
+  var pend = document.querySelectorAll('[data-timerex-pending]');
+  var has = !!(TIMEREX_URL && String(TIMEREX_URL).replace(/\s/g,''));
+  [].forEach.call(btns, function(a){
+    if(has){ a.setAttribute('href', TIMEREX_URL); a.classList.add('on'); }
+    else { a.removeAttribute('href'); a.classList.remove('on'); }
+  });
+  [].forEach.call(pend, function(p){ p.hidden = has; });
+})();
+
+/* ===== 2026-11-23 追加：会社HPのタブ・開閉・ハッシュ（index.html のみ。要素が無ければ何もしない） ===== */
+(function(){
+  var tablist = document.querySelector('.co-tablist');
+  if(!tablist) return;
+  var TABS = ['company','president','concept','juku','coaching','consulting','lecture'];
+  var ALIAS = {outline:'juku', pricing:'juku', philosophy:'juku', promo:'juku', founder:'president', book:'president'};
+  var DEFAULT = 'lecture';
+  var tabs = {}, panels = {};
+  TABS.forEach(function(id){ tabs[id] = document.getElementById('tab-'+id); panels[id] = document.getElementById('panel-'+id); });
+  var header = document.querySelector('header');
+  var bar = document.getElementById('coTabs');
+  var current = DEFAULT;
+
+  function measure(){
+    var root = document.documentElement;
+    if(header) root.style.setProperty('--co-hh', header.offsetHeight + 'px');
+    if(bar) root.style.setProperty('--co-th', bar.offsetHeight + 'px');
+  }
+  var tabsWrap = bar;
+  function fades(){
+    if(!tabsWrap) return;
+    var max = tablist.scrollWidth - tablist.clientWidth;
+    tabsWrap.classList.toggle('fade-l', tablist.scrollLeft > 4);
+    tabsWrap.classList.toggle('fade-r', max > 4 && tablist.scrollLeft < max - 4);
+  }
+  tablist.addEventListener('scroll', fades, {passive:true});
+  window.addEventListener('resize', fades, {passive:true});
+  function centerTab(id){
+    var t = tabs[id]; if(!t) return;
+    var target = t.offsetLeft - (tablist.clientWidth - t.offsetWidth) / 2;
+    tablist.scrollLeft = Math.max(0, target);
+    fades();
+  }
+  function show(id){
+    if(!panels[id]) id = DEFAULT;
+    current = id;
+    TABS.forEach(function(k){
+      var on = (k === id);
+      panels[k].classList.toggle('on', on);
+      tabs[k].setAttribute('aria-selected', on ? 'true' : 'false');
+      tabs[k].setAttribute('tabindex', on ? '0' : '-1');
+    });
+    centerTab(id);
+  }
+  function scrollToPanel(id){
+    var p = panels[id]; if(!p) return;
+    var off = (header ? header.offsetHeight : 0) + (bar ? bar.offsetHeight : 0);
+    var y = p.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - off;
+    window.scrollTo(0, Math.max(0, y));
+  }
+  function scrollToContact(){
+    var c = document.getElementById('contact'); if(!c) return;
+    var off = (header ? header.offsetHeight : 0) + (bar ? bar.offsetHeight : 0);
+    var y = c.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - off;
+    window.scrollTo(0, Math.max(0, y));
+  }
+  function hashId(){
+    var h = location.hash.replace(/^#/, '');
+    try { h = decodeURIComponent(h); } catch(e){}
+    return h;
+  }
+  function resolve(h){
+    if(TABS.indexOf(h) >= 0) return h;
+    if(Object.prototype.hasOwnProperty.call(ALIAS, h)) return ALIAS[h];
+    return null;
+  }
+  function apply(doScroll){
+    var h = hashId();
+    if(h === 'contact' || h === 'consult'){ show(current); if(doScroll) scrollToContact(); return; }
+    var id = resolve(h);
+    if(id){ show(id); if(doScroll) scrollToPanel(id); }
+    else { show(DEFAULT); }
+  }
+
+  /* タブのクリック・キーボード */
+  TABS.forEach(function(id, i){
+    tabs[id].addEventListener('click', function(){
+      if(hashId() === id){ show(id); scrollToPanel(id); }
+      else { location.hash = id; }
+    });
+    tabs[id].addEventListener('keydown', function(e){
+      var n = null;
+      if(e.key === 'ArrowRight') n = (i + 1) % TABS.length;
+      else if(e.key === 'ArrowLeft') n = (i - 1 + TABS.length) % TABS.length;
+      else if(e.key === 'Home') n = 0;
+      else if(e.key === 'End') n = TABS.length - 1;
+      if(n === null) return;
+      e.preventDefault();
+      var nid = TABS[n];
+      try { history.replaceState(null, '', '#' + nid); } catch(err){}
+      show(nid);
+      tabs[nid].focus();
+    });
+  });
+  /* 本文中・フッターのハッシュリンク（同じハッシュでも動かす） */
+  document.addEventListener('click', function(e){
+    var jump = e.target.closest ? e.target.closest('[data-jump]') : null;
+    if(jump){
+      var t = document.getElementById(jump.getAttribute('data-jump'));
+      if(t){ e.preventDefault(); var off0 = (header ? header.offsetHeight : 0) + (bar ? bar.offsetHeight : 0); window.scrollTo(0, Math.max(0, t.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - off0 - 12)); }
+      return;
+    }
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if(!a || a.getAttribute('role') === 'tab') return;
+    var h = a.getAttribute('href').slice(1);
+    if(h === hashId() && (resolve(h) || h === 'consult' || h === 'contact')){ e.preventDefault(); apply(true); }
+  });
+  window.addEventListener('hashchange', function(){ apply(true); });
+
+  /* すべて開く／すべて閉じる */
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-acc]') : null;
+    if(!b) return;
+    var panel = b.closest('.co-panel'); if(!panel) return;
+    var open = b.getAttribute('data-acc') === 'open';
+    [].forEach.call(panel.querySelectorAll('details.co-acc'), function(d){ d.open = open; });
+  });
+
+  window.addEventListener('resize', measure, {passive:true});
+  window.addEventListener('load', measure);
+  measure();
+  apply(!!hashId());
+  fades();
+  /* フォント読み込みで高さが変わるので、少し後にもう一度測る */
+  setTimeout(measure, 400);
+  if(hashId() === 'contact' || hashId() === 'consult'){ window.addEventListener('load', function(){ measure(); scrollToContact(); }); }
+})();
