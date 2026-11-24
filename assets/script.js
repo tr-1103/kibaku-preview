@@ -237,7 +237,7 @@ var TIMEREX_URL = "https://timerex.net/s/kamenobu0524_c67a/97b27436";
   if(!tablist) return;
   var TABS = ['company','president','concept','juku','coaching','consulting','lecture'];
   var ALIAS = {outline:'juku', pricing:'juku', philosophy:'juku', promo:'juku', founder:'president', book:'president'};
-  var DEFAULT = 'lecture';
+  var DEFAULT = 'company';
   var tabs = {}, panels = {};
   TABS.forEach(function(id){ tabs[id] = document.getElementById('tab-'+id); panels[id] = document.getElementById('panel-'+id); });
   var header = document.querySelector('header');
